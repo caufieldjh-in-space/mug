@@ -6,7 +6,9 @@ from pathlib import Path
 import random
 
 RES_DIR = "resources"
-ITEM_TYPES = {"colors": "colors.tsv"}
+ITEM_TYPES = {"color": "colors.tsv",
+              "zip code": "zip_codes.tsv"
+             }
 
 def get_items(item_type: str,
               count: int = 1,
