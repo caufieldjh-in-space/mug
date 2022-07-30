@@ -1,0 +1,327 @@
+[[package]]
+name = "atomicwrites"
+version = "1.4.1"
+description = "Atomic file writes."
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "attrs"
+version = "21.1.0"
+description = "Classes Without Boilerplate"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.extras]
+dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit"]
+docs = ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
+tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface"]
+tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
+
+[[package]]
+name = "backports.functools-lru-cache"
+version = "1.6.4"
+description = "Backport of functools.lru_cache"
+category = "main"
+optional = false
+python-versions = ">=2.6"
+
+[package.extras]
+docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
+testing = ["pytest (>=4.6)", "pytest-black (>=0.3.7)", "pytest-mypy", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-checkdocs (>=2.4)"]
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.9.3"
+description = "Screen-scraping library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+soupsieve = [
+    {version = ">1.2,<2.0", markers = "python_version < \"3.0\""},
+    {version = ">1.2", markers = "python_version >= \"3.0\""},
+]
+
+[package.extras]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
+name = "certifi"
+version = "2021.10.8"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "chardet"
+version = "3.0.4"
+description = "Universal encoding detector for Python 2 and 3"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "colorama"
+version = "0.4.1"
+description = "Cross-platform colored terminal text."
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "configparser"
+version = "4.0.2"
+description = "Updated configparser from Python 3.7 for Python 2.6+."
+category = "dev"
+optional = false
+python-versions = ">=2.6"
+
+[package.extras]
+docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
+testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2)", "pytest-flake8", "pytest-black-multipy"]
+
+[[package]]
+name = "contextlib2"
+version = "0.6.0.post1"
+description = "Backports and enhancements for the contextlib module"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "funcsigs"
+version = "1.0.2"
+description = "Python function signatures from PEP362 for Python 2.6, 2.7 and 3.2+"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "idna"
+version = "2.8"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "importlib-metadata"
+version = "1.1.3"
+description = "Read metadata from Python packages"
+category = "dev"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+
+[package.dependencies]
+configparser = {version = ">=3.5", markers = "python_version < \"3\""}
+contextlib2 = {version = "*", markers = "python_version < \"3\""}
+pathlib2 = {version = "*", markers = "python_version == \"3.4.*\" or python_version < \"3\""}
+zipp = ">=0.5"
+
+[package.extras]
+testing = ["importlib-resources", "packaging"]
+docs = ["rst.linker", "sphinx"]
+
+[[package]]
+name = "more-itertools"
+version = "5.0.0"
+description = "More routines for operating on iterables, beyond itertools"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = ">=1.0.0,<2.0.0"
+
+[[package]]
+name = "pathlib2"
+version = "2.3.7.post1"
+description = "Object-oriented filesystem paths"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+scandir = {version = "*", markers = "python_version < \"3.5\""}
+six = "*"
+typing = {version = "*", markers = "python_version < \"3.5\""}
+
+[[package]]
+name = "pluggy"
+version = "0.13.1"
+description = "plugin and hook calling mechanisms for python"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
+
+[package.extras]
+dev = ["pre-commit", "tox"]
+
+[[package]]
+name = "py"
+version = "1.10.0"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "pytest"
+version = "3.10.1"
+description = "pytest: simple powerful testing with Python"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+atomicwrites = ">=1.0"
+attrs = ">=17.4.0"
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+funcsigs = {version = "*", markers = "python_version < \"3.0\""}
+more-itertools = ">=4.0.0"
+pathlib2 = {version = ">=2.2.0", markers = "python_version < \"3.6\""}
+pluggy = ">=0.7"
+py = ">=1.5.0"
+six = ">=1.10.0"
+
+[[package]]
+name = "requests"
+version = "2.21.0"
+description = "Python HTTP for Humans."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+chardet = ">=3.0.2,<3.1.0"
+idna = ">=2.5,<2.9"
+urllib3 = ">=1.21.1,<1.25"
+
+[package.extras]
+security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)"]
+socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
+
+[[package]]
+name = "scandir"
+version = "1.10.0"
+description = "scandir, a better directory iterator and faster os.walk()"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "soupsieve"
+version = "1.9.6"
+description = "A modern CSS selector implementation for Beautiful Soup."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+"backports.functools-lru-cache" = {version = "*", markers = "python_version < \"3\""}
+
+[[package]]
+name = "typing"
+version = "3.10.0.0"
+description = "Type Hints for Python"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <3.5"
+
+[[package]]
+name = "urllib3"
+version = "1.22"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+
+[[package]]
+name = "wikipedia"
+version = "1.4.0"
+description = "Wikipedia API for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+beautifulsoup4 = "*"
+requests = ">=2.0.0,<3.0.0"
+
+[[package]]
+name = "zipp"
+version = "1.2.0"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+category = "dev"
+optional = false
+python-versions = ">=2.7"
+
+[package.dependencies]
+contextlib2 = {version = "*", markers = "python_version < \"3.4\""}
+
+[package.extras]
+testing = ["func-timeout", "jaraco.itertools", "unittest2", "pathlib2"]
+docs = ["rst.linker (>=1.9)", "jaraco.packaging (>=3.2)", "sphinx"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = "*"
+content-hash = "93c13746102a3f53d9d65e19323461926bc09186d058e9691fbda1e8418a8db8"
+
+[metadata.files]
+atomicwrites = []
+attrs = []
+"backports.functools-lru-cache" = []
+beautifulsoup4 = []
+certifi = []
+chardet = []
+colorama = []
+configparser = []
+contextlib2 = []
+funcsigs = []
+idna = []
+importlib-metadata = []
+more-itertools = []
+pathlib2 = []
+pluggy = [
+    {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
+    {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
+]
+py = [
+    {file = "py-1.10.0-py2.py3-none-any.whl", hash = "sha256:3b80836aa6d1feeaa108e046da6423ab8f6ceda6468545ae8d02d9d58d18818a"},
+    {file = "py-1.10.0.tar.gz", hash = "sha256:21b81bda15b66ef5e1a777a21c4dcd9c20ad3efd0b3f817e7a809035269e1bd3"},
+]
+pytest = []
+requests = []
+scandir = []
+six = [
+    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
+    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
+]
+soupsieve = []
+typing = []
+urllib3 = []
+wikipedia = []
+zipp = []

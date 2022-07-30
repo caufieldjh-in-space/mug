@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "mug"
+version = "0.0.1"
+description = "Modular Universal Generators"
+authors = ["Harry Caufield"]
+
+[tool.poetry.dependencies]
+python = "*"
+wikipedia = "^1.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.4"
