@@ -18,17 +18,25 @@ def get_items(item_type: str,
     res_file = (mod_path / RES_DIR / ITEM_TYPES[item_type]).resolve()
 
     with res_file.open() as infile:
+        header = (infile.readline().rstrip()).split("\t")
         sample = heapq.nlargest(count, 
                                 infile,
                                 key=lambda L: random.random()
                                 )
 
-    sample = clean_sample(sample)
+    sample = _prep_sample(sample, header)
 
     return sample
 
-def clean_sample(rawlist: list) -> list:
+def _prep_sample(rawlist: list, header: list = []) -> list:
+
+    prepped_sample = []
 
     cleanlist = [s.strip() for s in rawlist]
+    
+    for value_set in cleanlist:
+        values = value_set.split("\t")
+        kvs = dict(zip(header,values))
+        prepped_sample.append(kvs)
 
-    return cleanlist
+    return prepped_sample
