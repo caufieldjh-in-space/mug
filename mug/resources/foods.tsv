@@ -1,0 +1,547 @@
+id	fruit and vegetable	herb and spice	nut	meat	grain	paste and sauce	dairy	seafood
+Ancho chile	0	1	0	0	0	0	0	0
+Armenian cheese	0	0	0	0	0	0	1	0
+BBQ	0	1	0	0	0	0	0	0
+Berbere	0	1	0	0	0	0	0	0
+Bergkäse	0	0	0	0	0	0	1	0
+Blue Wensleydale cheese	0	0	0	0	0	0	1	0
+Brie	0	0	0	0	0	0	1	0
+Brunost	0	0	0	0	0	0	1	0
+Brussels cheese	0	0	0	0	0	0	1	0
+Caerphilly cheese	0	0	0	0	0	0	1	0
+California grape	1	0	0	0	0	0	0	0
+Carolina Reaper pepper	0	1	0	0	0	0	0	0
+Cheddar	0	0	0	0	0	0	1	0
+Chimay cheese	0	0	0	0	0	0	1	0
+Circassian cheese	0	0	0	0	0	0	1	0
+Colby-Jack cheese	0	0	0	0	0	0	1	0
+Cornish Yarg cheese	0	0	0	0	0	0	1	0
+Cotija cheese	0	0	0	0	0	0	1	0
+Danish Blue cheese	0	0	0	0	0	0	1	0
+Datil pepper	0	1	0	0	0	0	0	0
+Dungeness crab	0	0	0	0	0	0	0	1
+Farleigh Wallop cheese	0	0	0	0	0	0	1	0
+Feta	0	0	0	0	0	0	1	0
+Gloucester cheese	0	0	0	0	0	0	1	0
+Greek yogurt	0	0	0	0	0	0	1	0
+Halloumi	0	0	0	0	0	0	1	0
+Havarti	0	0	0	0	0	0	1	0
+Herve	0	0	0	0	0	0	1	0
+Humbolt Fog cheese	0	0	0	0	0	0	1	0
+Icelandic yogurt	0	0	0	0	0	0	1	0
+Imsil cheese	0	0	0	0	0	0	1	0
+Jāņi cheese	0	0	0	0	0	0	1	0
+Kashkaval cheese	0	0	0	0	0	0	1	0
+Limburger	0	0	0	0	0	0	1	0
+Livno cheese	0	0	0	0	0	0	1	0
+Lüneberg cheese	0	0	0	0	0	0	1	0
+Manchego	0	0	0	0	0	0	1	0
+Marmite	0	0	0	0	0	1	0	0
+Meyer lemon	1	0	0	0	0	0	0	0
+Montafoner Sauerkäse	0	0	0	0	0	0	1	0
+Muenster cheese	0	0	0	0	0	0	1	0
+Old Bay	0	1	0	0	0	0	0	0
+Olomoucké syrečky	0	0	0	0	0	0	1	0
+Passendale cheese	0	0	0	0	0	0	1	0
+Paški sir cheese	0	0	0	0	0	0	1	0
+Pecorino Romano	0	0	0	0	0	0	1	0
+Peppadew pepper	0	1	0	0	0	0	0	0
+Pálpusztai cheese	0	0	0	0	0	0	1	0
+Red Leicester cheese	0	0	0	0	0	0	1	0
+Samsø cheese	0	0	0	0	0	0	1	0
+Scotch bonnet	0	1	0	0	0	0	0	0
+Serrano chile	0	1	0	0	0	0	0	0
+Shropshire Blue cheese	0	0	0	0	0	0	1	0
+Stilton	0	0	0	0	0	0	1	0
+Stinking Bishop cheese	0	0	0	0	0	0	1	0
+Swedish moose cheese	0	0	0	0	0	0	1	0
+Swiss cheese	0	0	0	0	0	0	1	0
+São Jorge cheese	0	0	0	0	0	0	1	0
+Tonka bean	0	1	0	0	0	0	0	0
+Turkish apple tea	0	1	0	0	0	0	0	0
+Vegemite	0	0	0	0	0	1	0	0
+acai 	1	0	0	0	0	0	0	0
+acorn squash	1	0	0	0	0	0	0	0
+agave	1	0	0	0	0	0	0	0
+aioli	0	0	0	0	0	1	0	0
+alfalfa sprout	1	0	0	0	0	0	0	0
+allspice	0	1	0	0	0	0	0	0
+almond	0	0	1	0	0	0	0	0
+almond butter	0	0	0	0	0	1	0	0
+amaranth	1	0	0	0	0	0	0	0
+anchovy	0	0	0	0	0	0	0	1
+anise	0	1	0	0	0	0	0	0
+anise	1	0	0	0	0	0	0	0
+apple	1	0	0	0	0	0	0	0
+apple	1	0	0	0	0	0	0	0
+apricot	1	0	0	0	0	0	0	0
+apricot	1	0	0	0	0	0	0	0
+artichoke	1	0	0	0	0	0	0	0
+arugula	1	0	0	0	0	0	0	0
+asafoetida	0	1	0	0	0	0	0	0
+ashwagandha	0	1	0	0	0	0	0	0
+asparagus	1	0	0	0	0	0	0	0
+aubergine	1	0	0	0	0	0	0	0
+avocado	1	0	0	0	0	0	0	0
+azuki bean	1	0	0	0	0	0	0	0
+banana	1	0	0	0	0	0	0	0
+banana	1	0	0	0	0	0	0	0
+banana squash	1	0	0	0	0	0	0	0
+barbecue sauce	0	0	0	0	0	1	0	0
+barley	0	0	0	0	1	0	0	0
+basil	0	1	0	0	0	0	0	0
+basil	1	0	0	0	0	0	0	0
+bay leaf	0	1	0	0	0	0	0	0
+bean dip	0	0	0	0	0	1	0	0
+bean sprout	1	0	0	0	0	0	0	0
+beef	0	0	0	1	0	0	0	0
+beet	1	0	0	0	0	0	0	0
+beet	1	0	0	0	0	0	0	0
+bell pepper	1	0	0	0	0	0	0	0
+bilberry	1	0	0	0	0	0	0	0
+black bean	1	0	0	0	0	0	0	0
+black bean paste	0	0	0	0	0	1	0	0
+black cherry	1	0	0	0	0	0	0	0
+black currant	1	0	0	0	0	0	0	0
+black-eyed pea	1	0	0	0	0	0	0	0
+blackberry	1	0	0	0	0	0	0	0
+blackberry	1	0	0	0	0	0	0	0
+blackcurrant	1	0	0	0	0	0	0	0
+blackcurrant	1	0	0	0	0	0	0	0
+blood orange	1	0	0	0	0	0	0	0
+blue raspberry	1	0	0	0	0	0	0	0
+blueberry	1	0	0	0	0	0	0	0
+blueberry	1	0	0	0	0	0	0	0
+boar	0	0	0	1	0	0	0	0
+bok choy	1	0	0	0	0	0	0	0
+bone broth	0	0	0	1	0	0	0	0
+borlotti bean	1	0	0	0	0	0	0	0
+boysenberry	1	0	0	0	0	0	0	0
+brazil nut	0	0	1	0	0	0	0	0
+breadfruit	1	0	0	0	0	0	0	0
+brick cheese	0	0	0	0	0	0	1	0
+broad beans	1	0	0	0	0	0	0	0
+broccoflower	1	0	0	0	0	0	0	0
+broccoli	1	0	0	0	0	0	0	0
+brown mustard	0	0	0	0	0	1	0	0
+brussels sprout	1	0	0	0	0	0	0	0
+buckwheat	0	0	0	0	1	0	0	0
+bulgur	0	0	0	0	1	0	0	0
+butterfly pea flower tea	0	1	0	0	0	0	0	0
+buttermilk	0	0	0	0	0	0	1	0
+butternut squash	1	0	0	0	0	0	0	0
+cabbage	1	0	0	0	0	0	0	0
+calabrese	1	0	0	0	0	0	0	0
+canary melon	1	0	0	0	0	0	0	0
+candlenut	0	0	1	0	0	0	0	0
+cantaloupe	1	0	0	0	0	0	0	0
+caraway	1	0	0	0	0	0	0	0
+cardamom	0	1	0	0	0	0	0	0
+carrot	1	0	0	0	0	0	0	0
+cashew butter	0	0	0	0	0	1	0	0
+cauliflower	1	0	0	0	0	0	0	0
+cauliflower	1	0	0	0	0	0	0	0
+caviar	0	0	0	0	0	0	0	1
+cayenne	0	1	0	0	0	0	0	0
+cayenne pepper	1	0	0	0	0	0	0	0
+celeriac	1	0	0	0	0	0	0	0
+celery	1	0	0	0	0	0	0	0
+celery seed	0	1	0	0	0	0	0	0
+chaat masala	0	1	0	0	0	0	0	0
+chamomile	1	0	0	0	0	0	0	0
+chard	1	0	0	0	0	0	0	0
+charoli	0	1	0	0	0	0	0	0
+chayote	1	0	0	0	0	0	0	0
+cheese sauce	0	0	0	0	0	1	0	0
+cherimoya	1	0	0	0	0	0	0	0
+cherry	1	0	0	0	0	0	0	0
+cherry	1	0	0	0	0	0	0	0
+chestnut	0	0	1	0	0	0	0	0
+chhana	0	0	0	0	0	0	1	0
+chhurpi	0	0	0	0	0	0	1	0
+chicken	0	0	0	1	0	0	0	0
+chickpea	1	0	0	0	0	0	0	0
+chili oil	0	0	0	0	0	1	0	0
+chili pepper	1	0	0	0	0	0	0	0
+chili sauce	0	0	0	0	0	1	0	0
+chimichurri	0	0	0	0	0	1	0	0
+chinese five spice	0	1	0	0	0	0	0	0
+chipotle	0	1	0	0	0	0	0	0
+chives	1	0	0	0	0	0	0	0
+chorizo	0	0	0	1	0	0	0	0
+chura kampo	0	0	0	0	0	0	1	0
+chura loenpa	0	0	0	0	0	0	1	0
+chutney	0	0	0	0	0	1	0	0
+cilantro	0	1	0	0	0	0	0	0
+cilantro	1	0	0	0	0	0	0	0
+cinnamon	0	1	0	0	0	0	0	0
+clam	0	0	0	0	0	0	0	1
+clementine	1	0	0	0	0	0	0	0
+cloudberry	1	0	0	0	0	0	0	0
+clove	0	1	0	0	0	0	0	0
+cocktail sauce	0	0	0	0	0	1	0	0
+coconut	1	0	0	0	0	0	0	0
+coconut	1	0	0	0	0	0	0	0
+cod	0	0	0	0	0	0	0	1
+collard green	1	0	0	0	0	0	0	0
+corn	0	0	0	0	1	0	0	0
+corn	1	0	0	0	0	0	0	0
+corn salad	1	0	0	0	0	0	0	0
+cottage cheese	0	0	0	0	0	0	1	0
+courgette	1	0	0	0	0	0	0	0
+crab dip	0	0	0	0	0	1	0	0
+cranberry	1	0	0	0	0	0	0	0
+cranberry	1	0	0	0	0	0	0	0
+crayfish	0	0	0	0	0	0	0	1
+cream cheese	0	0	0	0	0	0	1	0
+cubeb	0	1	0	0	0	0	0	0
+cucumber	1	0	0	0	0	0	0	0
+cucumber	1	0	0	0	0	0	0	0
+cucumber	1	0	0	0	0	0	0	0
+curds	0	0	0	0	0	0	1	0
+currant	1	0	0	0	0	0	0	0
+daikon	1	0	0	0	0	0	0	0
+damson	1	0	0	0	0	0	0	0
+dangke	0	0	0	0	0	0	1	0
+date	1	0	0	0	0	0	0	0
+delicata	1	0	0	0	0	0	0	0
+dijon mustard	0	0	0	0	0	1	0	0
+dill	0	1	0	0	0	0	0	0
+dill	1	0	0	0	0	0	0	0
+dill pickle	1	0	0	0	0	0	0	0
+dip	0	0	0	0	0	1	0	0
+djathë i bardhë	0	0	0	0	0	0	1	0
+dragonfruit	1	0	0	0	0	0	0	0
+dragonfruit	1	0	0	0	0	0	0	0
+durian	1	0	0	0	0	0	0	0
+eggplant	1	0	0	0	0	0	0	0
+eggplant	1	0	0	0	0	0	0	0
+elderberry	1	0	0	0	0	0	0	0
+elderberry	1	0	0	0	0	0	0	0
+endive	1	0	0	0	0	0	0	0
+eucalyptus	1	0	0	0	0	0	0	0
+farmer cheese	0	0	0	0	0	0	1	0
+farro	0	0	0	0	1	0	0	0
+feijoa	1	0	0	0	0	0	0	0
+fennel	1	0	0	0	0	0	0	0
+fenugreek	0	1	0	0	0	0	0	0
+fiddlehead	1	0	0	0	0	0	0	0
+fig	1	0	0	0	0	0	0	0
+fig	1	0	0	0	0	0	0	0
+fish sauce	0	0	0	0	0	1	0	0
+freekeh	0	0	0	0	1	0	0	0
+frisee	1	0	0	0	0	0	0	0
+frog leg	0	0	0	0	0	0	0	1
+fruit preserves	0	0	0	0	0	1	0	0
+garam masala	0	1	0	0	0	0	0	0
+garlic	1	0	0	0	0	0	0	0
+gem squash	1	0	0	0	0	0	0	0
+ginger	0	1	0	0	0	0	0	0
+ginger	1	0	0	0	0	0	0	0
+ginkgo nut	0	0	1	0	0	0	0	0
+gjizë	0	0	0	0	0	0	1	0
+goat cheese	0	0	0	0	0	0	1	0
+gochujang	0	0	0	0	0	1	0	0
+gochujang	0	0	0	0	0	1	0	0
+goji berry	1	0	0	0	0	0	0	0
+gooseberry	1	0	0	0	0	0	0	0
+grape	1	0	0	0	0	0	0	0
+grapefruit	1	0	0	0	0	0	0	0
+green bean	1	0	0	0	0	0	0	0
+green pepper	1	0	0	0	0	0	0	0
+green tea	0	1	0	0	0	0	0	0
+greens	1	0	0	0	0	0	0	0
+guacamole	0	0	0	0	0	1	0	0
+guava	1	0	0	0	0	0	0	0
+guava	1	0	0	0	0	0	0	0
+guava paste	0	0	0	0	0	1	0	0
+gunpowder tea	0	1	0	0	0	0	0	0
+habanero	0	1	0	0	0	0	0	0
+habanero	1	0	0	0	0	0	0	0
+halibut	0	0	0	0	0	0	0	1
+ham	0	0	0	1	0	0	0	0
+harissa	0	1	0	0	0	0	0	0
+hazelnut	0	0	1	0	0	0	0	0
+hearts of palm	1	0	0	0	0	0	0	0
+herbs and spice	1	0	0	0	0	0	0	0
+herring	0	0	0	0	0	0	0	1
+hibiscus	1	0	0	0	0	0	0	0
+holy basil	0	1	0	0	0	0	0	0
+honey dill	0	0	0	0	0	1	0	0
+honeydew	1	0	0	0	0	0	0	0
+horseradish	0	0	0	0	0	1	0	0
+horseradish	1	0	0	0	0	0	0	0
+hubbard squash	1	0	0	0	0	0	0	0
+huckleberry	1	0	0	0	0	0	0	0
+huckleberry	1	0	0	0	0	0	0	0
+ikura	0	0	0	0	0	0	0	1
+jackfruit	1	0	0	0	0	0	0	0
+jalapeno	1	0	0	0	0	0	0	0
+jambul	1	0	0	0	0	0	0	0
+jerusalem artichoke	1	0	0	0	0	0	0	0
+jicama	1	0	0	0	0	0	0	0
+jujube	1	0	0	0	0	0	0	0
+juniper berry	0	1	0	0	0	0	0	0
+kalari	0	0	0	0	0	0	1	0
+kale	1	0	0	0	0	0	0	0
+kazunoko	0	0	0	0	0	0	0	1
+kaçkavall	0	0	0	0	0	0	1	0
+kesong puti	0	0	0	0	0	0	1	0
+ketchup	0	0	0	0	0	1	0	0
+key lime	1	0	0	0	0	0	0	0
+kidney bean	1	0	0	0	0	0	0	0
+kimchi	0	0	0	0	0	1	0	0
+kimchi	0	1	0	0	0	0	0	0
+king crab	0	0	0	0	0	0	0	1
+kiwi fruit	1	0	0	0	0	0	0	0
+kohlrabi	1	0	0	0	0	0	0	0
+kola nut	0	0	1	0	0	0	0	0
+kroeung	0	1	0	0	0	0	0	0
+kumquat	1	0	0	0	0	0	0	0
+labneh	0	0	0	0	0	0	1	0
+lamb	0	0	0	1	0	0	0	0
+langostino	0	0	0	0	0	0	0	1
+lavender	0	1	0	0	0	0	0	0
+lavender	1	0	0	0	0	0	0	0
+leek	1	0	0	0	0	0	0	0
+legume	1	0	0	0	0	0	0	0
+lemon	1	0	0	0	0	0	0	0
+lemon	1	0	0	0	0	0	0	0
+lemon grass	1	0	0	0	0	0	0	0
+lemon pepper	0	1	0	0	0	0	0	0
+lemongrass	0	1	0	0	0	0	0	0
+lentil	1	0	0	0	0	0	0	0
+lentils	1	0	0	0	0	0	0	0
+lettuce	1	0	0	0	0	0	0	0
+lima bean	1	0	0	0	0	0	0	0
+lime	1	0	0	0	0	0	0	0
+lime	1	0	0	0	0	0	0	0
+lobster	0	0	0	0	0	0	0	1
+loquat	1	0	0	0	0	0	0	0
+lychee	1	0	0	0	0	0	0	0
+lychee	1	0	0	0	0	0	0	0
+macadamia	0	0	1	0	0	0	0	0
+madras curry	0	1	0	0	0	0	0	0
+mahi mahi	0	0	0	0	0	0	0	1
+mamey	1	0	0	0	0	0	0	0
+mandarin	1	0	0	0	0	0	0	0
+mandarine	1	0	0	0	0	0	0	0
+mangetout	1	0	0	0	0	0	0	0
+mango	1	0	0	0	0	0	0	0
+mango	1	0	0	0	0	0	0	0
+marjoram	1	0	0	0	0	0	0	0
+masago	0	0	0	0	0	0	0	1
+mastic	0	1	0	0	0	0	0	0
+matcha	0	1	0	0	0	0	0	0
+mayonnaise	0	0	0	0	0	1	0	0
+meat substitute	0	0	0	1	0	0	0	0
+melon	1	0	0	0	0	0	0	0
+millet	0	0	0	0	1	0	0	0
+mint	0	1	0	0	0	0	0	0
+mish	0	0	0	0	0	0	1	0
+miso	0	0	0	0	0	1	0	0
+mixed berry	1	0	0	0	0	0	0	0
+monkfish	0	0	0	0	0	0	0	1
+mulberry	1	0	0	0	0	0	0	0
+mulling spice	0	1	0	0	0	0	0	0
+mung bean	1	0	0	0	0	0	0	0
+mung bean paste	0	0	0	0	0	1	0	0
+mushroom	1	0	0	0	0	0	0	0
+mussel	0	0	0	0	0	0	0	1
+mustard	0	0	0	0	0	1	0	0
+mustard green	1	0	0	0	0	0	0	0
+nacho cheese	0	0	0	0	0	0	1	0
+navy bean	1	0	0	0	0	0	0	0
+nectarine	1	0	0	0	0	0	0	0
+nectarine	1	0	0	0	0	0	0	0
+new zealand spinach	1	0	0	0	0	0	0	0
+nguri	0	0	0	0	0	0	1	0
+nopale	1	0	0	0	0	0	0	0
+nut	1	0	0	0	0	0	0	0
+nutmeg	0	1	0	0	0	0	0	0
+oat	0	0	0	0	1	0	0	0
+okra	1	0	0	0	0	0	0	0
+olive	1	0	0	0	0	0	0	0
+olive oil	0	0	0	0	0	1	0	0
+onion	1	0	0	0	0	0	0	0
+onion powder	0	1	0	0	0	0	0	0
+oolong tea	0	1	0	0	0	0	0	0
+orange	1	0	0	0	0	0	0	0
+orange	1	0	0	0	0	0	0	0
+oregano	1	0	0	0	0	0	0	0
+oyster	0	0	0	0	0	0	0	1
+pamelo	1	0	0	0	0	0	0	0
+panch phoron	0	1	0	0	0	0	0	0
+paneer	0	0	0	0	0	0	1	0
+papaya	1	0	0	0	0	0	0	0
+papaya	1	0	0	0	0	0	0	0
+paprika	1	0	0	0	0	0	0	0
+parsley	1	0	0	0	0	0	0	0
+parsnip	1	0	0	0	0	0	0	0
+passionfruit	1	0	0	0	0	0	0	0
+passionfruit	1	0	0	0	0	0	0	0
+patty pan	1	0	0	0	0	0	0	0
+pea	1	0	0	0	0	0	0	0
+peach	1	0	0	0	0	0	0	0
+peach	1	0	0	0	0	0	0	0
+peanut	0	0	1	0	0	0	0	0
+peanut butter	0	0	0	0	0	1	0	0
+pear	1	0	0	0	0	0	0	0
+pear	1	0	0	0	0	0	0	0
+pecan	0	0	1	0	0	0	0	0
+pecan	0	0	1	0	0	0	0	0
+pepper Jack cheese	0	0	0	0	0	0	1	0
+peppercorn	0	1	0	0	0	0	0	0
+perch	0	0	0	0	0	0	0	1
+persimmon	1	0	0	0	0	0	0	0
+pesto	0	0	0	0	0	1	0	0
+physalis	1	0	0	0	0	0	0	0
+pico de gallo	0	0	0	0	0	1	0	0
+pine nut	0	0	1	0	0	0	0	0
+pineapple	1	0	0	0	0	0	0	0
+pineapple	1	0	0	0	0	0	0	0
+pinto bean	1	0	0	0	0	0	0	0
+pistachio	0	0	1	0	0	0	0	0
+plum	1	0	0	0	0	0	0	0
+plum	1	0	0	0	0	0	0	0
+pomegranate	1	0	0	0	0	0	0	0
+pomegranate	1	0	0	0	0	0	0	0
+pomelo	1	0	0	0	0	0	0	0
+pomelo	1	0	0	0	0	0	0	0
+pork	0	0	0	1	0	0	0	0
+potato	1	0	0	0	0	0	0	0
+prawn	0	0	0	0	0	0	0	1
+prickly pear	1	0	0	0	0	0	0	0
+pumpkin	1	0	0	0	0	0	0	0
+pumpkin	1	0	0	0	0	0	0	0
+pumpkin pie spice	0	1	0	0	0	0	0	0
+pumpkin spice	0	1	0	0	0	0	0	0
+purple mangosteen	1	0	0	0	0	0	0	0
+purple tea	0	1	0	0	0	0	0	0
+pâté	0	0	0	1	0	0	0	0
+quark	0	0	0	0	0	0	1	0
+queso fresco	0	0	0	0	0	0	1	0
+queso panela	0	0	0	0	0	0	1	0
+queso sauce	0	0	0	0	0	0	1	0
+quince	1	0	0	0	0	0	0	0
+quinoa	0	0	0	0	1	0	0	0
+qâlat daqqa	0	1	0	0	0	0	0	0
+radicchio	1	0	0	0	0	0	0	0
+radish	1	0	0	0	0	0	0	0
+raisin	1	0	0	0	0	0	0	0
+rambutan	1	0	0	0	0	0	0	0
+raspberry	1	0	0	0	0	0	0	0
+red bean paste	0	0	0	0	0	1	0	0
+redcurrant	1	0	0	0	0	0	0	0
+reindeer milk	0	0	0	0	0	0	1	0
+reindeer milk cheese	0	0	0	0	0	0	1	0
+relish	0	0	0	0	0	1	0	0
+remoulade	0	0	0	0	0	1	0	0
+rhubarb	1	0	0	0	0	0	0	0
+rice	0	0	0	0	1	0	0	0
+rock melon	1	0	0	0	0	0	0	0
+rose	0	1	0	0	0	0	0	0
+rosemary	0	1	0	0	0	0	0	0
+rosemary	1	0	0	0	0	0	0	0
+rumi	0	0	0	0	0	0	1	0
+runner bean	1	0	0	0	0	0	0	0
+rutabaga	1	0	0	0	0	0	0	0
+rye	0	0	0	0	1	0	0	0
+sablefish	0	0	0	0	0	0	0	1
+saffron	0	1	0	0	0	0	0	0
+sage	0	1	0	0	0	0	0	0
+sage	1	0	0	0	0	0	0	0
+sakura cheese	0	0	0	0	0	0	1	0
+salad dressing	0	0	0	0	0	1	0	0
+salal berry	1	0	0	0	0	0	0	0
+salmon	0	0	0	0	0	0	0	1
+salsa	0	0	0	0	0	1	0	0
+satsuma	1	0	0	0	0	0	0	0
+sauerkraut	0	0	0	0	0	1	0	0
+sausage	0	0	0	1	0	0	0	0
+scallion	1	0	0	0	0	0	0	0
+scallop	0	0	0	0	0	0	0	1
+sea bass	0	0	0	0	0	0	0	1
+sesame oil	0	0	0	0	0	1	0	0
+shad roe	0	0	0	0	0	0	0	1
+shallot	1	0	0	0	0	0	0	0
+shrimp	0	0	0	0	0	0	0	1
+skirret	1	0	0	0	0	0	0	0
+snap pea	1	0	0	0	0	0	0	0
+snow crab	0	0	0	0	0	0	0	1
+soy bean	1	0	0	0	0	0	0	0
+soy sauce	0	0	0	0	0	1	0	0
+soybean	1	0	0	0	0	0	0	0
+spaghetti squash	1	0	0	0	0	0	0	0
+spelt	0	0	0	0	1	0	0	0
+spinach	1	0	0	0	0	0	0	0
+sprat	0	0	0	0	0	0	0	1
+squash	1	0	0	0	0	0	0	0
+sriracha	0	0	0	0	0	1	0	0
+ssamjang	0	0	0	0	0	1	0	0
+star anise	0	1	0	0	0	0	0	0
+star fruit	1	0	0	0	0	0	0	0
+steak sauce	0	0	0	0	0	1	0	0
+strawberry	1	0	0	0	0	0	0	0
+strawberry	1	0	0	0	0	0	0	0
+string cheese	0	0	0	0	0	0	1	0
+sumac	0	1	0	0	0	0	0	0
+sunflower butter	0	0	0	0	0	1	0	0
+sweet potato	1	0	0	0	0	0	0	0
+syrup	0	0	0	0	0	1	0	0
+tabasco pepper	1	0	0	0	0	0	0	0
+tahini	0	0	0	0	0	1	0	0
+tamarillo	1	0	0	0	0	0	0	0
+tamarind	0	1	0	0	0	0	0	0
+tandoori masala	0	1	0	0	0	0	0	0
+tangerine	1	0	0	0	0	0	0	0
+tangerine	1	0	0	0	0	0	0	0
+taro	1	0	0	0	0	0	0	0
+tart cherry	1	0	0	0	0	0	0	0
+tartar sauce	0	0	0	0	0	1	0	0
+tat soi	1	0	0	0	0	0	0	0
+teaberry	1	0	0	0	0	0	0	0
+teff	0	0	0	0	1	0	0	0
+teriyaki sauce	0	0	0	0	0	1	0	0
+thyme	0	1	0	0	0	0	0	0
+thyme	1	0	0	0	0	0	0	0
+tigernut	0	0	1	0	0	0	0	0
+tilapia	0	0	0	0	0	0	0	1
+tobiko	0	0	0	0	0	0	0	1
+tomato	1	0	0	0	0	0	0	0
+tomato	1	0	0	0	0	0	0	0
+tomato puree	0	0	0	0	0	1	0	0
+tomato sauce	0	0	0	0	0	1	0	0
+topinambur	1	0	0	0	0	0	0	0
+trout	0	0	0	0	0	0	0	1
+tubers	1	0	0	0	0	0	0	0
+tuna	0	0	0	0	0	0	0	1
+turbot	0	0	0	0	0	0	0	1
+turkey	0	0	0	1	0	0	0	0
+turmeric	0	1	0	0	0	0	0	0
+turnip	1	0	0	0	0	0	0	0
+ube	1	0	0	0	0	0	0	0
+ugli fruit	1	0	0	0	0	0	0	0
+veal	0	0	0	1	0	0	0	0
+venison	0	0	0	1	0	0	0	0
+walnut	0	0	1	0	0	0	0	0
+walnut	0	0	1	0	0	0	0	0
+wasabi	1	0	0	0	0	0	0	0
+water buffalo cheese	0	0	0	0	0	0	1	0
+water chestnut	1	0	0	0	0	0	0	0
+watercress	1	0	0	0	0	0	0	0
+watermelon	1	0	0	0	0	0	0	0
+watermelon	1	0	0	0	0	0	0	0
+weisswurst	0	0	0	1	0	0	0	0
+wheat	0	0	0	0	1	0	0	0
+white radish	1	0	0	0	0	0	0	0
+whitefish	0	0	0	0	0	0	0	1
+whiting	0	0	0	0	0	0	0	1
+wild rice	0	0	0	0	1	0	0	0
+wildberry	1	0	0	0	0	0	0	0
+yak milk cheese	0	0	0	0	0	0	1	0
+yam	1	0	0	0	0	0	0	0
+yellow soybean paste	0	0	0	0	0	1	0	0
+yogurt	0	0	0	0	0	0	1	0
+yuzukoshō	0	0	0	0	0	1	0	0
+zucchini	1	0	0	0	0	0	0	0

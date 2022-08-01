@@ -7,6 +7,8 @@ import random
 
 RES_DIR = "resources"
 ITEM_TYPES = {"color": "colors.tsv",
+              "flavor": "flavors.tsv",
+              "food": "foods.tsv",
               "zip code": "zip_codes.tsv"
              }
 

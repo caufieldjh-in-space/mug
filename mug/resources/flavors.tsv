@@ -1,0 +1,172 @@
+id	basic flavor	consistency	sweet	liqueur	savory	coffee	wellness	exotic
+Alpha-GPC	0	0	0	0	0	0	1	0
+B vitamin	0	0	0	0	0	0	1	0
+Baja Blast	0	0	0	0	0	0	0	1
+Boston cream doughnut	0	0	1	0	0	0	0	0
+CBD	0	0	0	0	0	0	1	0
+Code Red	0	0	0	0	0	0	0	1
+Cointreau	0	0	0	1	0	0	0	0
+Creme de Menthe	0	0	0	1	0	0	0	0
+Live Wire	0	0	0	0	0	0	0	1
+MCT oil	0	0	0	0	0	0	1	0
+Maui Burst	0	0	0	0	0	0	0	1
+Overdrive	0	0	0	0	0	0	0	1
+Pitch Black	0	0	0	0	0	0	0	1
+Sambuca	0	0	0	1	0	0	0	0
+Taurine	0	0	0	0	0	0	1	0
+Voltage	0	0	0	0	0	0	0	1
+acidic	1	0	0	0	0	0	0	0
+activated charcoal	0	0	0	0	0	0	1	0
+aloe vera	0	0	0	0	0	0	1	0
+amaretto	0	0	1	1	0	0	0	0
+antioxidants	0	0	0	0	0	0	1	0
+artificially-sweetened	0	0	0	0	0	0	1	0
+astringent	1	0	0	0	0	0	0	0
+bacon	0	0	0	0	0	0	0	0
+balanced	1	0	0	0	0	0	0	0
+barrel-aged	0	0	0	0	1	0	0	0
+bavarian cream	0	0	1	0	0	0	0	0
+biotin	0	0	0	0	0	0	1	0
+birthday cake	0	0	1	0	0	0	0	0
+bitter	1	0	0	0	0	0	0	0
+black licorice	0	0	1	0	0	0	0	0
+botanicals	0	0	0	0	0	0	1	0
+bourbon	0	0	0	1	0	0	0	0
+brown sugar	0	0	1	0	0	0	0	0
+bubblegum	0	0	1	0	0	0	0	0
+butter pecan	0	0	1	0	0	0	0	0
+butter rum	0	0	1	1	0	0	0	0
+butterscotch	0	0	1	0	0	0	0	0
+buttery	1	0	0	0	0	0	0	0
+caffeine	0	0	0	0	0	0	1	0
+cake batter	0	0	1	0	0	0	0	0
+candy corn	0	0	1	0	0	0	0	0
+cappuchino	0	0	0	0	0	1	0	0
+carajillo	0	0	0	1	0	0	0	0
+caramel	0	0	1	0	0	0	0	0
+caramel apple	0	0	1	0	0	0	0	0
+carrot cake	0	0	1	0	0	0	0	0
+chancaca	0	0	1	0	0	0	0	0
+charcoal	1	0	0	0	0	0	0	0
+cheesecake	0	0	1	0	0	0	0	0
+cherry cola	0	0	1	0	0	0	0	0
+chewy	1	1	0	0	0	0	0	0
+chocolate	0	0	1	0	0	0	0	0
+chocolate milkshake	0	0	1	0	0	0	0	0
+chocolate mint	0	0	1	0	0	0	0	0
+cinnamon roll	0	0	1	0	0	0	0	0
+citrus	1	0	0	0	0	0	0	0
+clean	0	0	0	0	0	0	1	0
+cloying	1	0	0	0	0	0	0	0
+coffee	0	0	0	0	0	1	0	0
+collagen	0	0	0	0	0	0	1	0
+complex	1	0	0	0	0	0	0	0
+cookie dough	0	0	1	0	0	0	0	0
+cookies n' cream	0	0	1	0	0	0	0	0
+cotton candy	0	0	1	0	0	0	0	0
+cream soda	0	0	1	0	0	0	0	0
+creamy	1	0	0	0	0	0	0	0
+creamy	1	1	0	0	0	0	0	0
+crisp	1	0	0	0	0	0	0	0
+crumbled	0	1	0	0	0	0	0	0
+crème de cassis	0	0	0	1	0	0	0	0
+doughnut	0	0	1	0	0	0	0	0
+drinkable	0	1	0	0	0	0	0	0
+dry	1	0	0	0	0	0	0	0
+earthy	1	0	0	0	0	0	0	0
+egg nog	0	0	1	1	0	0	0	0
+elegant	1	0	0	0	0	0	0	0
+energy boost	0	0	0	0	0	0	1	0
+espresso	0	0	0	0	0	1	0	0
+firm	1	0	0	0	0	0	0	0
+flabby	1	0	0	0	0	0	0	0
+flan	0	0	1	0	0	0	0	0
+frosting	0	0	1	0	0	0	0	0
+fruit curd	0	0	1	0	0	0	0	0
+fruit punch	0	0	1	0	0	0	0	0
+fruit-forward	1	0	0	0	0	0	0	0
+fruity	1	0	0	0	0	0	0	0
+fudge	0	0	1	0	0	0	0	0
+fudge ripple	0	0	1	0	0	0	0	0
+functional botanical	0	0	0	0	0	0	1	0
+funky	1	0	0	0	0	0	0	0
+glucose	0	0	1	0	0	0	0	0
+grassy	1	0	0	0	0	0	0	0
+gummy	1	1	0	0	0	0	0	0
+herbaceous	1	0	0	0	0	0	0	0
+hokey pokey	0	0	1	0	0	0	0	0
+honey	0	0	1	0	0	0	0	0
+honey liqueur 	0	0	1	1	0	0	0	0
+hops	0	0	0	0	1	0	0	0
+horchata	0	0	0	1	0	0	0	0
+hydrogen	0	0	0	0	0	0	1	0
+immunity boost	0	0	0	0	0	0	1	0
+ion	0	0	0	0	0	0	1	0
+irish cream	0	0	1	1	0	0	0	0
+jammy	1	0	0	0	0	0	0	0
+juicy	1	0	0	0	0	0	0	0
+latik	0	0	1	0	0	0	0	0
+latte	0	0	0	0	0	1	0	0
+lemon custard	0	0	1	0	0	0	0	0
+locally-sourced	0	0	0	0	0	0	1	0
+low fat	0	0	0	0	0	0	1	0
+low sugar	0	0	0	0	0	0	1	0
+macchiato	0	0	0	0	0	1	0	0
+marshmallow	0	0	1	0	0	0	0	0
+melatonin	0	0	0	0	0	0	1	0
+metabolism boost	0	0	0	0	0	0	1	0
+mocha	0	0	1	0	0	0	0	0
+mocha	0	0	1	0	0	1	0	0
+mojito	0	0	0	1	0	0	0	0
+molasses	0	0	1	0	0	0	0	0
+molasses	0	0	1	0	0	0	0	0
+molten chocolate	0	0	1	0	0	0	0	0
+non-dairy	0	0	0	0	0	0	1	0
+nootropic	0	0	0	0	0	0	1	0
+oak	0	0	0	0	1	0	0	0
+oak-aged	0	0	0	0	1	0	0	0
+oxygen	0	0	0	0	0	0	1	0
+pH-balance	0	0	0	0	0	0	1	0
+peanut butter	0	0	1	0	0	0	0	0
+peppermint schnapps	0	0	0	1	0	0	0	0
+plant-based	0	0	0	0	0	0	1	0
+powerful	1	0	0	0	0	0	0	0
+probiotic	0	0	0	0	0	0	1	0
+pureed	0	1	0	0	0	0	0	0
+refined	1	0	0	0	0	0	0	0
+rich	1	0	0	0	0	0	0	0
+rocky road	0	0	1	0	0	0	0	0
+rum	0	0	0	1	0	0	0	0
+s'mores	0	0	1	0	0	0	0	0
+salted mocha	0	0	1	0	0	1	0	0
+salty	1	0	0	0	0	0	0	0
+savory	1	0	0	0	0	0	0	0
+smoky	1	0	0	0	0	0	0	0
+smooth	1	0	0	0	0	0	0	0
+sour	1	0	0	0	0	0	0	0
+spicy	1	0	0	0	0	0	0	0
+squeezable	0	1	0	0	0	0	0	0
+stracciatella	0	0	1	0	0	0	0	0
+strawberry milkshake	0	0	1	0	0	0	0	0
+strudel	0	0	1	0	0	0	0	0
+sugar	0	0	1	0	0	0	0	0
+superfood	0	0	0	0	0	0	1	0
+supplement	0	0	0	0	0	0	1	0
+sustainable	0	0	0	0	0	0	1	0
+sweet	1	0	0	0	0	0	0	0
+tannic	1	0	0	0	0	0	0	0
+tequila	0	0	0	1	0	0	0	0
+toasty	1	0	0	0	0	0	0	0
+toffee	0	0	1	0	0	0	0	0
+treacle	0	0	1	0	0	0	0	0
+vanilla	0	0	1	0	0	0	0	0
+vanilla latte	0	0	1	0	0	1	0	0
+vegetal	1	0	0	0	0	0	0	0
+velvety	1	0	0	0	0	0	0	0
+vitamin boost	0	0	0	0	0	0	1	0
+wellness	0	0	0	0	0	0	1	0
+wet walnut	0	0	1	0	0	0	0	0
+whey protein	0	0	0	0	0	0	1	0
+yeasty	1	0	0	0	0	0	0	0
+zero gluten	0	0	0	0	0	0	1	0
+zero sugar	0	0	0	0	0	0	1	0
