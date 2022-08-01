@@ -15,6 +15,7 @@ ITEM_TYPES = {"beverage": "beverages.tsv",
               "home electronic": "home_electronics.tsv",
               "image": "images.tsv",
               "mood": "moods.tsv",
+              "technology": "technologies.tsv",
               "zip code": "zip_codes.tsv"
              }
 
