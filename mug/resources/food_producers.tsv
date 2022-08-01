@@ -1,0 +1,24 @@
+id	beverage_dairy	beverage_dairylike	beverage_beer	beverage_wine	beverage_juice	beverage_water	beverage_softdrink	beverage_coffee	beverage_energydrink	beverage_proteindrink	beverage_tea	beverage_alcohol	beverage_otherdrink
+beverages	0	0	0	0	1	1	1	0	1	1	0	1	1
+brewers	0	0	1	0	0	0	0	1	0	0	0	0	0
+brewing	0	0	1	0	0	0	0	0	0	0	0	0	0
+cola	0	0	0	0	0	0	1	0	1	0	0	0	0
+craft brewing	0	0	1	0	0	0	0	0	0	0	0	0	0
+dairies	1	0	0	0	0	0	0	0	0	0	0	0	0
+distillers	0	0	0	0	0	0	0	0	0	0	0	1	0
+energy	0	0	0	0	0	0	0	0	1	1	0	0	0
+estates	0	0	0	1	0	0	0	1	0	0	0	0	0
+farms	1	1	0	1	1	0	1	1	0	1	1	0	0
+fitness	0	1	0	0	1	1	0	0	1	1	0	0	0
+juicery	0	0	0	0	1	0	0	0	0	0	0	0	0
+mountain	0	0	0	0	0	1	0	1	1	0	1	0	0
+orchards	0	0	0	0	1	0	0	0	0	0	0	0	0
+roasters	0	0	0	0	0	0	0	1	0	0	0	0	0
+spirits	0	0	0	0	0	0	0	0	0	0	0	1	0
+springs	0	0	0	0	0	1	0	0	0	0	0	0	0
+tea	0	0	0	0	0	0	0	0	0	0	1	0	0
+tea growers	0	0	0	0	0	0	0	0	0	0	1	0	0
+valley	1	1	1	1	1	1	0	1	0	0	1	1	1
+vinyards	0	0	0	1	0	0	0	0	0	0	0	0	0
+wellness	0	1	0	0	1	1	0	0	1	1	0	0	0
+wines	0	0	0	1	0	0	0	0	0	0	0	0	0

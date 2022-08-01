@@ -6,9 +6,11 @@ from pathlib import Path
 import random
 
 RES_DIR = "resources"
-ITEM_TYPES = {"color": "colors.tsv",
+ITEM_TYPES = {"beverage": "beverages.tsv",
+              "color": "colors.tsv",
               "flavor": "flavors.tsv",
               "food": "foods.tsv",
+              "food producer": "food_producers.tsv",
               "zip code": "zip_codes.tsv"
              }
 
