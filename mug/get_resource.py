@@ -1,9 +1,8 @@
 """Utilities to get text from resources."""
 
-from distutils.command.clean import clean
 import heapq
-from pathlib import Path
 import random
+from pathlib import Path
 
 RES_DIR = "resources"
 ITEM_TYPES = {"beverage": "beverages.tsv",
