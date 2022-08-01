@@ -11,6 +11,7 @@ ITEM_TYPES = {"beverage": "beverages.tsv",
               "flavor": "flavors.tsv",
               "food": "foods.tsv",
               "food producer": "food_producers.tsv",
+              "furniture": "furniture.tsv",
               "image": "images.tsv",
               "zip code": "zip_codes.tsv"
              }
