@@ -19,13 +19,13 @@ class Company(MUGProduct):
         self.address = None
         self.industry = None
         self.slogan = None
+        self.logo_description = None
 
     def make_company_name(self) -> str:
         name = ""
 
-        sample = get_items('mood',1)
-        name = sample[0]['id']
-
-        name = name.title()
+        mood = get_items('mood',1)[0]['id'].title()
+        animal = get_items('animal',1)[0]['id'].title().replace(" ", "")
+        name = f"{mood}{animal}"
 
         return name

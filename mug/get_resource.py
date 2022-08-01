@@ -5,7 +5,8 @@ import random
 from pathlib import Path
 
 RES_DIR = "resources"
-ITEM_TYPES = {"beverage": "beverages.tsv",
+RES_TYPES = { "animal": "animals.tsv",
+              "beverage": "beverages.tsv",
               "color": "colors.tsv",
               "flavor": "flavors.tsv",
               "food": "foods.tsv",
@@ -18,12 +19,12 @@ ITEM_TYPES = {"beverage": "beverages.tsv",
               "zip code": "zip_codes.tsv"
              }
 
-def get_items(item_type: str,
+def get_items(res_type: str,
               count: int = 1,
               ) -> list:
 
     mod_path = Path(__file__).parent
-    res_file = (mod_path / RES_DIR / ITEM_TYPES[item_type]).resolve()
+    res_file = (mod_path / RES_DIR / RES_TYPES[res_type]).resolve()
 
     with res_file.open() as infile:
         header = (infile.readline().rstrip()).split("\t")
