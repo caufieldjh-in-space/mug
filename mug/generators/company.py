@@ -1,11 +1,15 @@
 """company.py - generate company names + metadata"""
 
-from mug.get_resource import get_items
+import random
+
 from mug.generators.generic import MUGProduct
+from mug.get_resource import get_items
+from mug.utils.vary_text import all_upper, controlled_misspell, uncontrolled_misspell
+
 
 class Company(MUGProduct):
-    """ Generate a company. 
-    
+    """Generate a company.
+
     By default, this only includes the name.
     Methods may be called to generate
     additional metadata; they are initialized
@@ -22,10 +26,21 @@ class Company(MUGProduct):
         self.logo_description = None
 
     def make_company_name(self) -> str:
-        name = ""
 
-        mood = get_items('mood',1)[0]['id'].title()
-        animal = get_items('animal',1)[0]['id'].title().replace(" ", "")
-        name = f"{mood}{animal}"
+        part_types = ["animal", "color", "mood"]
+
+        part1 = get_items(random.choice(part_types), 1)[0]["id"].title()
+        part2 = get_items(random.choice(part_types), 1)[0]["id"].title()
+        name = f"{part1}{part2}"
+        name = name.replace(" ", "")
+
+        if random.randint(0,6) == 0:
+            name = controlled_misspell(name)
+
+        if random.randint(0,6) == 0:
+            name = uncontrolled_misspell(name)
+
+        if random.randint(0,9) == 0:
+            name = all_upper(name)
 
         return name
