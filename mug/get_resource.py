@@ -5,13 +5,17 @@ import random
 from pathlib import Path
 
 RES_DIR = "resources"
+# TODO: move these types out to their own file
 RES_TYPES = { "animal": "animals.tsv",
               "beverage": "beverages.tsv",
+              "clothes": "clothes.tsv",
               "color": "colors.tsv",
+              "company postfix": "company_postfixes.tsv",
               "flavor": "flavors.tsv",
               "food": "foods.tsv",
               "food producer": "food_producers.tsv",
               "furniture": "furniture.tsv",
+              "generic place": "generic_places.tsv",
               "home electronic": "home_electronics.tsv",
               "image": "images.tsv",
               "mood": "moods.tsv",

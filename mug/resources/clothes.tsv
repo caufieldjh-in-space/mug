@@ -1,0 +1,64 @@
+id	hat	shirt	pants	underwear
+T-shirt	0	1	0	0
+V-neck shirt	0	1	0	0
+ascot cap	1	0	0	0
+balaclava	1	0	0	0
+baseball cap	1	0	0	0
+baseball jersey	0	1	0	0
+basketball jersey	0	1	0	0
+belly shirt	0	1	0	0
+beret	1	0	0	0
+blouse	0	1	0	0
+boater hat	1	0	0	0
+boonie hat	1	0	0	0
+bowler hat	1	0	0	0
+bra	0	0	0	1
+bucket hat	1	0	0	0
+button-down shirt	0	1	0	0
+campaign hat	1	0	0	0
+cap	1	0	0	0
+chullo	1	0	0	0
+construction helmet	1	0	0	0
+dress shirt	0	1	0	0
+fedora	1	0	0	0
+flat cap	1	0	0	0
+halter top	0	1	0	0
+hard hat	1	0	0	0
+nightshirt	0	1	0	0
+pair of bell-bottom pants	0	0	1	0
+pair of bermuda shorts	0	0	1	0
+pair of board shorts	0	0	1	0
+pair of boxers	0	0	0	1
+pair of boyshorts	0	0	1	0
+pair of briefs	0	0	0	1
+pair of capri pants	0	0	1	0
+pair of cargo pants	0	0	1	0
+pair of chinos	0	0	1	0
+pair of cycling shorts	0	0	1	0
+pair of drawstring pants	0	0	1	0
+pair of harem pants	0	0	1	0
+pair of jeans	0	0	1	0
+pair of jeggings	0	0	1	0
+pair of khaki pants	0	0	1	0
+pair of leggings	0	0	1	0
+pair of pajama pants	0	0	1	0
+pair of panties	0	0	0	1
+pair of pants	0	0	1	0
+pair of shorts	0	0	1	0
+pair of suit pants	0	0	1	0
+pair of sweatpants	0	0	1	0
+pair of thong underwear	0	0	0	1
+pair of track pants	0	0	1	0
+pocket T-shirt	0	1	0	0
+polo shirt	0	1	0	0
+sailor's cap	1	0	0	0
+shirt	0	1	0	0
+short sleeve shirt	0	1	0	0
+skirt	0	0	1	0
+skort	0	0	1	0
+sports bra	0	0	0	1
+sun hat	1	0	0	0
+sun visor	1	0	0	0
+sweatshirt	0	1	0	0
+tube top	0	1	0	0
+tunic	0	1	0	0

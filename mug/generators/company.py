@@ -27,7 +27,11 @@ class Company(MUGProduct):
 
     def make_company_name(self) -> str:
 
-        part_types = ["animal", "color", "mood"]
+        part_types = ["animal",
+                      "color",
+                      "generic place",
+                      "mood"
+                      ]
 
         part1 = get_items(random.choice(part_types), 1)[0]["id"].title()
         part2 = get_items(random.choice(part_types), 1)[0]["id"].title()
@@ -42,5 +46,9 @@ class Company(MUGProduct):
 
         if random.randint(0,9) == 0:
             name = all_upper(name)
+
+        if random.randint(0,3) == 0:
+            postfix = get_items("company postfix", 1)[0]["id"]
+            name = f"{name} {postfix}"
 
         return name
