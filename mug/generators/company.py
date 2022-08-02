@@ -43,8 +43,11 @@ class Company(MUGProduct):
                 name = name + random.choice(string.ascii_uppercase)
         elif tc == 1:
             part1 = get_items(random.choice(part_types), 1)[0]["id"].title()
-            part2 = get_items(random.choice(part_types), 1)[0]["id"].title()
-            name = f"{part1}{part2}"
+            if random.randint(0,4) == 0:
+                name = f"{part1}"
+            else:
+                part2 = get_items(random.choice(part_types), 1)[0]["id"].title()
+                name = f"{part1} {part2}"
         elif tc == 2:
             parts = get_items("surname", 2)
             part1 = parts[0]["id"].title()
