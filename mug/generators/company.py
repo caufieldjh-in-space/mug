@@ -29,14 +29,26 @@ class Company(MUGProduct):
 
         part_types = ["animal",
                       "color",
+                      "forename",
                       "generic place",
-                      "mood"
+                      "mood",
+                      "surname"
                       ]
 
-        part1 = get_items(random.choice(part_types), 1)[0]["id"].title()
-        part2 = get_items(random.choice(part_types), 1)[0]["id"].title()
-        name = f"{part1}{part2}"
-        name = name.replace(" ", "")
+        tc = random.randint(0,1)
+        if tc == 0:
+            part1 = get_items(random.choice(part_types), 1)[0]["id"].title()
+            part2 = get_items(random.choice(part_types), 1)[0]["id"].title()
+            name = f"{part1}{part2}"
+        elif tc == 1:
+            parts = get_items("forename", 2)
+            part1 = parts[0]["id"].title()
+            part2 = parts[1]["id"].title()
+            conn = random.choice(["&","and"])
+            name = f"{part1} {conn} {part2}"
+
+        if random.randint(0,4) > 0:
+            name = name.replace(" ", "")
 
         if random.randint(0,6) == 0:
             name = controlled_misspell(name)

@@ -14,11 +14,13 @@ RES_TYPES = { "animal": "animals.tsv",
               "flavor": "flavors.tsv",
               "food": "foods.tsv",
               "food producer": "food_producers.tsv",
+              "forename": "forenames.tsv",
               "furniture": "furniture.tsv",
               "generic place": "generic_places.tsv",
               "home electronic": "home_electronics.tsv",
               "image": "images.tsv",
               "mood": "moods.tsv",
+              "surname": "surnames.tsv",
               "technology": "technologies.tsv",
               "zip code": "zip_codes.tsv"
              }
