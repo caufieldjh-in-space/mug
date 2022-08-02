@@ -44,7 +44,7 @@ class Company(MUGProduct):
             parts = get_items("forename", 2)
             part1 = parts[0]["id"].title()
             part2 = parts[1]["id"].title()
-            conn = random.choice(["&","and"])
+            conn = random.choice(["&","And"])
             name = f"{part1} {conn} {part2}"
 
         if random.randint(0,4) > 0:
