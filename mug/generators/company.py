@@ -30,10 +30,15 @@ class Company(MUGProduct):
 
         part_types = ["animal",
                       "color",
+                      "fictional beast",
+                      "fictional character",
                       "forename",
                       "generic place",
                       "mood",
-                      "surname"
+                      "surname",
+                      "us states",
+                      "world cities",
+                      "world countries"
                       ]
 
         tc = random.randint(0,2)
@@ -62,7 +67,7 @@ class Company(MUGProduct):
             else:
                 name = f"{part1} {conn} {part2}"
 
-        if random.randint(0,4) > 0:
+        if random.randint(0,8) > 0:
             name = name.replace(" ", "")
 
         if random.randint(0,6) == 0:
@@ -74,7 +79,7 @@ class Company(MUGProduct):
         if random.randint(0,9) == 0:
             name = all_upper(name)
 
-        if random.randint(0,3) == 0:
+        if random.randint(0,2) == 0:
             postfix = get_items("company postfix", 1)[0]["id"]
             name = f"{name} {postfix}"
 

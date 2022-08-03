@@ -11,6 +11,8 @@ RES_TYPES = { "animal": "animals.tsv",
               "clothes": "clothes.tsv",
               "color": "colors.tsv",
               "company postfix": "company_postfixes.tsv",
+              "fictional beast": "fictional_beasts.tsv",
+              "fictional character": "fictional_characters.tsv",
               "flavor": "flavors.tsv",
               "food": "foods.tsv",
               "food producer": "food_producers.tsv",
@@ -22,6 +24,9 @@ RES_TYPES = { "animal": "animals.tsv",
               "mood": "moods.tsv",
               "surname": "surnames.tsv",
               "technology": "technologies.tsv",
+              "us states": "us_states.tsv",
+              "world cities": "world_cities.tsv",
+              "world countries": "world_countries.tsv",
               "zip code": "zip_codes.tsv"
              }
 
