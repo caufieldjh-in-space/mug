@@ -7,9 +7,9 @@ from pathlib import Path
 RES_DIR = "resources"
 # TODO: move these types out to their own file
 # TODO: more resources!
-# TODO: rebuild the industry names list and add
 RES_TYPES = { "animal": "animals.tsv",
               "beverage": "beverages.tsv",
+              "business type": "business_types.tsv",
               "clothes": "clothes.tsv",
               "color": "colors.tsv",
               "company postfix casual": "company_postfixes_casual.tsv",
@@ -24,6 +24,7 @@ RES_TYPES = { "animal": "animals.tsv",
               "generic place": "generic_places.tsv",
               "home electronic": "home_electronics.tsv",
               "image": "images.tsv",
+              "industry": "industries.tsv",
               "mood": "moods.tsv",
               "surname": "surnames.tsv",
               "technology": "technologies.tsv",
