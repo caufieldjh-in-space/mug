@@ -28,6 +28,8 @@ class Company(MUGProduct):
 
     def make_company_name(self) -> str:
 
+        #TODO: add portmanteu generator
+
         part_types = ["animal",
                       "color",
                       "fictional beast",
@@ -67,7 +69,7 @@ class Company(MUGProduct):
             else:
                 name = f"{part1} {conn} {part2}"
 
-        if random.randint(0,8) > 0:
+        if random.randint(0,8) == 0:
             name = name.replace(" ", "")
 
         if random.randint(0,6) == 0:
@@ -80,7 +82,11 @@ class Company(MUGProduct):
             name = all_upper(name)
 
         if random.randint(0,2) == 0:
-            postfix = get_items("company postfix", 1)[0]["id"]
-            name = f"{name} {postfix}"
+            if random.randint(0,5) == 0:
+                postfix = get_items("company postfix casual", 1)[0]["id"]
+                name = f"{name}{postfix}"
+            else:
+                postfix = get_items("company postfix formal", 1)[0]["id"]
+                name = f"{name} {postfix}"
 
         return name
