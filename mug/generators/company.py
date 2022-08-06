@@ -20,11 +20,17 @@ class Company(MUGProduct):
     def __init__(self):
         """Init - generate a name"""
         super().__init__()
+        self.industry = self.make_industry_name()
         self.name = self.make_company_name()
         self.address = None
-        self.industry = None
         self.slogan = None
         self.logo_description = None
+
+    def make_industry_name(self) -> str:
+
+        industry = get_items(random.choice(["business type", "industry"]), 1)[0]["id"]
+
+        return industry
 
     def make_company_name(self) -> str:
 
@@ -93,8 +99,12 @@ class Company(MUGProduct):
 
         #TODO: align this with the industry object property
         if random.randint(0,3) == 0:
-            parttype = random.choice(["business type", "industry"])
-            busindtype = get_items(parttype, 1)[0]["id"]
+            if self.industry:
+                busindtype = self.industry
+            else:
+                parttype = random.choice(["business type", "industry"])
+                busindtype = get_items(parttype, 1)[0]["id"]
+                self.industry = busindtype
             name = f"{name} {busindtype}"
 
         if random.randint(0,2) == 0:
