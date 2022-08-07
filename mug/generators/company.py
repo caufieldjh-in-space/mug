@@ -22,15 +22,17 @@ class Company(MUGProduct):
         super().__init__()
         self.industry = self.make_industry_name()
         self.name = self.make_company_name()
-        self.address = None
-        self.slogan = None
-        self.logo_description = None
+        self.address = self.make_company_address()
+        self.slogan = self.make_company_slogan()
+        self.logo_description = self.make_company_logo_description()
+
 
     def make_industry_name(self) -> str:
 
         industry = get_items(random.choice(["business type", "industry"]), 1)[0]["id"]
 
         return industry
+
 
     def make_company_name(self) -> str:
 
@@ -112,3 +114,48 @@ class Company(MUGProduct):
             name = f"{name} {postfix}"
 
         return name
+
+
+    def make_company_address(self) -> str:
+
+        # TODO: see wastegenerator/waste_text_generators.py for address generator
+
+        address = ""
+
+        return address
+
+
+    def make_company_slogan(self) -> str:
+
+        nounchoice = random.choice([self.name,
+                                    self.industry])
+        if isinstance(nounchoice, str):
+            noun = nounchoice
+
+        slogbase = get_items("slogan", 1)[0]["id"]
+
+        slogan = f"{slogbase} {noun}"
+
+        for term in ["Service","Store"]:
+            if slogan.endswith(term):
+                slogan = " ".join((slogan.split())[:-1])
+
+        return slogan
+
+
+    def make_company_logo_description(self) -> str:
+
+        logobase = get_items("image", 1)[0]["id"]
+
+        if random.randint(0,1) == 0:
+            descriptor_choice = random.choice(["color", "mood"])
+            descriptor = get_items(descriptor_choice, 1)[0]["id"]
+            logo_description = f"A {descriptor} {logobase}"
+        else:
+            if random.randint(0,1) == 0:
+                count = random.choice(["Two","Three","Four","Five","Six"])
+                logo_description = f"{count} {logobase}s"
+            else:
+                logo_description = f"A {logobase}"
+
+        return logo_description

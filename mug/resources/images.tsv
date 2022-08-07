@@ -37,7 +37,7 @@ anthropomorphic food-based superhero	0	0	0	0	0	0	1	0	0	0
 anthropomorphic plane	0	0	0	0	0	0	1	0	0	0
 anxious face with sweat symbol	0	0	0	0	0	0	0	0	0	1
 articulated lorry symbol	0	0	0	0	0	0	0	0	0	1
-atom symbol symbol	0	0	0	0	0	0	0	0	0	1
+atom symbol	0	0	0	0	0	0	0	0	0	1
 auto rickshaw symbol	0	0	0	0	0	0	0	0	0	1
 automobile symbol	0	0	0	0	0	0	0	0	0	1
 baby	0	0	0	1	0	0	0	0	0	0
@@ -63,10 +63,10 @@ bellhop bell symbol	0	0	0	0	0	0	0	0	0	1
 beverage box symbol	0	0	0	0	0	0	0	0	0	1
 bicycle symbol	0	0	0	0	0	0	0	0	0	1
 biohazard symbol	0	0	0	0	0	0	0	0	0	1
-black flag symbol	0	0	0	0	0	0	0	0	0	1
-black heart symbol	0	0	0	0	0	0	0	0	0	1
-black large square symbol	0	0	0	0	0	0	0	0	0	1
-black medium square symbol	0	0	0	0	0	0	0	0	0	1
+flag symbol	0	0	0	0	0	0	0	0	0	1
+heart symbol	0	0	0	0	0	0	0	0	0	1
+large square	0	0	0	0	0	0	0	0	0	1
+medium square	0	0	0	0	0	0	0	0	0	1
 black nib symbol	0	0	0	0	0	0	0	0	0	1
 black small square symbol	0	0	0	0	0	0	0	0	0	1
 blueberries symbol	0	0	0	0	0	0	0	0	0	1
@@ -106,13 +106,13 @@ chestnut symbol	0	0	0	0	0	0	0	0	0	1
 chicken	0	0	1	0	0	0	0	0	0	0
 chicken symbol	0	0	0	0	0	0	0	0	0	1
 child	0	0	0	1	0	0	0	0	0	0
-chipmunk symbol	0	0	0	0	0	0	0	0	0	1
-church symbol	0	0	0	0	0	0	0	0	0	1
+chipmunk	0	0	0	0	0	0	0	0	0	1
+church	0	0	0	0	0	0	0	0	0	1
 circle	1	0	0	0	0	0	0	0	0	0
-circled M symbol	0	0	0	0	0	0	0	0	0	1
-cityscape symbol	0	0	0	0	0	0	0	0	0	1
-clamp symbol	0	0	0	0	0	0	0	0	0	1
-classical building symbol	0	0	0	0	0	0	0	0	0	1
+circled M	0	0	0	0	0	0	0	0	0	1
+cityscape	0	0	0	0	0	0	0	0	0	1
+clamp	0	0	0	0	0	0	0	0	0	1
+classical building	0	0	0	0	0	0	0	0	0	1
 clockwise vertical arrows symbol	0	0	0	0	0	0	0	0	0	1
 cloud symbol	0	0	0	0	0	0	0	0	0	1
 cloud with lightning and rain symbol	0	0	0	0	0	0	0	0	0	1
@@ -131,27 +131,27 @@ copyright symbol	0	0	0	0	0	0	0	0	0	1
 couch and lamp symbol	0	0	0	0	0	0	0	0	0	1
 counterclockwise arrows button symbol	0	0	0	0	0	0	0	0	0	1
 cow	0	0	1	0	0	0	0	0	0	0
-cowboy hat face symbol	0	0	0	0	0	0	0	0	0	1
-crab symbol	0	0	0	0	0	0	0	0	0	1
-crayon symbol	0	0	0	0	0	0	0	0	0	1
-crescent moon symbol	0	0	0	0	0	0	0	0	0	1
+cowboy hat face	0	0	0	0	0	0	0	0	0	1
+crab	0	0	0	0	0	0	0	0	0	1
+crayon	0	0	0	0	0	0	0	0	0	1
+crescent moon	0	0	0	0	0	0	0	0	0	1
 cricket game symbol	0	0	0	0	0	0	0	0	0	1
 croissant symbol	0	0	0	0	0	0	0	0	0	1
 cross mark button symbol	0	0	0	0	0	0	0	0	0	1
 cross mark symbol	0	0	0	0	0	0	0	0	0	1
 crossed swords symbol	0	0	0	0	0	0	0	0	0	1
-crystal ball symbol	0	0	0	0	0	0	0	0	0	1
-cupcake symbol	0	0	0	0	0	0	0	0	0	1
-curling stone symbol	0	0	0	0	0	0	0	0	0	1
+crystal ball	0	0	0	0	0	0	0	0	0	1
+cupcake	0	0	0	0	0	0	0	0	0	1
+curling stone	0	0	0	0	0	0	0	0	0	1
 curly loop symbol	0	0	0	0	0	0	0	0	0	1
 cyclone symbol	0	0	0	0	0	0	0	0	0	1
 dagger symbol	0	0	0	0	0	0	0	0	0	1
 deer	0	0	1	0	0	0	0	0	0	0
-derelict house symbol	0	0	0	0	0	0	0	0	0	1
-desert island symbol	0	0	0	0	0	0	0	0	0	1
-desert symbol	0	0	0	0	0	0	0	0	0	1
-desktop computer symbol	0	0	0	0	0	0	0	0	0	1
-detective symbol	0	0	0	0	0	0	0	0	0	1
+derelict house	0	0	0	0	0	0	0	0	0	1
+desert island	0	0	0	0	0	0	0	0	0	1
+desert	0	0	0	0	0	0	0	0	0	1
+desktop computer	0	0	0	0	0	0	0	0	0	1
+detective	0	0	0	0	0	0	0	0	0	1
 diamond	1	0	0	0	0	0	0	0	0	0
 diamond suit symbol	0	0	0	0	0	0	0	0	0	1
 diving mask symbol	0	0	0	0	0	0	0	0	0	1
@@ -159,8 +159,8 @@ dizzy face symbol	0	0	0	0	0	0	0	0	0	1
 doctor	0	0	0	0	0	0	0	1	0	0
 dog symbol	0	0	0	0	0	0	0	0	0	1
 dolphin	0	0	1	0	0	0	0	0	0	0
-double curly loop symbol	0	0	0	0	0	0	0	0	0	1
-double exclamation mark symbol	0	0	0	0	0	0	0	0	0	1
+double curly loop	0	0	0	0	0	0	0	0	0	1
+double exclamation mark	0	0	0	0	0	0	0	0	0	1
 dove symbol	0	0	0	0	0	0	0	0	0	1
 down arrow symbol	0	0	0	0	0	0	0	0	0	1
 down-left arrow symbol	0	0	0	0	0	0	0	0	0	1
@@ -169,9 +169,9 @@ dragon symbol	0	0	0	0	0	0	0	0	0	1
 drop of blood symbol	0	0	0	0	0	0	0	0	0	1
 dumpling symbol	0	0	0	0	0	0	0	0	0	1
 eagle symbol	0	0	0	0	0	0	0	0	0	1
-ear symbol	0	0	0	0	0	0	0	0	0	1
-eight-pointed star symbol	0	0	0	0	0	0	0	0	0	1
-eight-spoked asterisk symbol	0	0	0	0	0	0	0	0	0	1
+ear	0	0	0	0	0	0	0	0	0	1
+eight-pointed star	0	0	0	0	0	0	0	0	0	1
+eight-spoked asterisk	0	0	0	0	0	0	0	0	0	1
 eject button symbol	0	0	0	0	0	0	0	0	0	1
 elf	0	0	0	0	0	0	1	0	0	0
 envelope symbol	0	0	0	0	0	0	0	0	0	1
@@ -194,12 +194,12 @@ factory	0	0	0	0	1	0	0	0	0	0
 fairy	0	0	0	0	0	0	1	0	0	0
 farmer	0	0	0	0	0	0	0	1	0	0
 fast-forward button symbol	0	0	0	0	0	0	0	0	0	1
-fearful face symbol	0	0	0	0	0	0	0	0	0	1
-female sign symbol	0	0	0	0	0	0	0	0	0	1
-ferry symbol	0	0	0	0	0	0	0	0	0	1
+fearful face	0	0	0	0	0	0	0	0	0	1
+female sign	0	0	0	0	0	0	0	0	0	1
+ferry	0	0	0	0	0	0	0	0	0	1
 file cabinet symbol	0	0	0	0	0	0	0	0	0	1
 film frames symbol	0	0	0	0	0	0	0	0	0	1
-film projector symbol	0	0	0	0	0	0	0	0	0	1
+film projector	0	0	0	0	0	0	0	0	0	1
 first quarter moon face symbol	0	0	0	0	0	0	0	0	0	1
 first quarter moon symbol	0	0	0	0	0	0	0	0	0	1
 fleur-de-lis symbol	0	0	0	0	0	0	0	0	0	1
@@ -218,7 +218,7 @@ full moon face symbol	0	0	0	0	0	0	0	0	0	1
 funeral urn symbol	0	0	0	0	0	0	0	0	0	1
 gardener	0	0	0	0	0	0	0	1	0	0
 gear symbol	0	0	0	0	0	0	0	0	0	1
-giraffe symbol	0	0	0	0	0	0	0	0	0	1
+giraffe	0	0	0	0	0	0	0	0	0	1
 globe showing Asia-Australia symbol	0	0	0	0	0	0	0	0	0	1
 globe showing Europe-Africa symbol	0	0	0	0	0	0	0	0	0	1
 globe with meridians symbol	0	0	0	0	0	0	0	0	0	1
@@ -233,7 +233,7 @@ heart	1	0	0	0	0	0	0	0	0	0
 heart exclamation symbol	0	0	0	0	0	0	0	0	0	1
 heart suit symbol	0	0	0	0	0	0	0	0	0	1
 hedgehog	0	0	1	0	0	0	0	0	0	0
-helicopter symbol	0	0	0	0	0	0	0	0	0	1
+helicopter	0	0	0	0	0	0	0	0	0	1
 helmet	0	0	0	0	0	0	0	0	1	0
 high voltage symbol	0	0	0	0	0	0	0	0	0	1
 hill	0	0	0	0	0	1	0	0	0	0
@@ -241,7 +241,7 @@ hindu temple symbol	0	0	0	0	0	0	0	0	0	1
 hockey puck	0	0	0	0	0	0	0	0	1	0
 hockey stick	0	0	0	0	0	0	0	0	1	0
 hole symbol	0	0	0	0	0	0	0	0	0	1
-hollow red circle symbol	0	0	0	0	0	0	0	0	0	1
+hollow red circle	0	0	0	0	0	0	0	0	0	1
 horse racing symbol	0	0	0	0	0	0	0	0	0	1
 hospital symbol	0	0	0	0	0	0	0	0	0	1
 hot dog symbol	0	0	0	0	0	0	0	0	0	1
@@ -258,12 +258,12 @@ infinity symbol	0	0	0	0	0	0	0	0	0	1
 information symbol	0	0	0	0	0	0	0	0	0	1
 island	0	0	0	0	0	1	0	0	0	0
 joker symbol	0	0	0	0	0	0	0	0	0	1
-joystick symbol	0	0	0	0	0	0	0	0	0	1
+joystick	0	0	0	0	0	0	0	0	0	1
 kaaba symbol	0	0	0	0	0	0	0	0	0	1
-kangaroo symbol	0	0	0	0	0	0	0	0	0	1
-keyboard symbol	0	0	0	0	0	0	0	0	0	1
-kick scooter symbol	0	0	0	0	0	0	0	0	0	1
-kissing face symbol	0	0	0	0	0	0	0	0	0	1
+kangaroo	0	0	0	0	0	0	0	0	0	1
+keyboard	0	0	0	0	0	0	0	0	0	1
+kick scooter	0	0	0	0	0	0	0	0	0	1
+kissing face	0	0	0	0	0	0	0	0	0	1
 kissing face with closed eyes symbol	0	0	0	0	0	0	0	0	0	1
 kissing face with smiling eyes symbol	0	0	0	0	0	0	0	0	0	1
 lab coat symbol	0	0	0	0	0	0	0	0	0	1
@@ -296,7 +296,7 @@ man dancing symbol	0	0	0	0	0	0	0	0	0	1
 mansion	0	0	0	0	1	0	0	0	0	0
 mantelpiece clock symbol	0	0	0	0	0	0	0	0	0	1
 mechanic	0	0	0	0	0	0	0	1	0	0
-medical symbol symbol	0	0	0	0	0	0	0	0	0	1
+medical symbol	0	0	0	0	0	0	0	0	0	1
 men holding hands symbol	0	0	0	0	0	0	0	0	0	1
 men's room symbol	0	0	0	0	0	0	0	0	0	1
 mermaid	0	0	0	0	0	0	1	0	0	0
@@ -313,12 +313,11 @@ motorcycle symbol	0	0	0	0	0	0	0	0	0	1
 motorway symbol	0	0	0	0	0	0	0	0	0	1
 mount fuji symbol	0	0	0	0	0	0	0	0	0	1
 mountain	0	0	0	0	0	1	0	0	0	0
-mountain symbol	0	0	0	0	0	0	0	0	0	1
 multiply symbol	0	0	0	0	0	0	0	0	0	1
 musician	0	0	0	0	0	0	0	1	0	0
 national park symbol	0	0	0	0	0	0	0	0	0	1
-neutral face symbol	0	0	0	0	0	0	0	0	0	1
-new moon face symbol	0	0	0	0	0	0	0	0	0	1
+neutral face	0	0	0	0	0	0	0	0	0	1
+new moon face	0	0	0	0	0	0	0	0	0	1
 new moon symbol	0	0	0	0	0	0	0	0	0	1
 newspaper symbol	0	0	0	0	0	0	0	0	0	1
 next track button symbol	0	0	0	0	0	0	0	0	0	1
@@ -328,8 +327,8 @@ no entry symbol	0	0	0	0	0	0	0	0	0	1
 no mobile phones symbol	0	0	0	0	0	0	0	0	0	1
 no pedestrians symbol	0	0	0	0	0	0	0	0	0	1
 office building	0	0	0	0	1	0	0	0	0	0
-oil drum symbol	0	0	0	0	0	0	0	0	0	1
-old key symbol	0	0	0	0	0	0	0	0	0	1
+oil drum	0	0	0	0	0	0	0	0	0	1
+old key	0	0	0	0	0	0	0	0	0	1
 om symbol	0	0	0	0	0	0	0	0	0	1
 oncoming automobile symbol	0	0	0	0	0	0	0	0	0	1
 oncoming bus symbol	0	0	0	0	0	0	0	0	0	1
@@ -342,11 +341,10 @@ orange circle symbol	0	0	0	0	0	0	0	0	0	1
 orthodox cross symbol	0	0	0	0	0	0	0	0	0	1
 paintbrush symbol	0	0	0	0	0	0	0	0	0	1
 palm tree symbol	0	0	0	0	0	0	0	0	0	1
-part alternation mark symbol	0	0	0	0	0	0	0	0	0	1
 partying face symbol	0	0	0	0	0	0	0	0	0	1
 passenger ship	0	0	0	0	0	0	0	0	0	1
 pause button symbol	0	0	0	0	0	0	0	0	0	1
-peace symbol symbol	0	0	0	0	0	0	0	0	0	1
+peace symbol	0	0	0	0	0	0	0	0	0	1
 peach symbol	0	0	0	0	0	0	0	0	0	1
 pear symbol	0	0	0	0	0	0	0	0	0	1
 pen symbol	0	0	0	0	0	0	0	0	0	1
@@ -367,7 +365,6 @@ person walking symbol	0	0	0	0	0	0	0	0	0	1
 pick symbol	0	0	0	0	0	0	0	0	0	1
 pickup truck symbol	0	0	0	0	0	0	0	0	0	1
 pig	0	0	1	0	0	0	0	0	0	0
-pig symbol	0	0	0	0	0	0	0	0	0	1
 pinched fingers symbol	0	0	0	0	0	0	0	0	0	1
 place of worship symbol	0	0	0	0	0	0	0	0	0	1
 play button symbol	0	0	0	0	0	0	0	0	0	1
@@ -379,7 +376,6 @@ police officer symbol	0	0	0	0	0	0	0	0	0	1
 post office symbol	0	0	0	0	0	0	0	0	0	1
 postal horn symbol	0	0	0	0	0	0	0	0	0	1
 postbox symbol	0	0	0	0	0	0	0	0	0	1
-prayer beads symbol	0	0	0	0	0	0	0	0	0	1
 pregnant woman symbol	0	0	0	0	0	0	0	0	0	1
 printer symbol	0	0	0	0	0	0	0	0	0	1
 question mark symbol	0	0	0	0	0	0	0	0	0	1
@@ -392,7 +388,7 @@ raised fist symbol	0	0	0	0	0	0	0	0	0	1
 ram symbol	0	0	0	0	0	0	0	0	0	1
 record button symbol	0	0	0	0	0	0	0	0	0	1
 rectangle	1	0	0	0	0	0	0	0	0	0
-recycling symbol symbol	0	0	0	0	0	0	0	0	0	1
+recycling symbol	0	0	0	0	0	0	0	0	0	1
 red envelope symbol	0	0	0	0	0	0	0	0	0	1
 red hair symbol	0	0	0	0	0	0	0	0	0	1
 red heart symbol	0	0	0	0	0	0	0	0	0	1
@@ -402,33 +398,30 @@ rescue worker's helmet symbol	0	0	0	0	0	0	0	0	0	1
 reverse button symbol	0	0	0	0	0	0	0	0	0	1
 ribbon symbol	0	0	0	0	0	0	0	0	0	1
 right anger bubble symbol	0	0	0	0	0	0	0	0	0	1
-right arrow curving down symbol	0	0	0	0	0	0	0	0	0	1
-right arrow curving left symbol	0	0	0	0	0	0	0	0	0	1
-right arrow curving up symbol	0	0	0	0	0	0	0	0	0	1
-right arrow symbol	0	0	0	0	0	0	0	0	0	1
+right arrow	0	0	0	0	0	0	0	0	0	1
 ringed planet symbol	0	0	0	0	0	0	0	0	0	1
 robot	0	0	0	0	0	0	1	0	0	0
-rocket symbol	0	0	0	0	0	0	0	0	0	1
-rolled-up newspaper symbol	0	0	0	0	0	0	0	0	0	1
+rocket	0	0	0	0	0	0	0	0	0	1
+rolled-up newspaper	0	0	0	0	0	0	0	0	0	1
 rooster symbol	0	0	0	0	0	0	0	0	0	1
 rosette symbol	0	0	0	0	0	0	0	0	0	1
 royal figure	0	0	0	0	0	0	1	0	0	0
-rugby football symbol	0	0	0	0	0	0	0	0	0	1
-safety vest symbol	0	0	0	0	0	0	0	0	0	1
+rugby football	0	0	0	0	0	0	0	0	0	1
+safety vest	0	0	0	0	0	0	0	0	0	1
 sailboat symbol	0	0	0	0	0	0	0	0	0	1
 sari symbol	0	0	0	0	0	0	0	0	0	1
 satellite symbol	0	0	0	0	0	0	0	0	0	1
 scissors symbol	0	0	0	0	0	0	0	0	0	1
 selfie symbol	0	0	0	0	0	0	0	0	0	1
-shamrock symbol	0	0	0	0	0	0	0	0	0	1
+shamrock	0	0	0	0	0	0	0	0	0	1
 sheep	0	0	1	0	0	0	0	0	0	0
-shield symbol	0	0	0	0	0	0	0	0	0	1
-shinto shrine symbol	0	0	0	0	0	0	0	0	0	1
-ship symbol	0	0	0	0	0	0	0	0	0	1
-shopping bags symbol	0	0	0	0	0	0	0	0	0	1
-shower symbol	0	0	0	0	0	0	0	0	0	1
-skateboard symbol	0	0	0	0	0	0	0	0	0	1
-skier symbol	0	0	0	0	0	0	0	0	0	1
+shield	0	0	0	0	0	0	0	0	0	1
+shinto shrine	0	0	0	0	0	0	0	0	0	1
+ship	0	0	0	0	0	0	0	0	0	1
+shopping bag	0	0	0	0	0	0	0	0	0	1
+shower	0	0	0	0	0	0	0	0	0	1
+skateboard	0	0	0	0	0	0	0	0	0	1
+skier	0	0	0	0	0	0	0	0	0	1
 skull and crossbones symbol	0	0	0	0	0	0	0	0	0	1
 sled symbol	0	0	0	0	0	0	0	0	0	1
 sleeping face symbol	0	0	0	0	0	0	0	0	0	1
@@ -440,19 +433,16 @@ smiling face with halo symbol	0	0	0	0	0	0	0	0	0	1
 smiling face with sunglasses symbol	0	0	0	0	0	0	0	0	0	1
 smiling face with tear symbol	0	0	0	0	0	0	0	0	0	1
 smirking face symbol	0	0	0	0	0	0	0	0	0	1
-snail symbol	0	0	0	0	0	0	0	0	0	1
-snow-capped mountain symbol	0	0	0	0	0	0	0	0	0	1
-snowflake symbol	0	0	0	0	0	0	0	0	0	1
-snowman symbol	0	0	0	0	0	0	0	0	0	1
+snail	0	0	0	0	0	0	0	0	0	1
+snow-capped mountain	0	0	0	0	0	0	0	0	0	1
+snowflake	0	0	0	0	0	0	0	0	0	1
+snowman	0	0	0	0	0	0	0	0	0	1
 snowman without snow symbol	0	0	0	0	0	0	0	0	0	1
-soccer ball symbol	0	0	0	0	0	0	0	0	0	1
+soccer ball	0	0	0	0	0	0	0	0	0	1
 soldier	0	0	0	0	0	0	0	1	0	0
 spade suit symbol	0	0	0	0	0	0	0	0	0	1
 sparkle symbol	0	0	0	0	0	0	0	0	0	1
-sparkles symbol	0	0	0	0	0	0	0	0	0	1
-speaker high volume symbol	0	0	0	0	0	0	0	0	0	1
-speaker low volume symbol	0	0	0	0	0	0	0	0	0	1
-speaker medium volume symbol	0	0	0	0	0	0	0	0	0	1
+speaker volume symbol	0	0	0	0	0	0	0	0	0	1
 speaking head symbol	0	0	0	0	0	0	0	0	0	1
 speedboat symbol	0	0	0	0	0	0	0	0	0	1
 spider symbol	0	0	0	0	0	0	0	0	0	1
@@ -463,37 +453,34 @@ sport utility vehicle symbol	0	0	0	0	0	0	0	0	0	1
 sports medal symbol	0	0	0	0	0	0	0	0	0	1
 square	1	0	0	0	0	0	0	0	0	0
 stadium symbol	0	0	0	0	0	0	0	0	0	1
-star	1	0	0	0	0	0	0	0	0	0
-star and crescent symbol	0	0	0	0	0	0	0	0	0	1
-star of David symbol	0	0	0	0	0	0	0	0	0	1
-star symbol	0	0	0	0	0	0	0	0	0	1
+star	0	0	0	0	0	0	0	0	0	1
 station symbol	0	0	0	0	0	0	0	0	0	1
 stop button symbol	0	0	0	0	0	0	0	0	0	1
-stop sign symbol	0	0	0	0	0	0	0	0	0	1
+stop sign	0	0	0	0	0	0	0	0	0	1
 stopwatch symbol	0	0	0	0	0	0	0	0	0	1
 studio microphone symbol	0	0	0	0	0	0	0	0	0	1
 sun behind large cloud symbol	0	0	0	0	0	0	0	0	0	1
 sun behind rain cloud symbol	0	0	0	0	0	0	0	0	0	1
 sun behind small cloud symbol	0	0	0	0	0	0	0	0	0	1
-sun symbol	0	0	0	0	0	0	0	0	0	1
+sun	0	0	0	0	0	0	0	0	0	1
 sunglasses symbol	0	0	0	0	0	0	0	0	0	1
 superhero	0	0	0	0	0	0	1	0	0	0
-taxi symbol	0	0	0	0	0	0	0	0	0	1
+taxi	0	0	0	0	0	0	0	0	0	1
 telephone symbol	0	0	0	0	0	0	0	0	0	1
-tent symbol	0	0	0	0	0	0	0	0	0	1
+tent	0	0	0	0	0	0	0	0	0	1
 thermometer symbol	0	0	0	0	0	0	0	0	0	1
 thong sandal symbol	0	0	0	0	0	0	0	0	0	1
 thought balloon symbol	0	0	0	0	0	0	0	0	0	1
 tiger	0	0	1	0	0	0	0	0	0	0
 timer clock symbol	0	0	0	0	0	0	0	0	0	1
-tornado symbol	0	0	0	0	0	0	0	0	0	1
+tornado	0	0	0	0	0	0	0	0	0	1
 tower	0	0	0	0	1	0	0	0	0	0
 trackball symbol	0	0	0	0	0	0	0	0	0	1
 trade mark symbol	0	0	0	0	0	0	0	0	0	1
 train engineer	0	0	0	0	0	0	0	1	0	0
-train symbol	0	0	0	0	0	0	0	0	0	1
-tram symbol	0	0	0	0	0	0	0	0	0	1
-transgender symbol symbol	0	0	0	0	0	0	0	0	0	1
+train	0	0	0	0	0	0	0	0	0	1
+tram	0	0	0	0	0	0	0	0	0	1
+transgender symbol	0	0	0	0	0	0	0	0	0	1
 triangle	1	0	0	0	0	0	0	0	0	0
 trolleybus symbol	0	0	0	0	0	0	0	0	0	1
 trophy symbol	0	0	0	0	0	0	0	0	0	1
@@ -501,7 +488,7 @@ truck	0	1	0	0	0	0	0	0	0	0
 tulip symbol	0	0	0	0	0	0	0	0	0	1
 two-hump camel symbol	0	0	0	0	0	0	0	0	0	1
 umbrella on ground symbol	0	0	0	0	0	0	0	0	0	1
-umbrella symbol	0	0	0	0	0	0	0	0	0	1
+umbrella	0	0	0	0	0	0	0	0	0	1
 umbrella with rain drops symbol	0	0	0	0	0	0	0	0	0	1
 unamused face symbol	0	0	0	0	0	0	0	0	0	1
 up arrow symbol	0	0	0	0	0	0	0	0	0	1
@@ -522,7 +509,7 @@ wavy line	1	0	0	0	0	0	0	0	0	0
 waxing crescent moon symbol	0	0	0	0	0	0	0	0	0	1
 whale	0	0	1	0	0	0	0	0	0	0
 wheel of dharma symbol	0	0	0	0	0	0	0	0	0	1
-wheelchair symbol symbol	0	0	0	0	0	0	0	0	0	1
+wheelchair	0	0	0	0	0	0	0	0	0	1
 white circle symbol	0	0	0	0	0	0	0	0	0	1
 white flag symbol	0	0	0	0	0	0	0	0	0	1
 white flower symbol	0	0	0	0	0	0	0	0	0	1
@@ -535,10 +522,10 @@ wind face symbol	0	0	0	0	0	0	0	0	0	1
 winking face symbol	0	0	0	0	0	0	0	0	0	1
 winking face with tongue symbol	0	0	0	0	0	0	0	0	0	1
 woman	0	0	0	1	0	0	0	0	0	0
-world map symbol	0	0	0	0	0	0	0	0	0	1
-worried face symbol	0	0	0	0	0	0	0	0	0	1
-writing hand symbol	0	0	0	0	0	0	0	0	0	1
-yawning face symbol	0	0	0	0	0	0	0	0	0	1
+world map	0	0	0	0	0	0	0	0	0	1
+worried face	0	0	0	0	0	0	0	0	0	1
+writing hand	0	0	0	0	0	0	0	0	0	1
+yawning face	0	0	0	0	0	0	0	0	0	1
 yin yang symbol	0	0	0	0	0	0	0	0	0	1
 yo-yo symbol	0	0	0	0	0	0	0	0	0	1
 zipper-mouth face symbol	0	0	0	0	0	0	0	0	0	1
