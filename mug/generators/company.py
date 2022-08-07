@@ -9,16 +9,10 @@ from mug.utils.vary_text import all_upper, controlled_misspell, uncontrolled_mis
 
 
 class Company(MUGProduct):
-    """Generate a company.
-
-    By default, this only includes the name.
-    Methods may be called to generate
-    additional metadata; they are initialized
-    as None.
-    """
+    """Generate a company."""
 
     def __init__(self):
-        """Init - generate a name"""
+        """Init"""
         super().__init__()
         self.industry = self.make_industry_name()
         self.name = self.make_company_name()
