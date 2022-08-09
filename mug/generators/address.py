@@ -124,15 +124,19 @@ class Address(MUGProduct):
             except KeyError: # Many addresses lack the values above
 
                 # TODO: fix for instances where display_name includes a street
-                # same for duplicate zip codes
 
                 street_name = get_items(random.choice(["forename","surname"]), 1)[0]["id"]
                 street_postfix = get_items("street postfix", 1)[0]["id"]
                 street = f"{street_name} {street_postfix}"
-                locality = result["display_name"]
+                try:
+                    locality = result["display_name"]
+                except KeyError:
+                    locality = startcode # If we still don't have a display_name
 
                 if locality.endswith("United States"):
-                    locality = locality.replace(", United States", f" {startcode}", 1)
+                    locality = locality.replace(", United States", "", 1)
+                    if not ((locality.split())[-1]).isnumeric():
+                        locality = f"{locality} {startcode}"
             
         except requests.exceptions.ConnectionError:
 
