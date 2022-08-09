@@ -36,7 +36,6 @@ class Company(MUGProduct):
         #       that will probably require passing the Address obj
 
         part_types = ["animal",
-                      "color",
                       "fictional beast",
                       "fictional character",
                       "forename",
@@ -48,7 +47,7 @@ class Company(MUGProduct):
                       "world countries"
                       ]
 
-        tc = random.randint(0,2)
+        tc = random.randint(0,3)
         if tc == 0: # Acronym
             name = ""
             for _ in range(0,random.randint(3,6)):
@@ -60,7 +59,12 @@ class Company(MUGProduct):
             else:
                 part2 = get_items(random.choice(part_types), 1)[0]["id"].title()
                 name = f"{part1} {part2}"
-        elif tc == 2: # Person name(s)
+        elif tc == 2: # Single person name
+            # TODO: replace with full person name gen
+            forename = get_items("forename", 1)[0]["id"]
+            surname = get_items("surname", 1)[0]["id"]
+            name = f"{forename} {surname}"
+        elif tc == 3: # Multiple person names
             parts = get_items("surname", 2)
             part1 = parts[0]["id"].title()
             part2 = parts[1]["id"].title()
