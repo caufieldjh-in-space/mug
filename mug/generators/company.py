@@ -34,6 +34,7 @@ class Company(MUGProduct):
         #TODO: add portmanteu generator
         #TODO: add names based on location
         #       that will probably require passing the Address obj
+        #TODO: add names based on food producers
 
         part_types = ["animal",
                       "fictional beast",
