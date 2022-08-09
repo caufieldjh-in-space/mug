@@ -4,7 +4,6 @@ import string
 import random
 import requests
 
-from mug.generators.company import Company
 from mug.generators.generic import MUGProduct
 from mug.get_resource import get_items
 
@@ -13,8 +12,7 @@ class Address(MUGProduct):
     """Generate an address.
     
     Gets a real, randomly chosen street address,
-    with the exception of the addressee, which
-    is randomly generated.
+    with the exception of the addressee.
 	Limited to the US for now, or occasionally 
     points close to the US.
     Uses Openstreetmap API, so if the connection 
@@ -28,21 +26,10 @@ class Address(MUGProduct):
         """Init"""
         super().__init__()
         street_and_locality = self.make_street_and_locality()
-        self.addressee = self.make_addressee()
         self.number = self.make_address_number()
         self.street = street_and_locality["street"]
         self.locality = street_and_locality["locality"]
         
-
-    def make_addressee(self) -> str:
-
-        # TODO: include person name generation
-
-        newcomp = Company()
-        addressee = newcomp.name
-
-        return addressee
-
 
     def make_address_number(self) -> str:
         """Make address number.

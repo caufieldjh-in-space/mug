@@ -4,6 +4,7 @@ import random
 import string
 
 from mug.generators.generic import MUGProduct
+from mug.generators.address import Address
 from mug.get_resource import get_items
 from mug.utils.vary_text import all_upper, controlled_misspell, uncontrolled_misspell
 
@@ -31,6 +32,8 @@ class Company(MUGProduct):
     def make_company_name(self) -> str:
 
         #TODO: add portmanteu generator
+        #TODO: add names based on location
+        #       that will probably require passing the Address obj
 
         part_types = ["animal",
                       "color",
@@ -112,9 +115,8 @@ class Company(MUGProduct):
 
     def make_company_address(self) -> str:
 
-        # TODO: see wastegenerator/waste_text_generators.py for address generator
-
-        address = ""
+        add_obj = Address()
+        address = f"{add_obj.number} {add_obj.street}\n{add_obj.locality}"
 
         return address
 
