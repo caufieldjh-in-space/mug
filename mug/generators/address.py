@@ -19,9 +19,6 @@ class Address(MUGProduct):
     fails then it just generates a simple address.
     """
 
-    # TODO: add init setting allowing for no addressee
-    # and person-vs-business option
-
     def __init__(self):
         """Init"""
         super().__init__()

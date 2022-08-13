@@ -1,5 +1,5 @@
 id	beverage_dairy	beverage_dairylike	beverage_beer	beverage_wine	beverage_juice	beverage_water	beverage_softdrink	beverage_coffee	beverage_energydrink	beverage_proteindrink	beverage_tea	beverage_alcohol	beverage_otherdrink
-beverages	0	0	0	0	1	1	1	0	1	1	0	1	1
+beverages	1	1	1	1	1	1	1	1	1	1	1	1	1
 brewers	0	0	1	0	0	0	0	1	0	0	0	0	0
 brewing	0	0	1	0	0	0	0	0	0	0	0	0	0
 cola	0	0	0	0	0	0	1	0	1	0	0	0	0
