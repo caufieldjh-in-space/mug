@@ -16,7 +16,8 @@ RES_TYPES = { "address modifier": "address_modifiers.tsv",
               "color": "colors.tsv",
               "company postfix casual": "company_postfixes_casual.tsv",
               "company postfix formal": "company_postfixes_formal.tsv",
-              "corporate department": "corporate departments.tsv",
+              "corporate department": "corporate_departments.tsv",
+              "english word": "english_words.tsv",
               "fictional beast": "fictional_beasts.tsv",
               "fictional character": "fictional_characters.tsv",
               "flavor": "flavors.tsv",
@@ -27,6 +28,7 @@ RES_TYPES = { "address modifier": "address_modifiers.tsv",
               "home electronic": "home_electronics.tsv",
               "image": "images.tsv",
               "industry": "industries.tsv",
+              "latin word": "latin_words.tsv",
               "mood": "moods.tsv",
               "slogan": "slogans.tsv",
               "street postfix": "street_postfixes.tsv",
@@ -55,6 +57,21 @@ def get_items(res_type: str,
     sample = _prep_sample(sample, header)
 
     return sample
+
+def get_all_ids(res_type: str,
+                ) -> list:
+
+    mod_path = Path(__file__).parent
+    res_file = (mod_path / RES_DIR / RES_TYPES[res_type]).resolve()
+
+    ids = []
+
+    with res_file.open() as infile:
+        infile.readline() # Skip header
+        for line in infile:
+            ids.append((line.rstrip().split("\t"))[0])
+
+    return ids
 
 def _prep_sample(rawlist: list, header: list = []) -> list:
 
