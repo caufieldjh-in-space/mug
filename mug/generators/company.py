@@ -5,7 +5,8 @@ import string
 
 from mug.generators.address import Address
 from mug.generators.generic import MUGProduct
-from mug.get_resource import get_items
+from mug.get_resource import get_items, get_all_ids
+from mug.utils.portmanteau import make_portmanteau
 from mug.utils.vary_text import all_upper, controlled_misspell, uncontrolled_misspell
 
 
@@ -29,17 +30,20 @@ class Company(MUGProduct):
 
     def make_company_name(self) -> str:
 
-        # TODO: add portmanteu generator
         # TODO: add names based on location
         #       that will probably require passing the Address obj
-        # TODO: add names based on food producers
+        #       and include locations not present in the address as written
+        # TODO: clean up random selection - separate functions would be nice
 
         part_types = [
             "animal",
+            "english word",
             "fictional beast",
             "fictional character",
+            "flavor",
             "forename",
             "generic place",
+            "latin word",
             "mood",
             "surname",
             "us states",
@@ -47,7 +51,7 @@ class Company(MUGProduct):
             "world countries",
         ]
 
-        tc = random.randint(0, 3)
+        tc = random.randint(0, 4)
         if tc == 0:  # Acronym
             name = ""
             for _ in range(0, random.randint(3, 6)):
@@ -83,6 +87,10 @@ class Company(MUGProduct):
                     name = f"{part1}{conn}{part2}"
                 else:
                     name = f"{part1}"
+        elif tc == 4:  # Portmanteau
+            list1 = get_all_ids(random.choice(part_types))
+            list2 = get_all_ids(random.choice(part_types))
+            name = make_portmanteau((list1, list2)).title()
 
         if random.randint(0, 8) == 0:
             name = name.replace(" ", "")
