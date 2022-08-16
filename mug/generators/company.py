@@ -42,11 +42,9 @@ class Company(MUGProduct):
             "fictional beast",
             "fictional character",
             "flavor",
-            "forename",
             "generic place",
             "latin word",
             "mood",
-            "surname",
             "us states",
             "world cities",
             "world countries",
@@ -60,7 +58,6 @@ class Company(MUGProduct):
         elif tc == 2:
             name = make_phrase(part_types, random.randint(2,3)).title()
         elif tc == 3:  # Single person name
-            # TODO: replace with full person name gen
             person = Person()
             name = person.name
         elif tc == 4:  # Multiple person names
