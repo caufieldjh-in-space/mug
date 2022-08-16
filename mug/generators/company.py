@@ -61,24 +61,18 @@ class Company(MUGProduct):
             person = Person()
             name = person.name
         elif tc == 4:  # Multiple person names
-            parts = get_items("surname", 2)
-            part1 = parts[0]["id"].title()
-            part2 = parts[1]["id"].title()
-            conn = random.choice(["", "-", " & ", " And "])
-            if random.randint(0, 5) > 0:
-                if random.randint(0, 1) == 0:
-                    part3 = get_items("surname", 1)[0]["id"].title()
-                    name = f"{part1}, {part2} & {part3}"
-                else:
-                    if random.randint(0, 1) == 0:
-                        name = f"{part1}, {part2} & {part2}"
-                    else:
-                        name = f"{part1}{part2}{part2}"
+            persons = [Person() for i in range(3)]
+            parts = [((person.name).split())[1] for person in persons]
+            part1 = parts[0].title()
+            part2 = parts[1].title()
+            part3 = parts[2].title()
+            conn1 = random.choice([""," ",", "])
+            conn2 = random.choice(["", "-", " & ", " + "," And "])
+            if random.randint(0, 1) == 0:
+                name = f"{part1}{conn1}{part2}{conn2}{part3}"
             else:
-                if random.randint(0, 1) == 0:
-                    name = f"{part1}{conn}{part2}"
-                else:
-                    name = f"{part1}"
+                name = f"{part1}{conn2}{part2}"
+
         elif tc == 5:  # Portmanteau
             list1 = get_all_ids(random.choice(part_types))
             list2 = get_all_ids(random.choice(part_types))
