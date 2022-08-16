@@ -1,12 +1,13 @@
 """company.py - generate company names + metadata"""
 
 import random
-import string
 
 from mug.generators.address import Address
+from mug.generators.person import Person
 from mug.generators.generic import MUGProduct
-from mug.get_resource import get_items, get_all_ids
+from mug.get_resource import get_all_ids, get_items
 from mug.utils.portmanteau import make_portmanteau
+from mug.utils.textgen import make_acronym, make_phrase
 from mug.utils.vary_text import all_upper, controlled_misspell, uncontrolled_misspell
 
 
@@ -51,24 +52,18 @@ class Company(MUGProduct):
             "world countries",
         ]
 
-        tc = random.randint(0, 4)
+        tc = random.randint(0, 5)
         if tc == 0:  # Acronym
-            name = ""
-            for _ in range(0, random.randint(3, 6)):
-                name = name + random.choice(string.ascii_uppercase)
+            name = make_acronym()
         elif tc == 1:  # Simple word or phrase
-            part1 = get_items(random.choice(part_types), 1)[0]["id"].title()
-            if random.randint(0, 4) == 0:
-                name = f"{part1}"
-            else:
-                part2 = get_items(random.choice(part_types), 1)[0]["id"].title()
-                name = f"{part1} {part2}"
-        elif tc == 2:  # Single person name
+            name = make_phrase(part_types, 1).title()
+        elif tc == 2:
+            name = make_phrase(part_types, random.randint(2,3)).title()
+        elif tc == 3:  # Single person name
             # TODO: replace with full person name gen
-            forename = get_items("forename", 1)[0]["id"]
-            surname = get_items("surname", 1)[0]["id"]
-            name = f"{forename} {surname}"
-        elif tc == 3:  # Multiple person names
+            person = Person()
+            name = person.name
+        elif tc == 4:  # Multiple person names
             parts = get_items("surname", 2)
             part1 = parts[0]["id"].title()
             part2 = parts[1]["id"].title()
@@ -87,7 +82,7 @@ class Company(MUGProduct):
                     name = f"{part1}{conn}{part2}"
                 else:
                     name = f"{part1}"
-        elif tc == 4:  # Portmanteau
+        elif tc == 5:  # Portmanteau
             list1 = get_all_ids(random.choice(part_types))
             list2 = get_all_ids(random.choice(part_types))
             name = make_portmanteau((list1, list2)).title()
@@ -137,6 +132,8 @@ class Company(MUGProduct):
 
     def make_company_slogan(self) -> str:
 
+        # TODO: make more generative
+
         nounchoice = random.choice([self.name, self.industry])
         if isinstance(nounchoice, str):
             noun = nounchoice
@@ -152,6 +149,8 @@ class Company(MUGProduct):
         return slogan
 
     def make_company_logo_description(self) -> str:
+
+        # TODO: make more generative
 
         logobase = get_items("image", 1)[0]["id"]
 
