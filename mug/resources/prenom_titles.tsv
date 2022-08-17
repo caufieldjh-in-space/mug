@@ -1,4 +1,4 @@
-ids	full_title
+id	full_title
 1st Lt	First Lieutenant
 1st Sgt	First Sergeant
 2nd Lt	Second Lieutenant
@@ -8,27 +8,28 @@ Amn	Airman
 Assoc Prof	Associate Professor
 Asst Prof	Assistant Professor
 Brig Gen	Brigadier General
+CPO	Chief Petty Officer
 Capt	Captain
 Ch	Chairperson
 Chanc	Chancellor
 Chf	Chief
-CPO	Chief Petty Officer
 Cmdr	Commander
-Coach	Coach
 Cmdre	Commodore
+Coach	Coach
 Cpl	Corporal
 Dame	Dame
 Dean	Dean
 Det	Detective
 Dir	Director
+Dr	Doctor
 Elder	Elder
 Ens	Ensign
 Fr	Father
 Gen	General
 Gunnery Sgt	Gunnery Sergeant
-Hd Coach	Head Coach
 HH	Her Holiness
 HH	His Holiness
+Hd Coach	Head Coach
 Imam	Imam
 Lady	Lady
 Lance Cpl	Lance Corporal
@@ -55,20 +56,20 @@ Pvt	Private
 Rab	Rabbi
 Rear Adm	Rear Admiral
 Rev	Reverend
-Sman	Seaman
+SA	Special Agent
 Sen	Senator
 Sgt	Sergeant
 Sgt 1st Class	Sergeant First Class
 Sgt Maj	Sergeant Major
 Sir	Sir
-SA	Special Agent
+Sman	Seaman
 Spec	Specialist
 Staff Sgt	Staff Sergeant
-The Hon	The Honorable
 TH	Their Holiness
+The Hon	The Honorable
 Tpr	Trooper
+VP	Vice President
 Ven	Venerable
 Vice Adm	Vice Admiral
 Vice Dean	Vice Dean
-VP	Vice President
 Vice-Chancellor	Vice Chancellor

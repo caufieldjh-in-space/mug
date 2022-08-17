@@ -5,6 +5,8 @@ import string
 
 from mug.get_resource import get_items
 
+VOWELS = "aeiouAEIOU"
+
 def make_acronym() -> str:
     """Make an acronym."""
 
