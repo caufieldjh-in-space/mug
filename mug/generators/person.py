@@ -3,7 +3,7 @@
 import random
 
 from mug.generators.generic import MUGProduct
-from mug.get_resource import get_items
+from mug.get_resource import get_items, get_mapped_ids
 from mug.utils.textgen import VOWELS
 
 
@@ -28,7 +28,6 @@ class Person(MUGProduct):
         is random - it may be as short as a single name,
         but will generally include a forename and surname
         without titles."""
-        # TODO: expand based on wastegen namegen
 
         forename = get_items("forename", 1)[0]["id"]
         surname = get_items("surname", 1)[0]["id"]
@@ -101,9 +100,14 @@ def get_nickname(name: str) -> str:
 
         if random.randint(0, 19) == 0 and nickname[-1] not in VOWELS:
             nickname = nickname + "y"
-    elif 5 < namechoice < 9:
-        # Look up a nickname
-        nickname = name # Placeholder
+    elif 5 < namechoice < 9:  # Look up a nickname
+        all_nicknames = get_mapped_ids("forename")
+        one_name = (name.split())[0]
+        try:
+            nicknames = (all_nicknames[one_name]).split(",")
+            nickname = random.choice(nicknames).strip()
+        except KeyError:
+            nickname = name
     elif namechoice == 9:
         nickname = (get_items("animal", 1)[0]["id"]).title()
 
