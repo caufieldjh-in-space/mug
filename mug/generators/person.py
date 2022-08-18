@@ -29,6 +29,9 @@ class Person(MUGProduct):
         but will generally include a forename and surname
         without titles."""
 
+        # TODO: increase frequency of *some* names
+        #       just because a small subset are very common
+
         forename = get_items("forename", 1)[0]["id"]
         surname = get_items("surname", 1)[0]["id"]
         middlename = get_items(random.choice(["forename", "surname"]), 1)[0]["id"]
