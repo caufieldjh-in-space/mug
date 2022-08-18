@@ -59,10 +59,14 @@ class Company(MUGProduct):
             name = make_phrase(part_types, random.randint(2,3)).title()
         elif tc == 3:  # Single person name
             person = Person()
-            name = person.name
+            fullname = person.name_informal
+            if random.randint(0,1) == 0:
+                name = fullname
+            else:
+                name = (fullname.split())[:-1]
         elif tc == 4:  # Multiple person names
             persons = [Person() for i in range(3)]
-            parts = [((person.name).split())[1] for person in persons]
+            parts = [((person.name_informal).split())[:-1] for person in persons]
             part1 = parts[0].title()
             part2 = parts[1].title()
             part3 = parts[2].title()
@@ -78,18 +82,15 @@ class Company(MUGProduct):
             list2 = get_all_ids(random.choice(part_types))
             name = make_portmanteau((list1, list2)).title()
 
+        # Modifiers
         if random.randint(0, 8) == 0:
             name = name.replace(" ", "")
-
         if random.randint(0, 6) == 0:
             name = controlled_misspell(name)
-
         if random.randint(0, 6) == 0:
             name = uncontrolled_misspell(name)
-
         if random.randint(0, 9) == 0:
             name = all_upper(name)
-
         if random.randint(0, 6) == 0:
             postfix = get_items("company postfix casual", 1)[0]["id"]
             name = f"{name}{postfix}"
