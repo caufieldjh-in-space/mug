@@ -26,7 +26,7 @@ linkml:topValue a owl:DatatypeProperty ;
     dcterms:license "MIT" ;
     dcterms:title "mug_schemas" ;
     rdfs:seeAlso "https://my-org.github.io/mug_schemas" ;
-    linkml:generation_date "2023-03-23T10:39:49" ;
+    linkml:generation_date "2023-03-23T10:53:27" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "mug_schemas.yaml" ;
     linkml:source_file_date "2023-03-23T10:28:23" ;
@@ -105,16 +105,16 @@ mug_schemas:GeneratedThing a owl:Class,
     rdfs:label "GeneratedThing" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass mug_schemas:PersonStatus ;
-            owl:onProperty mug_schemas:vital_status ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Date ;
             owl:onProperty schema:birthDate ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty schema:email ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass mug_schemas:PersonStatus ;
+            owl:onProperty mug_schemas:vital_status ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Integer ;
@@ -126,17 +126,17 @@ mug_schemas:NamedThing a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "NamedThing" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:Uriorcurie ;
-            owl:onProperty schema:identifier ;
-            owl:qualifiedCardinality 1 ],
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema:description ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty schema:name ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema:description ] ;
+            owl:onClass linkml:Uriorcurie ;
+            owl:onProperty schema:identifier ;
+            owl:qualifiedCardinality 1 ] ;
     skos:definition "A generic grouping for any identifiable entity" ;
     skos:exactMatch schema:Thing .
 

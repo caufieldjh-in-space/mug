@@ -1,5 +1,5 @@
 # Auto generated from mug_schemas.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-03-23T10:39:50
+# Generation date: 2023-03-23T10:53:28
 # Schema: mug_schemas
 #
 # id: https://w3id.org/my-org/mug_schemas
