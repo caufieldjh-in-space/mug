@@ -34,7 +34,6 @@ class Company(MUGProduct):
         # TODO: add names based on location
         #       that will probably require passing the Address obj
         #       and include locations not present in the address as written
-        # TODO: clean up random selection - separate functions would be nice
 
         part_types = [
             "animal",
