@@ -5,8 +5,10 @@ description = "Modular Universal Generators"
 authors = ["Harry Caufield"]
 
 [tool.poetry.dependencies]
-python = "*"
+python = "^3.8"
 wikipedia = "^1.4.0"
+click = "8.1.3"
+cruft = "^2.12.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.4"
