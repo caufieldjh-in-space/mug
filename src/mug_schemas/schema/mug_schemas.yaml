@@ -40,6 +40,16 @@ classes:
       in generating that representation. Think of this
       like the ingredients list rather than the finished meal.
 
+  Address:
+    is_a: GeneratedThing
+    description: >-
+      A mailing address for a physical location.
+    slots:
+      - addressee
+      - address_number
+      - street
+      - locality
+
   GeneratedThingCollection:
     tree_root: true
     description: >-
@@ -65,3 +75,59 @@ slots:
       A human-readable description for a thing.
       For a GeneratedThing, this will be one potential
       string representation of the object.
+  addressee:
+    range: string
+    any_of:
+      - range: Person
+      - range: Company
+    description: >-
+      The recipient of mail. May be a person or a
+      company - the name is the most relevant part.
+    todos: 
+      - Add Person objects
+      - Add Company objects
+      - Unions can be tricky, so test this
+  address_number:
+    range: string
+    multivalued: true
+    description: >-
+      The most specific component of a physical
+      mailing address. Multi-line values are 
+      represented by multivalues.
+    examples:
+      - "30"
+      - "40B"
+      - "Room 581"
+      - "Floor 12"
+      - "Bamberg Building"
+    todos: 
+      - add an enum for corporate departments
+  street:
+    range: string
+    multivalued: true
+    description: >-
+      The street component of a physical mailing
+      address. Unabbreviated by default (Street,
+      not St.) Multi-line values are represented
+      by multivalues. See examples.
+    examples:
+      - "Sandstone Street"
+      - "Colonial Highway"
+      - "Stevens Q. Puddleton Trail"
+    todos: 
+      - convert to a GeneratedThing, at least to make street type enum
+  locality:
+    range: string
+    multivalued: true
+    description: >-
+      The broadest component of a physical mailing
+      address. Should include postal code.
+    examples:
+      - "Kansas City, Missouri 64102, United States"
+      - "Staples, Ontario N0P 2J0, Canada"
+      - "14612 Falkensee, Germany"
+    todos:
+      - evaluate whether this really needs to be multivalued
+      - convert to a GeneratedThing
+      - but note that city, broader location, and postal code are all related
+      - define a regex pattern (or patterns)
