@@ -44,11 +44,58 @@ classes:
     is_a: GeneratedThing
     description: >-
       A mailing address for a physical location.
+      This is the general class - it doesn't include
+      an addressee.
     slots:
-      - addressee
       - address_number
       - street
       - locality
+
+  ResidentialAddress:
+    is_a: Address
+    description: >-
+      Address of a residential location.
+    slot_usage:
+      addressee:
+        range: Person
+        required: true
+
+  WorkingAddress:
+    is_a: Address
+    description: >-
+      Address of a workplace location.
+      Technically this is a commercial address
+      since it's specific to Company,
+      but for now that can cover things
+      like government agencies, too.
+    slot_usage:
+      addressee:
+        range: Company
+        required: true
+
+  Person:
+    is_a: GeneratedThing
+    description: >-
+      General class for people.
+    slots:
+      - full_name
+    slot_usage:
+      home_address:
+        range: ResidentialAddress 
+      work_address:
+        range: WorkingAddress
+
+  FullName:
+    is_a: GeneratedThing
+    description: >-
+      All parts of a name.
+    slots:
+      - given_name
+      - family_name
+      - other_name
+      - preferred_name
+      - title
+      - suffix
 
   GeneratedThingCollection:
     tree_root: true
@@ -84,7 +131,6 @@ slots:
       The recipient of mail. May be a person or a
       company - the name is the most relevant part.
     todos: 
-      - Add Person objects
       - Add Company objects
       - Unions can be tricky, so test this
   address_number:
@@ -131,3 +177,96 @@ slots:
       - convert to a GeneratedThing
       - but note that city, broader location, and postal code are all related
       - define a regex pattern (or patterns)
+  full_name:
+    range: FullName
+    description: >-
+      Slot for all name parts.
+  given_name:
+    range: string
+    multivalued: true
+    aliases:
+      - first name
+      - forename
+    description: >-
+      A given name. May be a mononym (i.e., the only name).
+      When multivalued, implies spaces in between names.
+    examples:
+      - "Frances"
+      - "Mary Kate"
+      - "Sinbad"
+  family_name:
+    range: string
+    multivalued: true
+    aliases:
+      - last name
+      - surname
+    description: >-
+      A family name. Optional, so mononyms should go in
+      given_name. For multvalued names like 
+      "Duarte de Perón", the "de" particle should
+      be part of the second name, not its own value.
+    examples:
+      - "Quigley"
+      - "Branson-Danforth"
+      - "de Souza"
+  other_name:
+    range: string
+    multivalued: true
+    aliases:
+      - middle name
+    description: >-
+      A middle name or names, usually, or at least
+      a name usually presented in between a given_name
+      and a family_name.
+  preferred_name:
+    range: string
+    multivalued: true
+    aliases:
+      - nickname
+      - pet name
+      - pseudonym
+    description: >-
+      Any name used to refer to a specific Person.
+      Often presented in quotes, but that doesn't
+      have to be the case here.
+    examples:
+      - "Jimmy"
+      - "The Brick"
+      - "xXDarksoul920Xx"
+  title:
+    range: string
+    multivalued: true
+    aliases:
+      - prenominative
+    description: >-
+      A formal or informal prefix for a name.
+      Use the full version, not an abbreviation.
+    examples:
+      - "Lady"
+      - "Captain"
+      - "His Holiness"
+  suffix:
+    range: string
+    multivalued: true
+    aliases:
+      - postnominative
+    description: >-
+      A formal or informal postfix for a name.
+      Use the full version, not an abbreviation.
+      These can get messy about commas and such,
+      but that's not a problem to be solved here.
+    examples:
+      - "Jr"
+      - "IV"
+      - "CEO"
+      - "Professor Emeritus"
+  home_address:
+    range: ResidentialAddress
+    multivalued: true
+    description: >-
+      One or more addresses where a person may live.
+  work_address:
+    range: WorkingAddress
+    multivalued: true
+    description: >-
+      One or more addresses where a person may work.
