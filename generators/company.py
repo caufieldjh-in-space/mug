@@ -2,13 +2,13 @@
 
 import random
 
-from mug.generators.address import Address
-from mug.generators.person import Person
-from mug.generators.generic import MUGProduct
-from mug.get_resource import get_all_ids, get_items
-from mug.utils.portmanteau import make_portmanteau
-from mug.utils.textgen import make_acronym, make_phrase
-from mug.utils.vary_text import all_upper, controlled_misspell, uncontrolled_misspell
+from address import Address
+from person import Person
+from generic import MUGProduct
+from get_resource import get_all_ids, get_items
+from utils.portmanteau import make_portmanteau
+from utils.textgen import make_acronym, make_phrase
+from utils.vary_text import all_upper, controlled_misspell, uncontrolled_misspell
 
 
 class Company(MUGProduct):

@@ -2,9 +2,9 @@
 
 import random
 
-from mug.generators.generic import MUGProduct
-from mug.get_resource import get_items, get_mapped_ids
-from mug.utils.textgen import VOWELS
+from generic import MUGProduct
+from get_resource import get_items, get_mapped_ids
+from utils.textgen import VOWELS
 
 
 class Person(MUGProduct):

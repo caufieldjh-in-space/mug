@@ -3,7 +3,7 @@
 import random
 import string
 
-from mug.get_resource import get_items
+from get_resource import get_items
 
 VOWELS = "aeiouAEIOU"
 

@@ -4,8 +4,8 @@ import string
 import random
 import requests
 
-from mug.generators.generic import MUGProduct
-from mug.get_resource import get_items
+from generic import MUGProduct
+from get_resource import get_items
 
 
 class Address(MUGProduct):
