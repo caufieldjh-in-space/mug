@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "mug_schemas"
-version = "0.1.0"
-description = "Schemas for Modular Universal Generators."
+name = "mug"
+version = "0.1.1"
+description = "Schemas and Scripts for Modular Universal Generators."
 authors = ["Harry Caufield <j.harry.caufield@gmail.com>"]
 license = "MIT"
 readme = "README.md"
