@@ -9,7 +9,7 @@ see_also:
   - https://caufieldjh-in-space.github.io/mug
 
 prefixes:
-  mug_schemas: https://w3id.org/caufieldjh-in-space/mug_schemas/
+  mug: https://w3id.org/caufieldjh-in-space/mug_schemas/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
@@ -44,9 +44,10 @@ classes:
     is_a: GeneratedThing
     description: >-
       A mailing address for a physical location.
-      This is the general class - it doesn't include
-      an addressee.
+      This is the general class - it includes
+      an addressee, but that isn't required.
     slots:
+      - addressee
       - address_number
       - street
       - locality
@@ -79,11 +80,8 @@ classes:
       General class for people.
     slots:
       - full_name
-    slot_usage:
-      home_address:
-        range: ResidentialAddress 
-      work_address:
-        range: WorkingAddress
+      - home_address
+      - work_address
 
   FullName:
     is_a: GeneratedThing
@@ -141,11 +139,11 @@ slots:
       mailing address. Multi-line values are 
       represented by multivalues.
     examples:
-      - "30"
-      - "40B"
-      - "Room 581"
-      - "Floor 12"
-      - "Bamberg Building"
+      - value: "30"
+      - value: "40B"
+      - value: "Room 581"
+      - value: "Floor 12"
+      - value: "Bamberg Building"
     todos: 
       - add an enum for corporate departments
   street:
@@ -157,9 +155,9 @@ slots:
       not St.) Multi-line values are represented
       by multivalues. See examples.
     examples:
-      - "Sandstone Street"
-      - "Colonial Highway"
-      - "Stevens Q. Puddleton Trail"
+      - value: "Sandstone Street"
+      - value: "Colonial Highway"
+      - value: "Stevens Q. Puddleton Trail"
     todos: 
       - convert to a GeneratedThing, at least to make street type enum
   locality:
@@ -169,9 +167,9 @@ slots:
       The broadest component of a physical mailing
       address. Should include postal code.
     examples:
-      - "Kansas City, Missouri 64102, United States"
-      - "Staples, Ontario N0P 2J0, Canada"
-      - "14612 Falkensee, Germany"
+      - value: "Kansas City, Missouri 64102, United States"
+      - value: "Staples, Ontario N0P 2J0, Canada"
+      - value: "14612 Falkensee, Germany"
     todos:
       - evaluate whether this really needs to be multivalued
       - convert to a GeneratedThing
@@ -191,9 +189,9 @@ slots:
       A given name. May be a mononym (i.e., the only name).
       When multivalued, implies spaces in between names.
     examples:
-      - "Frances"
-      - "Mary Kate"
-      - "Sinbad"
+      - value: "Frances"
+      - value: "Mary Kate"
+      - value: "Sinbad"
   family_name:
     range: string
     multivalued: true
@@ -206,9 +204,9 @@ slots:
       "Duarte de Perón", the "de" particle should
       be part of the second name, not its own value.
     examples:
-      - "Quigley"
-      - "Branson-Danforth"
-      - "de Souza"
+      - value: "Quigley"
+      - value: "Branson-Danforth"
+      - value: "de Souza"
   other_name:
     range: string
     multivalued: true
@@ -230,9 +228,9 @@ slots:
       Often presented in quotes, but that doesn't
       have to be the case here.
     examples:
-      - "Jimmy"
-      - "The Brick"
-      - "xXDarksoul920Xx"
+      - value: "Jimmy"
+      - value: "The Brick"
+      - value: "xXDarksoul920Xx"
   title:
     range: string
     multivalued: true
@@ -242,9 +240,9 @@ slots:
       A formal or informal prefix for a name.
       Use the full version, not an abbreviation.
     examples:
-      - "Lady"
-      - "Captain"
-      - "His Holiness"
+      - value: "Lady"
+      - value: "Captain"
+      - value: "His Holiness"
   suffix:
     range: string
     multivalued: true
@@ -256,10 +254,10 @@ slots:
       These can get messy about commas and such,
       but that's not a problem to be solved here.
     examples:
-      - "Jr"
-      - "IV"
-      - "CEO"
-      - "Professor Emeritus"
+      - value: "Jr"
+      - value: "IV"
+      - value: "CEO"
+      - value: "Professor Emeritus"
   home_address:
     range: ResidentialAddress
     multivalued: true
