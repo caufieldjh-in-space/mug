@@ -95,6 +95,17 @@ classes:
       - title
       - suffix
 
+  Company:
+    is_a: GeneratedThing
+    description: >-
+      A corporate entity.
+    slots:
+      - company_name
+      - work_address
+      - industry
+      - slogan
+      - logo_description
+
   GeneratedThingCollection:
     tree_root: true
     description: >-
@@ -129,7 +140,6 @@ slots:
       The recipient of mail. May be a person or a
       company - the name is the most relevant part.
     todos: 
-      - Add Company objects
       - Unions can be tricky, so test this
   address_number:
     range: string
@@ -268,3 +278,11 @@ slots:
     multivalued: true
     description: >-
       One or more addresses where a person may work.
+  company_name:
+    range: string
+  industry:
+    range: string
+  slogan:
+    range: string
+  logo_description:
+    range: string

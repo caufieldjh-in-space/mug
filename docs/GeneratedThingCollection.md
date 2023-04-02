@@ -4,7 +4,7 @@ _A holder for GeneratedThing objects_
 
 
 
-URI: [mug_schemas:GeneratedThingCollection](https://w3id.org/my-org/mug_schemas/GeneratedThingCollection)
+URI: [mug:GeneratedThingCollection](https://w3id.org/caufieldjh-in-space/mug_schemas/GeneratedThingCollection)
 
 
 
@@ -59,8 +59,8 @@ URI: [mug_schemas:GeneratedThingCollection](https://w3id.org/my-org/mug_schemas/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | mug_schemas:GeneratedThingCollection |
-| native | mug_schemas:GeneratedThingCollection |
+| self | mug:GeneratedThingCollection |
+| native | mug:GeneratedThingCollection |
 
 
 

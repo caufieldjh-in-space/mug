@@ -1,10 +1,10 @@
 # Class: GeneratedThing
-_Represents a GeneratedThing_
+_Any set of data representing a single generated object. In MUG, this does not include the object's string representation, but rather all components used in generating that representation. Think of this like the ingredients list rather than the finished meal._
 
 
 
 
-URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedThing)
+URI: [mug:GeneratedThing](https://w3id.org/caufieldjh-in-space/mug_schemas/GeneratedThing)
 
 
 
@@ -13,21 +13,18 @@ URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedT
     class GeneratedThing
       NamedThing <|-- GeneratedThing
       
-      GeneratedThing : age_in_years
-        
-      GeneratedThing : birth_date
-        
+
+      GeneratedThing <|-- Address
+      GeneratedThing <|-- Person
+      GeneratedThing <|-- FullName
+      GeneratedThing <|-- Company
+      
+      
       GeneratedThing : description
         
       GeneratedThing : id
         
       GeneratedThing : name
-        
-      GeneratedThing : primary_email
-        
-      GeneratedThing : vital_status
-        
-          GeneratedThing ..> PersonStatus : vital_status
         
       
 ```
@@ -39,6 +36,10 @@ URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedT
 ## Inheritance
 * [NamedThing](NamedThing.md)
     * **GeneratedThing**
+        * [Address](Address.md)
+        * [Person](Person.md)
+        * [FullName](FullName.md)
+        * [Company](Company.md)
 
 
 
@@ -46,10 +47,6 @@ URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedT
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [primary_email](primary_email.md) | 0..1 <br/> [String](String.md) | The main email address of a person | direct |
-| [birth_date](birth_date.md) | 0..1 <br/> [Date](Date.md) | Date on which a person is born | direct |
-| [age_in_years](age_in_years.md) | 0..1 <br/> [Integer](Integer.md) | Number of years since birth | direct |
-| [vital_status](vital_status.md) | 0..1 <br/> [PersonStatus](PersonStatus.md) | living or dead status | direct |
 | [id](id.md) | 1..1 <br/> [Uriorcurie](Uriorcurie.md) | A unique identifier for a thing | [NamedThing](NamedThing.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A human-readable name for a thing | [NamedThing](NamedThing.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | A human-readable description for a thing | [NamedThing](NamedThing.md) |
@@ -90,8 +87,8 @@ URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedT
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | mug_schemas:GeneratedThing |
-| native | mug_schemas:GeneratedThing |
+| self | mug:GeneratedThing |
+| native | mug:GeneratedThing |
 
 
 
@@ -106,21 +103,13 @@ URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedT
 <details>
 ```yaml
 name: GeneratedThing
-description: Represents a GeneratedThing
+description: Any set of data representing a single generated object. In MUG, this
+  does not include the object's string representation, but rather all components used
+  in generating that representation. Think of this like the ingredients list rather
+  than the finished meal.
 from_schema: https://w3id.org/my-org/mug_schemas
 rank: 1000
 is_a: NamedThing
-slots:
-- primary_email
-- birth_date
-- age_in_years
-- vital_status
-slot_usage:
-  primary_email:
-    name: primary_email
-    domain_of:
-    - GeneratedThing
-    pattern: ^\S+@[\S+\.]+\S+
 
 ```
 </details>
@@ -130,60 +119,14 @@ slot_usage:
 <details>
 ```yaml
 name: GeneratedThing
-description: Represents a GeneratedThing
+description: Any set of data representing a single generated object. In MUG, this
+  does not include the object's string representation, but rather all components used
+  in generating that representation. Think of this like the ingredients list rather
+  than the finished meal.
 from_schema: https://w3id.org/my-org/mug_schemas
 rank: 1000
 is_a: NamedThing
-slot_usage:
-  primary_email:
-    name: primary_email
-    domain_of:
-    - GeneratedThing
-    pattern: ^\S+@[\S+\.]+\S+
 attributes:
-  primary_email:
-    name: primary_email
-    description: The main email address of a person
-    from_schema: https://w3id.org/my-org/mug_schemas
-    rank: 1000
-    slot_uri: schema:email
-    alias: primary_email
-    owner: GeneratedThing
-    domain_of:
-    - GeneratedThing
-    range: string
-    pattern: ^\S+@[\S+\.]+\S+
-  birth_date:
-    name: birth_date
-    description: Date on which a person is born
-    from_schema: https://w3id.org/my-org/mug_schemas
-    rank: 1000
-    slot_uri: schema:birthDate
-    alias: birth_date
-    owner: GeneratedThing
-    domain_of:
-    - GeneratedThing
-    range: date
-  age_in_years:
-    name: age_in_years
-    description: Number of years since birth
-    from_schema: https://w3id.org/my-org/mug_schemas
-    rank: 1000
-    alias: age_in_years
-    owner: GeneratedThing
-    domain_of:
-    - GeneratedThing
-    range: integer
-  vital_status:
-    name: vital_status
-    description: living or dead status
-    from_schema: https://w3id.org/my-org/mug_schemas
-    rank: 1000
-    alias: vital_status
-    owner: GeneratedThing
-    domain_of:
-    - GeneratedThing
-    range: PersonStatus
   id:
     name: id
     description: A unique identifier for a thing
@@ -209,7 +152,8 @@ attributes:
     range: string
   description:
     name: description
-    description: A human-readable description for a thing
+    description: A human-readable description for a thing. For a GeneratedThing, this
+      will be one potential string representation of the object.
     from_schema: https://w3id.org/my-org/mug_schemas
     rank: 1000
     slot_uri: schema:description

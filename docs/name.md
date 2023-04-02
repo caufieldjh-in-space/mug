@@ -16,7 +16,13 @@ URI: [schema:name](http://schema.org/name)
 | Name | Description |
 | --- | --- |
 [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity
-[GeneratedThing](GeneratedThing.md) | Represents a GeneratedThing
+[GeneratedThing](GeneratedThing.md) | Any set of data representing a single generated object
+[Address](Address.md) | A mailing address for a physical location
+[ResidentialAddress](ResidentialAddress.md) | Address of a residential location
+[WorkingAddress](WorkingAddress.md) | Address of a workplace location
+[Person](Person.md) | General class for people
+[FullName](FullName.md) | All parts of a name
+[Company](Company.md) | A corporate entity
 
 
 

@@ -4,7 +4,7 @@
 
 
 
-URI: [mug_schemas:generatedThingCollection__entries](https://w3id.org/my-org/mug_schemas/generatedThingCollection__entries)
+URI: [mug:generatedThingCollection__entries](https://w3id.org/caufieldjh-in-space/mug_schemas/generatedThingCollection__entries)
 
 
 ## Domain and Range

@@ -1,21 +1,123 @@
 {
     "$defs": {
-        "GeneratedThing": {
+        "Address": {
             "additionalProperties": false,
-            "description": "Represents a GeneratedThing",
+            "description": "A mailing address for a physical location. This is the general class - it includes an addressee, but that isn't required.",
             "properties": {
-                "age_in_years": {
-                    "description": "Number of years since birth",
-                    "type": "integer"
+                "address_number": {
+                    "description": "The most specific component of a physical mailing address. Multi-line values are  represented by multivalues.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
-                "birth_date": {
-                    "description": "Date on which a person is born",
-                    "format": "date",
+                "addressee": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "description": "The recipient of mail. May be a person or a company - the name is the most relevant part."
+                },
+                "description": {
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "locality": {
+                    "description": "The broadest component of a physical mailing address. Should include postal code.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "street": {
+                    "description": "The street component of a physical mailing address. Unabbreviated by default (Street, not St.) Multi-line values are represented by multivalues. See examples.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Address",
+            "type": "object"
+        },
+        "Company": {
+            "additionalProperties": false,
+            "description": "A corporate entity.",
+            "properties": {
+                "company_name": {
                     "type": "string"
                 },
                 "description": {
-                    "description": "A human-readable description for a thing",
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
                     "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "industry": {
+                    "type": "string"
+                },
+                "logo_description": {
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "slogan": {
+                    "type": "string"
+                },
+                "work_address": {
+                    "description": "One or more addresses where a person may work.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Company",
+            "type": "object"
+        },
+        "FullName": {
+            "additionalProperties": false,
+            "description": "All parts of a name.",
+            "properties": {
+                "description": {
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
+                    "type": "string"
+                },
+                "family_name": {
+                    "description": "A family name. Optional, so mononyms should go in given_name. For multvalued names like  \"Duarte de Per\u00f3n\", the \"de\" particle should be part of the second name, not its own value.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "given_name": {
+                    "description": "A given name. May be a mononym (i.e., the only name). When multivalued, implies spaces in between names.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "id": {
                     "description": "A unique identifier for a thing",
@@ -25,14 +127,56 @@
                     "description": "A human-readable name for a thing",
                     "type": "string"
                 },
-                "primary_email": {
-                    "description": "The main email address of a person",
-                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
+                "other_name": {
+                    "description": "A middle name or names, usually, or at least a name usually presented in between a given_name and a family_name.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "preferred_name": {
+                    "description": "Any name used to refer to a specific Person. Often presented in quotes, but that doesn't have to be the case here.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "suffix": {
+                    "description": "A formal or informal postfix for a name. Use the full version, not an abbreviation. These can get messy about commas and such, but that's not a problem to be solved here.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "title": {
+                    "description": "A formal or informal prefix for a name. Use the full version, not an abbreviation.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "FullName",
+            "type": "object"
+        },
+        "GeneratedThing": {
+            "additionalProperties": false,
+            "description": "Any set of data representing a single generated object. In MUG, this does not include the object's string representation, but rather all components used in generating that representation. Think of this like the ingredients list rather than the finished meal.",
+            "properties": {
+                "description": {
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
                     "type": "string"
                 },
-                "vital_status": {
-                    "$ref": "#/$defs/PersonStatus",
-                    "description": "living or dead status"
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
                 }
             },
             "required": [
@@ -57,19 +201,10 @@
         },
         "GeneratedThing__identifier_optional": {
             "additionalProperties": false,
-            "description": "Represents a GeneratedThing",
+            "description": "Any set of data representing a single generated object. In MUG, this does not include the object's string representation, but rather all components used in generating that representation. Think of this like the ingredients list rather than the finished meal.",
             "properties": {
-                "age_in_years": {
-                    "description": "Number of years since birth",
-                    "type": "integer"
-                },
-                "birth_date": {
-                    "description": "Date on which a person is born",
-                    "format": "date",
-                    "type": "string"
-                },
                 "description": {
-                    "description": "A human-readable description for a thing",
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
                     "type": "string"
                 },
                 "id": {
@@ -79,15 +214,6 @@
                 "name": {
                     "description": "A human-readable name for a thing",
                     "type": "string"
-                },
-                "primary_email": {
-                    "description": "The main email address of a person",
-                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
-                    "type": "string"
-                },
-                "vital_status": {
-                    "$ref": "#/$defs/PersonStatus",
-                    "description": "living or dead status"
                 }
             },
             "required": [],
@@ -99,7 +225,7 @@
             "description": "A generic grouping for any identifiable entity",
             "properties": {
                 "description": {
-                    "description": "A human-readable description for a thing",
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
                     "type": "string"
                 },
                 "id": {
@@ -117,15 +243,144 @@
             "title": "NamedThing",
             "type": "object"
         },
-        "PersonStatus": {
-            "description": "",
-            "enum": [
-                "ALIVE",
-                "DEAD",
-                "UNKNOWN"
+        "Person": {
+            "additionalProperties": false,
+            "description": "General class for people.",
+            "properties": {
+                "description": {
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
+                    "type": "string"
+                },
+                "full_name": {
+                    "description": "Slot for all name parts.",
+                    "type": "string"
+                },
+                "home_address": {
+                    "description": "One or more addresses where a person may live.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "work_address": {
+                    "description": "One or more addresses where a person may work.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "id"
             ],
-            "title": "PersonStatus",
-            "type": "string"
+            "title": "Person",
+            "type": "object"
+        },
+        "ResidentialAddress": {
+            "additionalProperties": false,
+            "description": "Address of a residential location.",
+            "properties": {
+                "address_number": {
+                    "description": "The most specific component of a physical mailing address. Multi-line values are  represented by multivalues.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "addressee": {
+                    "description": "The recipient of mail. May be a person or a company - the name is the most relevant part.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "locality": {
+                    "description": "The broadest component of a physical mailing address. Should include postal code.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "street": {
+                    "description": "The street component of a physical mailing address. Unabbreviated by default (Street, not St.) Multi-line values are represented by multivalues. See examples.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "addressee",
+                "id"
+            ],
+            "title": "ResidentialAddress",
+            "type": "object"
+        },
+        "WorkingAddress": {
+            "additionalProperties": false,
+            "description": "Address of a workplace location. Technically this is a commercial address since it's specific to Company, but for now that can cover things like government agencies, too.",
+            "properties": {
+                "address_number": {
+                    "description": "The most specific component of a physical mailing address. Multi-line values are  represented by multivalues.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "addressee": {
+                    "description": "The recipient of mail. May be a person or a company - the name is the most relevant part.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "locality": {
+                    "description": "The broadest component of a physical mailing address. Should include postal code.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "street": {
+                    "description": "The street component of a physical mailing address. Unabbreviated by default (Street, not St.) Multi-line values are represented by multivalues. See examples.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "addressee",
+                "id"
+            ],
+            "title": "WorkingAddress",
+            "type": "object"
         }
     },
     "$id": "https://w3id.org/my-org/mug_schemas",

@@ -3,7 +3,7 @@
   "description": "Schemas for Modular Universal Generators.",
   "title": "mug_schemas",
   "see_also": [
-    "https://my-org.github.io/mug_schemas"
+    "https://caufieldjh-in-space.github.io/mug"
   ],
   "id": "https://w3id.org/my-org/mug_schemas",
   "imports": [
@@ -12,8 +12,8 @@
   "license": "MIT",
   "prefixes": [
     {
-      "prefix_prefix": "mug_schemas",
-      "prefix_reference": "https://w3id.org/my-org/mug_schemas/"
+      "prefix_prefix": "mug",
+      "prefix_reference": "https://w3id.org/caufieldjh-in-space/mug_schemas/"
     },
     {
       "prefix_prefix": "linkml",
@@ -30,13 +30,9 @@
     {
       "prefix_prefix": "PATO",
       "prefix_reference": "http://purl.obolibrary.org/obo/PATO_"
-    },
-    {
-      "prefix_prefix": "example",
-      "prefix_reference": "https://example.org/"
     }
   ],
-  "default_prefix": "mug_schemas",
+  "default_prefix": "mug",
   "default_range": "string",
   "types": [
     {
@@ -259,36 +255,10 @@
       "@type": "TypeDefinition"
     }
   ],
-  "enums": [
-    {
-      "name": "PersonStatus",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/PersonStatus",
-      "from_schema": "https://w3id.org/my-org/mug_schemas",
-      "permissible_values": [
-        {
-          "text": "ALIVE",
-          "description": "the person is living",
-          "meaning": "PATO:0001421"
-        },
-        {
-          "text": "DEAD",
-          "description": "the person is deceased",
-          "meaning": "PATO:0001422"
-        },
-        {
-          "text": "UNKNOWN",
-          "description": "the vital status is not known",
-          "todos": [
-            "map this to an ontology"
-          ]
-        }
-      ]
-    }
-  ],
   "slots": [
     {
       "name": "id",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/id",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/id",
       "description": "A unique identifier for a thing",
       "from_schema": "https://w3id.org/my-org/mug_schemas",
       "mappings": [
@@ -306,7 +276,7 @@
     },
     {
       "name": "name",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/name",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/name",
       "description": "A human-readable name for a thing",
       "from_schema": "https://w3id.org/my-org/mug_schemas",
       "mappings": [
@@ -322,8 +292,8 @@
     },
     {
       "name": "description",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/description",
-      "description": "A human-readable description for a thing",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/description",
+      "description": "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.",
       "from_schema": "https://w3id.org/my-org/mug_schemas",
       "mappings": [
         "http://schema.org/description"
@@ -337,67 +307,409 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "primary_email",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/primary_email",
-      "description": "The main email address of a person",
-      "from_schema": "https://w3id.org/my-org/mug_schemas",
-      "mappings": [
-        "http://schema.org/email"
+      "name": "addressee",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/addressee",
+      "description": "The recipient of mail. May be a person or a company - the name is the most relevant part.",
+      "todos": [
+        "Unions can be tricky, so test this"
       ],
-      "slot_uri": "http://schema.org/email",
-      "owner": "GeneratedThing",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/addressee",
+      "owner": "Address",
       "domain_of": [
-        "GeneratedThing"
+        "Address"
+      ],
+      "range": "string",
+      "any_of": [
+        {
+          "range": "Person",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Company",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "address_number",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/address_number",
+      "description": "The most specific component of a physical mailing address. Multi-line values are  represented by multivalues.",
+      "todos": [
+        "add an enum for corporate departments"
+      ],
+      "examples": [
+        {
+          "value": "30",
+          "@type": "Example"
+        },
+        {
+          "value": "40B",
+          "@type": "Example"
+        },
+        {
+          "value": "Room 581",
+          "@type": "Example"
+        },
+        {
+          "value": "Floor 12",
+          "@type": "Example"
+        },
+        {
+          "value": "Bamberg Building",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/address_number",
+      "multivalued": true,
+      "owner": "Address",
+      "domain_of": [
+        "Address"
       ],
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "birth_date",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/birth_date",
-      "description": "Date on which a person is born",
+      "name": "street",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/street",
+      "description": "The street component of a physical mailing address. Unabbreviated by default (Street, not St.) Multi-line values are represented by multivalues. See examples.",
+      "todos": [
+        "convert to a GeneratedThing, at least to make street type enum"
+      ],
+      "examples": [
+        {
+          "value": "Sandstone Street",
+          "@type": "Example"
+        },
+        {
+          "value": "Colonial Highway",
+          "@type": "Example"
+        },
+        {
+          "value": "Stevens Q. Puddleton Trail",
+          "@type": "Example"
+        }
+      ],
       "from_schema": "https://w3id.org/my-org/mug_schemas",
-      "mappings": [
-        "http://schema.org/birthDate"
-      ],
-      "slot_uri": "http://schema.org/birthDate",
-      "owner": "GeneratedThing",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/street",
+      "multivalued": true,
+      "owner": "Address",
       "domain_of": [
-        "GeneratedThing"
+        "Address"
       ],
-      "range": "date",
+      "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "age_in_years",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/age_in_years",
-      "description": "Number of years since birth",
-      "from_schema": "https://w3id.org/my-org/mug_schemas",
-      "slot_uri": "https://w3id.org/my-org/mug_schemas/age_in_years",
-      "owner": "GeneratedThing",
-      "domain_of": [
-        "GeneratedThing"
+      "name": "locality",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/locality",
+      "description": "The broadest component of a physical mailing address. Should include postal code.",
+      "todos": [
+        "evaluate whether this really needs to be multivalued",
+        "convert to a GeneratedThing",
+        "but note that city, broader location, and postal code are all related",
+        "define a regex pattern (or patterns)"
       ],
-      "range": "integer",
+      "examples": [
+        {
+          "value": "Kansas City, Missouri 64102, United States",
+          "@type": "Example"
+        },
+        {
+          "value": "Staples, Ontario N0P 2J0, Canada",
+          "@type": "Example"
+        },
+        {
+          "value": "14612 Falkensee, Germany",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/locality",
+      "multivalued": true,
+      "owner": "Address",
+      "domain_of": [
+        "Address"
+      ],
+      "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "vital_status",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/vital_status",
-      "description": "living or dead status",
+      "name": "full_name",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/full_name",
+      "description": "Slot for all name parts.",
       "from_schema": "https://w3id.org/my-org/mug_schemas",
-      "slot_uri": "https://w3id.org/my-org/mug_schemas/vital_status",
-      "owner": "GeneratedThing",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/full_name",
+      "owner": "Person",
       "domain_of": [
-        "GeneratedThing"
+        "Person"
       ],
-      "range": "PersonStatus",
+      "range": "FullName",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "given_name",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/given_name",
+      "description": "A given name. May be a mononym (i.e., the only name). When multivalued, implies spaces in between names.",
+      "examples": [
+        {
+          "value": "Frances",
+          "@type": "Example"
+        },
+        {
+          "value": "Mary Kate",
+          "@type": "Example"
+        },
+        {
+          "value": "Sinbad",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "aliases": [
+        "first name",
+        "forename"
+      ],
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/given_name",
+      "multivalued": true,
+      "owner": "FullName",
+      "domain_of": [
+        "FullName"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "family_name",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/family_name",
+      "description": "A family name. Optional, so mononyms should go in given_name. For multvalued names like  \"Duarte de Per\u00f3n\", the \"de\" particle should be part of the second name, not its own value.",
+      "examples": [
+        {
+          "value": "Quigley",
+          "@type": "Example"
+        },
+        {
+          "value": "Branson-Danforth",
+          "@type": "Example"
+        },
+        {
+          "value": "de Souza",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "aliases": [
+        "last name",
+        "surname"
+      ],
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/family_name",
+      "multivalued": true,
+      "owner": "FullName",
+      "domain_of": [
+        "FullName"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "other_name",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/other_name",
+      "description": "A middle name or names, usually, or at least a name usually presented in between a given_name and a family_name.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "aliases": [
+        "middle name"
+      ],
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/other_name",
+      "multivalued": true,
+      "owner": "FullName",
+      "domain_of": [
+        "FullName"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "preferred_name",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/preferred_name",
+      "description": "Any name used to refer to a specific Person. Often presented in quotes, but that doesn't have to be the case here.",
+      "examples": [
+        {
+          "value": "Jimmy",
+          "@type": "Example"
+        },
+        {
+          "value": "The Brick",
+          "@type": "Example"
+        },
+        {
+          "value": "xXDarksoul920Xx",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "aliases": [
+        "nickname",
+        "pet name",
+        "pseudonym"
+      ],
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/preferred_name",
+      "multivalued": true,
+      "owner": "FullName",
+      "domain_of": [
+        "FullName"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "title",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/title",
+      "description": "A formal or informal prefix for a name. Use the full version, not an abbreviation.",
+      "examples": [
+        {
+          "value": "Lady",
+          "@type": "Example"
+        },
+        {
+          "value": "Captain",
+          "@type": "Example"
+        },
+        {
+          "value": "His Holiness",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "aliases": [
+        "prenominative"
+      ],
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/title",
+      "multivalued": true,
+      "owner": "FullName",
+      "domain_of": [
+        "FullName"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "suffix",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/suffix",
+      "description": "A formal or informal postfix for a name. Use the full version, not an abbreviation. These can get messy about commas and such, but that's not a problem to be solved here.",
+      "examples": [
+        {
+          "value": "Jr",
+          "@type": "Example"
+        },
+        {
+          "value": "IV",
+          "@type": "Example"
+        },
+        {
+          "value": "CEO",
+          "@type": "Example"
+        },
+        {
+          "value": "Professor Emeritus",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "aliases": [
+        "postnominative"
+      ],
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/suffix",
+      "multivalued": true,
+      "owner": "FullName",
+      "domain_of": [
+        "FullName"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "home_address",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/home_address",
+      "description": "One or more addresses where a person may live.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/home_address",
+      "multivalued": true,
+      "owner": "Person",
+      "domain_of": [
+        "Person"
+      ],
+      "range": "ResidentialAddress",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "work_address",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/work_address",
+      "description": "One or more addresses where a person may work.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/work_address",
+      "multivalued": true,
+      "owner": "Company",
+      "domain_of": [
+        "Person",
+        "Company"
+      ],
+      "range": "WorkingAddress",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "company_name",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/company_name",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/company_name",
+      "owner": "Company",
+      "domain_of": [
+        "Company"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "industry",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/industry",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/industry",
+      "owner": "Company",
+      "domain_of": [
+        "Company"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "slogan",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/slogan",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/slogan",
+      "owner": "Company",
+      "domain_of": [
+        "Company"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "logo_description",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/logo_description",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/logo_description",
+      "owner": "Company",
+      "domain_of": [
+        "Company"
+      ],
+      "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "generatedThingCollection__entries",
       "from_schema": "https://w3id.org/my-org/mug_schemas",
-      "slot_uri": "https://w3id.org/my-org/mug_schemas/entries",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/entries",
       "multivalued": true,
       "alias": "entries",
       "owner": "GeneratedThingCollection",
@@ -409,32 +721,74 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "GeneratedThing_primary_email",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/primary_email",
-      "description": "The main email address of a person",
-      "from_schema": "https://w3id.org/my-org/mug_schemas",
-      "mappings": [
-        "http://schema.org/email"
+      "name": "ResidentialAddress_addressee",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/addressee",
+      "description": "The recipient of mail. May be a person or a company - the name is the most relevant part.",
+      "todos": [
+        "Unions can be tricky, so test this"
       ],
-      "is_a": "primary_email",
-      "domain": "GeneratedThing",
-      "slot_uri": "http://schema.org/email",
-      "alias": "primary_email",
-      "owner": "GeneratedThing",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "is_a": "addressee",
+      "domain": "ResidentialAddress",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/addressee",
+      "alias": "addressee",
+      "owner": "ResidentialAddress",
       "domain_of": [
-        "GeneratedThing"
+        "ResidentialAddress"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "primary_email",
-      "range": "string",
-      "pattern": "^\\S+@[\\S+\\.]+\\S+",
+      "usage_slot_name": "addressee",
+      "range": "Person",
+      "required": true,
+      "any_of": [
+        {
+          "range": "Person",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Company",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "WorkingAddress_addressee",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/addressee",
+      "description": "The recipient of mail. May be a person or a company - the name is the most relevant part.",
+      "todos": [
+        "Unions can be tricky, so test this"
+      ],
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "is_a": "addressee",
+      "domain": "WorkingAddress",
+      "slot_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/addressee",
+      "alias": "addressee",
+      "owner": "WorkingAddress",
+      "domain_of": [
+        "WorkingAddress"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "addressee",
+      "range": "Company",
+      "required": true,
+      "any_of": [
+        {
+          "range": "Person",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Company",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
       "@type": "SlotDefinition"
     }
   ],
   "classes": [
     {
       "name": "NamedThing",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/NamedThing",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/NamedThing",
       "description": "A generic grouping for any identifiable entity",
       "from_schema": "https://w3id.org/my-org/mug_schemas",
       "mappings": [
@@ -451,26 +805,138 @@
     },
     {
       "name": "GeneratedThing",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/GeneratedThing",
-      "description": "Represents a GeneratedThing",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/GeneratedThing",
+      "description": "Any set of data representing a single generated object. In MUG, this does not include the object's string representation, but rather all components used in generating that representation. Think of this like the ingredients list rather than the finished meal.",
       "from_schema": "https://w3id.org/my-org/mug_schemas",
       "is_a": "NamedThing",
       "slots": [
         "id",
         "name",
-        "description",
-        "GeneratedThing_primary_email",
-        "birth_date",
-        "age_in_years",
-        "vital_status"
+        "description"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/my-org/mug_schemas/GeneratedThing",
+      "class_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/GeneratedThing",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Address",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/Address",
+      "description": "A mailing address for a physical location. This is the general class - it includes an addressee, but that isn't required.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "is_a": "GeneratedThing",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "addressee",
+        "address_number",
+        "street",
+        "locality"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/Address",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ResidentialAddress",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/ResidentialAddress",
+      "description": "Address of a residential location.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "is_a": "Address",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "address_number",
+        "street",
+        "locality",
+        "ResidentialAddress_addressee"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/ResidentialAddress",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "WorkingAddress",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/WorkingAddress",
+      "description": "Address of a workplace location. Technically this is a commercial address since it's specific to Company, but for now that can cover things like government agencies, too.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "is_a": "Address",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "address_number",
+        "street",
+        "locality",
+        "WorkingAddress_addressee"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/WorkingAddress",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Person",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/Person",
+      "description": "General class for people.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "is_a": "GeneratedThing",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "full_name",
+        "home_address",
+        "work_address"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/Person",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "FullName",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/FullName",
+      "description": "All parts of a name.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "is_a": "GeneratedThing",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "given_name",
+        "family_name",
+        "other_name",
+        "preferred_name",
+        "title",
+        "suffix"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/FullName",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Company",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/Company",
+      "description": "A corporate entity.",
+      "from_schema": "https://w3id.org/my-org/mug_schemas",
+      "is_a": "GeneratedThing",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "company_name",
+        "work_address",
+        "industry",
+        "slogan",
+        "logo_description"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/Company",
       "@type": "ClassDefinition"
     },
     {
       "name": "GeneratedThingCollection",
-      "definition_uri": "https://w3id.org/my-org/mug_schemas/GeneratedThingCollection",
+      "definition_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/GeneratedThingCollection",
       "description": "A holder for GeneratedThing objects",
       "from_schema": "https://w3id.org/my-org/mug_schemas",
       "slots": [
@@ -486,22 +952,22 @@
           "@type": "SlotDefinition"
         }
       ],
-      "class_uri": "https://w3id.org/my-org/mug_schemas/GeneratedThingCollection",
+      "class_uri": "https://w3id.org/caufieldjh-in-space/mug_schemas/GeneratedThingCollection",
       "tree_root": true,
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mug_schemas.yaml",
-  "source_file_date": "2023-03-23T10:28:23",
-  "source_file_size": 2218,
-  "generation_date": "2023-03-23T10:53:25",
+  "source_file_date": "2023-04-02T12:10:06",
+  "source_file_size": 7292,
+  "generation_date": "2023-04-02T12:10:11",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mug_schemas.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     {
-      "@base": "https://w3id.org/my-org/mug_schemas/"
+      "@base": "https://w3id.org/caufieldjh-in-space/mug_schemas/"
     }
   ]
 }

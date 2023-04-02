@@ -70,7 +70,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | schema:Thing |
-| native | mug_schemas:NamedThing |
+| native | mug:NamedThing |
 
 
 
@@ -131,7 +131,8 @@ attributes:
     range: string
   description:
     name: description
-    description: A human-readable description for a thing
+    description: A human-readable description for a thing. For a GeneratedThing, this
+      will be one potential string representation of the object.
     from_schema: https://w3id.org/my-org/mug_schemas
     rank: 1000
     slot_uri: schema:description

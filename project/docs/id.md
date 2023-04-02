@@ -4,7 +4,7 @@
 
 A unique identifier for a thing
 
-URI: [mug_schemas:id](https://w3id.org/my-org/mug_schemas/id)
+URI: [mug:id](https://w3id.org/caufieldjh-in-space/mug_schemas/id)
 
 
 ## Domain and Range
@@ -19,8 +19,14 @@ None &#8594;  <sub>1..1</sub> [Uriorcurie](types/Uriorcurie.md)
 
 ## Used by
 
+ * [Address](Address.md)
+ * [Company](Company.md)
+ * [FullName](FullName.md)
  * [GeneratedThing](GeneratedThing.md)
  * [NamedThing](NamedThing.md)
+ * [Person](Person.md)
+ * [ResidentialAddress](ResidentialAddress.md)
+ * [WorkingAddress](WorkingAddress.md)
 
 ## Other properties
 

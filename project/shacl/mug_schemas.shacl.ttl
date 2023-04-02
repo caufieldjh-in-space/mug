@@ -1,71 +1,256 @@
-@prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
-@prefix mug_schemas: <https://w3id.org/my-org/mug_schemas/> .
+@prefix mug: <https://w3id.org/caufieldjh-in-space/mug_schemas/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix schema: <http://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-schema:Thing a sh:NodeShape ;
+schema1:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "A generic grouping for any identifiable entity" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A unique identifier for a thing" ;
+    sh:property [ sh:description "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object." ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema1:description ],
+        [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
             sh:order 0 ;
-            sh:path schema:identifier ],
+            sh:path schema1:identifier ],
         [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path schema:name ],
-        [ sh:description "A human-readable description for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path schema:description ] ;
-    sh:targetClass schema:Thing .
+            sh:path schema1:name ] ;
+    sh:targetClass schema1:Thing .
 
-mug_schemas:GeneratedThingCollection a sh:NodeShape ;
+mug:Address a sh:NodeShape ;
     sh:closed true ;
-    sh:description "A holder for GeneratedThing objects" ;
+    sh:description "A mailing address for a physical location. This is the general class - it includes an addressee, but that isn't required." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class mug_schemas:GeneratedThing ;
-            sh:nodeKind sh:IRI ;
-            sh:order 0 ;
-            sh:path mug_schemas:entries ] ;
-    sh:targetClass mug_schemas:GeneratedThingCollection .
-
-mug_schemas:GeneratedThing a sh:NodeShape ;
-    sh:closed true ;
-    sh:description "Represents a GeneratedThing" ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Number of years since birth" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path mug_schemas:age_in_years ],
-        [ sh:description "The main email address of a person" ;
-            sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path schema:email ;
-            sh:pattern "^\\S+@[\\S+\\.]+\\S+" ],
-        [ sh:description "living or dead status" ;
-            sh:in ( PATO:0001421 PATO:0001422 "UNKNOWN" ) ;
-            sh:maxCount 1 ;
+    sh:property [ sh:description "The broadest component of a physical mailing address. Should include postal code." ;
             sh:order 3 ;
-            sh:path mug_schemas:vital_status ],
-        [ sh:description "A unique identifier for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path schema:identifier ],
-        [ sh:description "Date on which a person is born" ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path schema:birthDate ],
+            sh:path mug:locality ],
         [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
             sh:order 5 ;
-            sh:path schema:name ],
-        [ sh:description "A human-readable description for a thing" ;
+            sh:path schema1:name ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema1:identifier ],
+        [ sh:description "The most specific component of a physical mailing address. Multi-line values are  represented by multivalues." ;
+            sh:order 1 ;
+            sh:path mug:address_number ],
+        [ sh:description "The recipient of mail. May be a person or a company - the name is the most relevant part." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path mug:addressee ],
+        [ sh:description "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object." ;
             sh:maxCount 1 ;
             sh:order 6 ;
-            sh:path schema:description ] ;
-    sh:targetClass mug_schemas:GeneratedThing .
+            sh:path schema1:description ],
+        [ sh:description "The street component of a physical mailing address. Unabbreviated by default (Street, not St.) Multi-line values are represented by multivalues. See examples." ;
+            sh:order 2 ;
+            sh:path mug:street ] ;
+    sh:targetClass mug:Address .
+
+mug:GeneratedThingCollection a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A holder for GeneratedThing objects" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class mug:GeneratedThing ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path mug:entries ] ;
+    sh:targetClass mug:GeneratedThingCollection .
+
+mug:Company a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A corporate entity." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema1:identifier ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path mug:slogan ],
+        [ sh:description "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object." ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path schema1:description ],
+        [ sh:class mug:WorkingAddress ;
+            sh:description "One or more addresses where a person may work." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path mug:work_address ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path mug:company_name ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema1:name ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path mug:industry ],
+        [ sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path mug:logo_description ] ;
+    sh:targetClass mug:Company .
+
+mug:FullName a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "All parts of a name." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A formal or informal postfix for a name. Use the full version, not an abbreviation. These can get messy about commas and such, but that's not a problem to be solved here." ;
+            sh:order 5 ;
+            sh:path mug:suffix ],
+        [ sh:description "A given name. May be a mononym (i.e., the only name). When multivalued, implies spaces in between names." ;
+            sh:order 0 ;
+            sh:path mug:given_name ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema1:identifier ],
+        [ sh:description "A family name. Optional, so mononyms should go in given_name. For multvalued names like  \"Duarte de Perón\", the \"de\" particle should be part of the second name, not its own value." ;
+            sh:order 1 ;
+            sh:path mug:family_name ],
+        [ sh:description "A middle name or names, usually, or at least a name usually presented in between a given_name and a family_name." ;
+            sh:order 2 ;
+            sh:path mug:other_name ],
+        [ sh:description "A formal or informal prefix for a name. Use the full version, not an abbreviation." ;
+            sh:order 4 ;
+            sh:path mug:title ],
+        [ sh:description "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object." ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path schema1:description ],
+        [ sh:description "Any name used to refer to a specific Person. Often presented in quotes, but that doesn't have to be the case here." ;
+            sh:order 3 ;
+            sh:path mug:preferred_name ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path schema1:name ] ;
+    sh:targetClass mug:FullName .
+
+mug:GeneratedThing a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Any set of data representing a single generated object. In MUG, this does not include the object's string representation, but rather all components used in generating that representation. Think of this like the ingredients list rather than the finished meal." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object." ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema1:description ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema1:name ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path schema1:identifier ] ;
+    sh:targetClass mug:GeneratedThing .
+
+mug:Person a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "General class for people." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema1:name ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema1:identifier ],
+        [ sh:class mug:ResidentialAddress ;
+            sh:description "One or more addresses where a person may live." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path mug:home_address ],
+        [ sh:class mug:FullName ;
+            sh:description "Slot for all name parts." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path mug:full_name ],
+        [ sh:class mug:WorkingAddress ;
+            sh:description "One or more addresses where a person may work." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path mug:work_address ],
+        [ sh:description "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object." ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema1:description ] ;
+    sh:targetClass mug:Person .
+
+mug:ResidentialAddress a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Address of a residential location." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema1:name ],
+        [ sh:description "The most specific component of a physical mailing address. Multi-line values are  represented by multivalues." ;
+            sh:order 1 ;
+            sh:path mug:address_number ],
+        [ sh:class mug:Person ;
+            sh:description "The recipient of mail. May be a person or a company - the name is the most relevant part." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path mug:addressee ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema1:identifier ],
+        [ sh:description "The broadest component of a physical mailing address. Should include postal code." ;
+            sh:order 3 ;
+            sh:path mug:locality ],
+        [ sh:description "The street component of a physical mailing address. Unabbreviated by default (Street, not St.) Multi-line values are represented by multivalues. See examples." ;
+            sh:order 2 ;
+            sh:path mug:street ],
+        [ sh:description "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object." ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema1:description ] ;
+    sh:targetClass mug:ResidentialAddress .
+
+mug:WorkingAddress a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Address of a workplace location. Technically this is a commercial address since it's specific to Company, but for now that can cover things like government agencies, too." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object." ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema1:description ],
+        [ sh:description "The street component of a physical mailing address. Unabbreviated by default (Street, not St.) Multi-line values are represented by multivalues. See examples." ;
+            sh:order 2 ;
+            sh:path mug:street ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema1:name ],
+        [ sh:description "The most specific component of a physical mailing address. Multi-line values are  represented by multivalues." ;
+            sh:order 1 ;
+            sh:path mug:address_number ],
+        [ sh:description "The broadest component of a physical mailing address. Should include postal code." ;
+            sh:order 3 ;
+            sh:path mug:locality ],
+        [ sh:class mug:Company ;
+            sh:description "The recipient of mail. May be a person or a company - the name is the most relevant part." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path mug:addressee ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema1:identifier ] ;
+    sh:targetClass mug:WorkingAddress .
 

@@ -1,8 +1,8 @@
-BASE <https://w3id.org/my-org/mug_schemas/>
+BASE <https://w3id.org/caufieldjh-in-space/mug_schemas/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
-PREFIX schema: <http://schema.org/>
+PREFIX schema1: <http://schema.org/>
 
 
 linkml:String xsd:string
@@ -37,17 +37,56 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-<GeneratedThing> CLOSED {
-    (  $<GeneratedThing_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema:Thing ] ? ;
-          schema:email @linkml:String ? ;
-          schema:birthDate @linkml:Date ? ;
-          <age_in_years> @linkml:Integer ? ;
-          <vital_status> @<PersonStatus> ?
+<Address>  (
+    CLOSED {
+       (  $<Address_tes> (  &<GeneratedThing_tes> ;
+             rdf:type [ <GeneratedThing> ] ? ;
+             <addressee> @linkml:String ? ;
+             <address_number> @linkml:String * ;
+             <street> @linkml:String * ;
+             <locality> @linkml:String *
+          ) ;
+          rdf:type [ <Address> ]
+       )
+    } OR @<ResidentialAddress> OR @<WorkingAddress>
+)
+
+<Company> CLOSED {
+    (  $<Company_tes> (  &<GeneratedThing_tes> ;
+          rdf:type [ <GeneratedThing> ] ? ;
+          <company_name> @linkml:String ? ;
+          <work_address> @<WorkingAddress> * ;
+          <industry> @linkml:String ? ;
+          <slogan> @linkml:String ? ;
+          <logo_description> @linkml:String ?
        ) ;
-       rdf:type [ <GeneratedThing> ]
+       rdf:type [ <Company> ]
     )
 }
+
+<FullName> CLOSED {
+    (  $<FullName_tes> (  &<GeneratedThing_tes> ;
+          rdf:type [ <GeneratedThing> ] ? ;
+          <given_name> @linkml:String * ;
+          <family_name> @linkml:String * ;
+          <other_name> @linkml:String * ;
+          <preferred_name> @linkml:String * ;
+          <title> @linkml:String * ;
+          <suffix> @linkml:String *
+       ) ;
+       rdf:type [ <FullName> ]
+    )
+}
+
+<GeneratedThing>  (
+    CLOSED {
+       (  $<GeneratedThing_tes> (  &<NamedThing_tes> ;
+             rdf:type [ schema1:Thing ] ?
+          ) ;
+          rdf:type [ <GeneratedThing> ]
+       )
+    } OR @<Address> OR @<Company> OR @<FullName> OR @<Person>
+)
 
 <GeneratedThingCollection> CLOSED {
     (  $<GeneratedThingCollection_tes> <entries> @<GeneratedThing> * ;
@@ -57,12 +96,41 @@ linkml:Nodeidentifier NONLITERAL
 
 <NamedThing>  (
     CLOSED {
-       (  $<NamedThing_tes> (  schema:name @linkml:String ? ;
-             schema:description @linkml:String ?
+       (  $<NamedThing_tes> (  schema1:name @linkml:String ? ;
+             schema1:description @linkml:String ?
           ) ;
-          rdf:type [ schema:Thing ]
+          rdf:type [ schema1:Thing ]
        )
     } OR @<GeneratedThing>
 )
+
+<Person> CLOSED {
+    (  $<Person_tes> (  &<GeneratedThing_tes> ;
+          rdf:type [ <GeneratedThing> ] ? ;
+          <full_name> @<FullName> ? ;
+          <home_address> @<ResidentialAddress> * ;
+          <work_address> @<WorkingAddress> *
+       ) ;
+       rdf:type [ <Person> ]
+    )
+}
+
+<ResidentialAddress> CLOSED {
+    (  $<ResidentialAddress_tes> (  &<Address_tes> ;
+          rdf:type [ <Address> ] ? ;
+          <addressee> @<Person>
+       ) ;
+       rdf:type [ <ResidentialAddress> ]
+    )
+}
+
+<WorkingAddress> CLOSED {
+    (  $<WorkingAddress_tes> (  &<Address_tes> ;
+          rdf:type [ <Address> ] ? ;
+          <addressee> @<Company>
+       ) ;
+       rdf:type [ <WorkingAddress> ]
+    )
+}
 
 

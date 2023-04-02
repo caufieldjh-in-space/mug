@@ -2,16 +2,23 @@
 # Class: GeneratedThing
 
 
-Represents a GeneratedThing
+Any set of data representing a single generated object. In MUG, this does not include the object's string representation, but rather all components used in generating that representation. Think of this like the ingredients list rather than the finished meal.
 
-URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedThing)
+URI: [mug:GeneratedThing](https://w3id.org/caufieldjh-in-space/mug_schemas/GeneratedThing)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[GeneratedThingCollection]++-%20entries%200..*>[GeneratedThing&#124;primary_email:string%20%3F;birth_date:date%20%3F;age_in_years:integer%20%3F;vital_status:PersonStatus%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[GeneratedThing],[GeneratedThingCollection])](https://yuml.me/diagram/nofunky;dir:TB/class/[NamedThing],[GeneratedThingCollection]++-%20entries%200..*>[GeneratedThing&#124;primary_email:string%20%3F;birth_date:date%20%3F;age_in_years:integer%20%3F;vital_status:PersonStatus%20%3F;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[NamedThing]^-[GeneratedThing],[GeneratedThingCollection])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[Person],[NamedThing],[GeneratedThingCollection]++-%20entries%200..*>[GeneratedThing&#124;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[GeneratedThing]^-[Person],[GeneratedThing]^-[FullName],[GeneratedThing]^-[Company],[GeneratedThing]^-[Address],[NamedThing]^-[GeneratedThing],[GeneratedThingCollection],[FullName],[Company],[Address])](https://yuml.me/diagram/nofunky;dir:TB/class/[Person],[NamedThing],[GeneratedThingCollection]++-%20entries%200..*>[GeneratedThing&#124;id(i):uriorcurie;name(i):string%20%3F;description(i):string%20%3F],[GeneratedThing]^-[Person],[GeneratedThing]^-[FullName],[GeneratedThing]^-[Company],[GeneratedThing]^-[Address],[NamedThing]^-[GeneratedThing],[GeneratedThingCollection],[FullName],[Company],[Address])
 
 ## Parents
 
  *  is_a: [NamedThing](NamedThing.md) - A generic grouping for any identifiable entity
+
+## Children
+
+ * [Address](Address.md) - A mailing address for a physical location. This is the general class - it includes an addressee, but that isn't required.
+ * [Company](Company.md) - A corporate entity.
+ * [FullName](FullName.md) - All parts of a name.
+ * [Person](Person.md) - General class for people.
 
 ## Referenced by Class
 
@@ -19,21 +26,6 @@ URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedT
 
 ## Attributes
 
-
-### Own
-
- * [GeneratedThing➞primary_email](GeneratedThing_primary_email.md)  <sub>0..1</sub>
-     * Description: The main email address of a person
-     * Range: [String](types/String.md)
- * [birth_date](birth_date.md)  <sub>0..1</sub>
-     * Description: Date on which a person is born
-     * Range: [Date](types/Date.md)
- * [age_in_years](age_in_years.md)  <sub>0..1</sub>
-     * Description: Number of years since birth
-     * Range: [Integer](types/Integer.md)
- * [vital_status](vital_status.md)  <sub>0..1</sub>
-     * Description: living or dead status
-     * Range: [PersonStatus](PersonStatus.md)
 
 ### Inherited from NamedThing:
 
@@ -44,5 +36,5 @@ URI: [mug_schemas:GeneratedThing](https://w3id.org/my-org/mug_schemas/GeneratedT
      * Description: A human-readable name for a thing
      * Range: [String](types/String.md)
  * [description](description.md)  <sub>0..1</sub>
-     * Description: A human-readable description for a thing
+     * Description: A human-readable description for a thing. For a GeneratedThing, this will be one potential string representation of the object.
      * Range: [String](types/String.md)

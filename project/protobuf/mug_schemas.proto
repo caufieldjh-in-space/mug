@@ -1,13 +1,45 @@
-// Represents a GeneratedThing
+// A mailing address for a physical location. This is the general class - it includes an addressee, but that isn't required.
+message Address
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string addressee = 0
+ repeated  string addressNumber = 0
+ repeated  string street = 0
+ repeated  string locality = 0
+ }
+// A corporate entity.
+message Company
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string companyName = 0
+ repeated  workingAddress workAddress = 0
+  string industry = 0
+  string slogan = 0
+  string logoDescription = 0
+ }
+// All parts of a name.
+message FullName
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string givenName = 0
+ repeated  string familyName = 0
+ repeated  string otherName = 0
+ repeated  string preferredName = 0
+ repeated  string title = 0
+ repeated  string suffix = 0
+ }
+// Any set of data representing a single generated object. In MUG, this does not include the object's string representation, but rather all components used in generating that representation. Think of this like the ingredients list rather than the finished meal.
 message GeneratedThing
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
-  string primaryEmail = 0
-  date birthDate = 0
-  integer ageInYears = 0
-  personStatus vitalStatus = 0
  }
 // A holder for GeneratedThing objects
 message GeneratedThingCollection
@@ -20,4 +52,36 @@ message NamedThing
   uriorcurie id = 0
   string name = 0
   string description = 0
+ }
+// General class for people.
+message Person
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  fullName fullName = 0
+ repeated  residentialAddress homeAddress = 0
+ repeated  workingAddress workAddress = 0
+ }
+// Address of a residential location.
+message ResidentialAddress
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string addressNumber = 0
+ repeated  string street = 0
+ repeated  string locality = 0
+  person addressee = 0
+ }
+// Address of a workplace location. Technically this is a commercial address since it's specific to Company, but for now that can cover things like government agencies, too.
+message WorkingAddress
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string addressNumber = 0
+ repeated  string street = 0
+ repeated  string locality = 0
+  company addressee = 0
  }

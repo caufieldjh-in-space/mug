@@ -1,6 +1,6 @@
 # Slot: entries
 
-URI: [mug_schemas:entries](https://w3id.org/my-org/mug_schemas/entries)
+URI: [mug:entries](https://w3id.org/caufieldjh-in-space/mug_schemas/entries)
 
 
 

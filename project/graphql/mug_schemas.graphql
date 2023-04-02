@@ -1,12 +1,44 @@
+type Address
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    addressee: String
+    addressNumber: [String]
+    street: [String]
+    locality: [String]
+  }
+
+type Company
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    companyName: String
+    workAddress: [WorkingAddress]
+    industry: String
+    slogan: String
+    logoDescription: String
+  }
+
+type FullName
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    givenName: [String]
+    familyName: [String]
+    otherName: [String]
+    preferredName: [String]
+    title: [String]
+    suffix: [String]
+  }
+
 type GeneratedThing
   {
     id: Uriorcurie!
     name: String
     description: String
-    primaryEmail: String
-    birthDate: Date
-    ageInYears: Integer
-    vitalStatus: PersonStatus
   }
 
 type GeneratedThingCollection
@@ -19,5 +51,37 @@ type NamedThing
     id: Uriorcurie!
     name: String
     description: String
+  }
+
+type Person
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    fullName: FullName
+    homeAddress: [ResidentialAddress]
+    workAddress: [WorkingAddress]
+  }
+
+type ResidentialAddress
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    addressNumber: [String]
+    street: [String]
+    locality: [String]
+    addressee: Person!
+  }
+
+type WorkingAddress
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    addressNumber: [String]
+    street: [String]
+    locality: [String]
+    addressee: Company!
   }
 

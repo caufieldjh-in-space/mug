@@ -11,30 +11,48 @@ Name: mug_schemas
 
 | Class | Description |
 | --- | --- |
-| [GeneratedThing](GeneratedThing.md) | Represents a GeneratedThing |
+| [Address](Address.md) | A mailing address for a physical location |
+| [Company](Company.md) | A corporate entity |
+| [FullName](FullName.md) | All parts of a name |
+| [GeneratedThing](GeneratedThing.md) | Any set of data representing a single generated object |
 | [GeneratedThingCollection](GeneratedThingCollection.md) | A holder for GeneratedThing objects |
 | [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |
+| [Person](Person.md) | General class for people |
+| [ResidentialAddress](ResidentialAddress.md) | Address of a residential location |
+| [WorkingAddress](WorkingAddress.md) | Address of a workplace location |
 
 
 ## Slots
 
 | Slot | Description |
 | --- | --- |
-| [age_in_years](age_in_years.md) | Number of years since birth |
-| [birth_date](birth_date.md) | Date on which a person is born |
+| [address_number](address_number.md) | The most specific component of a physical mailing address |
+| [addressee](addressee.md) | The recipient of mail |
+| [company_name](company_name.md) |  |
 | [description](description.md) | A human-readable description for a thing |
 | [entries](entries.md) |  |
+| [family_name](family_name.md) | A family name |
+| [full_name](full_name.md) | Slot for all name parts |
+| [given_name](given_name.md) | A given name |
+| [home_address](home_address.md) | One or more addresses where a person may live |
 | [id](id.md) | A unique identifier for a thing |
+| [industry](industry.md) |  |
+| [locality](locality.md) | The broadest component of a physical mailing address |
+| [logo_description](logo_description.md) |  |
 | [name](name.md) | A human-readable name for a thing |
-| [primary_email](primary_email.md) | The main email address of a person |
-| [vital_status](vital_status.md) | living or dead status |
+| [other_name](other_name.md) | A middle name or names, usually, or at least a name usually presented in betw... |
+| [preferred_name](preferred_name.md) | Any name used to refer to a specific Person |
+| [slogan](slogan.md) |  |
+| [street](street.md) | The street component of a physical mailing address |
+| [suffix](suffix.md) | A formal or informal postfix for a name |
+| [title](title.md) | A formal or informal prefix for a name |
+| [work_address](work_address.md) | One or more addresses where a person may work |
 
 
 ## Enumerations
 
 | Enumeration | Description |
 | --- | --- |
-| [PersonStatus](PersonStatus.md) |  |
 
 
 ## Types
@@ -42,6 +60,7 @@ Name: mug_schemas
 | Type | Description |
 | --- | --- |
 | [Boolean](Boolean.md) | A binary (true or false) value |
+| [Curie](Curie.md) | a compact URI |
 | [Date](Date.md) | a date (year, month and day) in an idealized calendar |
 | [DateOrDatetime](DateOrDatetime.md) | Either a date or a datetime |
 | [Datetime](Datetime.md) | The combination of a date and time |
