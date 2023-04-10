@@ -30,3 +30,6 @@ build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry.extras]
 docs = ["linkml", "mkdocs-material"]
+
+[tool.poetry.scripts]
+mug = "mug.cli:main"

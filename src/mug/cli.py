@@ -2,7 +2,7 @@
 
 import click
 
-from generators.load_class import load_class
+from mug.load_class import load_class
 
 @click.command()
 @click.argument("classname")
