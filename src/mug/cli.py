@@ -3,7 +3,7 @@
 import click
 import uuid
 
-from mug.load_class import load_class
+from mug.load_class import load_model_class, load_generator_class
 
 @click.command()
 @click.argument("classname")
@@ -14,17 +14,16 @@ def main(classname: str, count: int):
     :param count: Number of items to generate in total.
     """
 
-    gen = load_class(classname)
+    model_class = load_model_class(classname)
 
     # Get the slot list for this
-    example = gen(id="NULL")
-    print(example.__dict__)
+    example = model_class(id="NULL")
+    slots = example.__dict__
 
     for _ in range(count):
-        
-        this_id = str(uuid.uuid4())
-        new_item = gen(id=this_id)
-
+        genclass = load_generator_class(classname)
+        kwargs = genclass()
+        new_item = model_class(**kwargs)
         print(new_item)
 
 
