@@ -14,10 +14,17 @@ def main(classname: str, count: int):
     :param count: Number of items to generate in total.
     """
 
+    gen = load_class(classname)
+
+    # Get the slot list for this
+    example = gen(id="NULL")
+    print(example.__dict__)
+
     for _ in range(count):
-        gen = load_class(classname)
+        
         this_id = str(uuid.uuid4())
         new_item = gen(id=this_id)
+
         print(new_item)
 
 
