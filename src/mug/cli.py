@@ -1,6 +1,7 @@
 """Command line interface for mug generators."""
 
 import click
+import uuid
 
 from mug.load_class import load_class
 
@@ -15,7 +16,9 @@ def main(classname: str, count: int):
 
     for _ in range(count):
         gen = load_class(classname)
-        print(gen)
+        this_id = str(uuid.uuid4())
+        new_item = gen(id=this_id)
+        print(new_item)
 
 
 if __name__ == "__main__":
