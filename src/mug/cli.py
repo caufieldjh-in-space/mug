@@ -1,7 +1,6 @@
 """Command line interface for mug generators."""
 
 import click
-import uuid
 
 from mug.load_class import load_model_class, load_generator_class
 
@@ -15,10 +14,6 @@ def main(classname: str, count: int):
     """
 
     model_class = load_model_class(classname)
-
-    # Get the slot list for this
-    example = model_class(id="NULL")
-    slots = example.__dict__
 
     for _ in range(count):
         genclass = load_generator_class(classname)
