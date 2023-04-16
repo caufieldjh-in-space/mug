@@ -17,7 +17,8 @@ def load_res(resname: str):
     return res
 
 def sample_res(resname: str):
-    """Retrieve a sample from a resource, returning a dict."""
+    """Retrieve a sample from a resource, returning a dict.
+    """
 
     res = load_res(resname)
 
