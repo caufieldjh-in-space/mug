@@ -4,9 +4,11 @@ id	full_title
 2nd Lt	Second Lieutenant
 Adm	Admiral
 Agent	Agent
+Amb	Ambassador
 Amn	Airman
 Assoc Prof	Associate Professor
 Asst Prof	Assistant Professor
+Bishop	Bishop
 Brig Gen	Brigadier General
 CPO	Chief Petty Officer
 Capt	Captain
@@ -16,6 +18,8 @@ Chf	Chief
 Cmdr	Commander
 Cmdre	Commodore
 Coach	Coach
+Commr	Commissioner
+Counselor	Counselor
 Cpl	Corporal
 Dame	Dame
 Dean	Dean
@@ -27,6 +31,8 @@ Ens	Ensign
 Fr	Father
 Gen	General
 Gunnery Sgt	Gunnery Sergeant
+HE	His Excellency
+HG	His Grace
 HH	Her Holiness
 HH	His Holiness
 Hd Coach	Head Coach
@@ -41,6 +47,7 @@ Maj	Major
 Maj Gen	Major General
 Master	Master
 Master Sgt	Master Sergeant
+Mayor	Mayor
 Ofc	Officer
 Pfc	Private First Class
 Pres	President
@@ -56,9 +63,11 @@ Sen	Senator
 Sgt	Sergeant
 Sgt 1st Class	Sergeant First Class
 Sgt Maj	Sergeant Major
+Sheikh	Sheikh 
 Sir	Sir
 Sman	Seaman
 Spec	Specialist
+Special Envoy	Special Envoy
 Staff Sgt	Staff Sergeant
 TH	Their Holiness
 The Hon	The Honorable
