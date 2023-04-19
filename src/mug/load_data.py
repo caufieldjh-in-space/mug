@@ -6,7 +6,8 @@ from pathlib import Path
 
 RESOURCE_DIR = Path("src/mug/resources")
 
-#TODO: add a lookup function (given id, get value in column)
+# TODO: add a lookup function (given id, get value in column)
+
 
 def load_res(resname: str):
     """Load TSV and return full data frame."""
@@ -17,12 +18,24 @@ def load_res(resname: str):
 
     return res
 
+
 def sample_res(resname: str):
-    """Retrieve a sample from a resource, returning a dict.
-    """
+    """Retrieve a sample from a resource, returning a dict."""
 
     res = load_res(resname)
 
     sample = (res.sample(n=1)).to_dict(as_series=False)
 
     return sample
+
+
+def lookup_res(resname: str, idselect: str):
+    """Retrieve a row from a resource, given a resname and an ID.
+    Returns a dict.
+    """
+
+    res = load_res(resname)
+
+    row = res.filter(pl.col("id") == idselect).to_dict(as_series=False)
+
+    return row
