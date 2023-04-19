@@ -72,9 +72,10 @@ def diminutize(names):
 
 def get_known_nickname(names):
     # Need to do a bit of parsing to get a list
+    print("KNOWN*")
     raw = lookup_res("givenname", names[0])["nickname"]
     nickname = [choice(raw[0].split(","))]
-    if names[0] == nickname:
+    if names[0] == nickname[0]:
         nickname = diminutize(names)
     return nickname
 
