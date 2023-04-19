@@ -4,7 +4,7 @@
 from random import randint, choice
 import sys
 
-from mug.load_data import sample_res
+from mug.load_data import sample_res, lookup_res
 from mug.constants import CONSONANTS, VOWELS
 
 GEN_NAME = "Nickname"
@@ -71,7 +71,12 @@ def diminutize(names):
 
 
 def get_known_nickname(names):
-    return ["Bruce"]
+    # Need to do a bit of parsing to get a list
+    raw = lookup_res("givenname", names[0])["nickname"]
+    nickname = [choice(raw[0].split(","))]
+    if names[0] == nickname:
+        nickname = diminutize(names)
+    return nickname
 
 
 def make_into_initials(names):
