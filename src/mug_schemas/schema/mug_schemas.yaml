@@ -52,6 +52,9 @@ classes:
       - street
       - locality
 
+  # TODO: create a separate class for addresses
+  # selected randomly from OpenStreetMap
+
   ResidentialAddress:
     is_a: Address
     description: >-
