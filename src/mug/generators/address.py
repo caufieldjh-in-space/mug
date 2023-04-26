@@ -57,11 +57,12 @@ def generate():
 def addressee():
     # TODO: generate Person object instead of FullName
     #       or reconsider this in the model
+    # TODO: Add another name rendering to FullName
+    #       that's somewhere between the current name and desc
     return fullname.generate()
 
 
 def address_number():
-
     address_number = []
     if randint(0, 19) == 0:
         modnumber = str(randint(1, 99))
@@ -69,27 +70,46 @@ def address_number():
             modnumber = modnumber + str(choice(choice([CONSONANTS, VOWELS]))).upper()
         add_mod = sample_res("address_modifier")["id"][0]
         address_number.append(f"{add_mod} {modnumber}")
-    main_num = str(randint(1, 9999)) # TODO: set this so it is usually a lower number
+    main_num = str(randint(1, 9999))  # TODO: set this so it is usually a lower number
     address_number.append(main_num)
 
     return address_number
 
 
 def street():
-    # TODO: title case in case there are lowercase first characters
-    # TODO: generic highways
-    # TODO: two-named streets
-    # TODO: simple modifiers e.g. "green hill"
     street_postfix = sample_res("street_postfix")["id"][0]
     if randint(0, 9) == 0:
         street_name = choice(["Hwy", "Rte"])
-        another_number = randint(1,99)
+        another_number = randint(1, 99)
         street = [f"{street_name} {another_number}"]
     else:
-        street_name = sample_res(
-            choice(["english_word", "familyname", "givenname"])
-    )["id"][0]
-        street = [street_name.title(), street_postfix]
+        street_name = sample_res(choice(["english_word", "familyname", "givenname"]))[
+            "id"
+        ][0]
+        if randint(0, 9) == 0:
+            street_prefix = choice(
+                [
+                    "N",
+                    "North",
+                    "E",
+                    "East",
+                    "W",
+                    "West",
+                    "S",
+                    "South",
+                    "Old",
+                    "New",
+                    "Upper",
+                    "Lower",
+                    "Middle",
+                ]
+            )
+            street = [street_prefix, street_name.title(), street_postfix]
+        elif randint(0, 9) == 0:
+            street_prefix = sample_res("genericplace")["id"][0]
+            street = [street_name.title(), street_prefix.title(), street_postfix]
+        else:
+            street = [street_name.title(), street_postfix]
     return street
 
 
