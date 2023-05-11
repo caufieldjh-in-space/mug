@@ -44,7 +44,7 @@ def generate():
     else:
         fstreet = ""
     if contents["locality"]:
-        flocality = f'{contents["locality"]}'
+        flocality = " ".join(contents["locality"])
     else:
         flocality = ""
     contents["description"] = f"{faddressee}\n{faddress_number} {fstreet}\n{flocality}"
@@ -98,7 +98,12 @@ def street():
             street = [street_name.title(), street_postfix]
     return street
 
-# TODO: I lost the original version of this due to a corrupt git record.
-# Rebuild it by selecting from a list of real locations, states, and zips.
+
 def locality():
-    return "placeholder town, PA 19341"
+    # Localities selected from simplemaps - see https://simplemaps.com/data/us-zips
+    place = sample_res("us_place")
+    area = place['id'][0]
+    state_abbrev = place['state_abbreviation'][0]
+    zipcode = str(place['zipcode'][0])
+    locality = [area, state_abbrev, zipcode]
+    return locality
