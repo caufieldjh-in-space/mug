@@ -70,11 +70,13 @@ def address_number():
             modnumber = modnumber + str(choice(choice([CONSONANTS, VOWELS]))).upper()
         add_mod = sample_res("address_modifier")["id"][0]
         address_number.append(f"{add_mod} {modnumber}")
-    main_num = str(randint(1, 9999))  # TODO: set this so it is usually a lower number
+    if randint(0,1) == 0:
+        main_num = str(randint(0,99))
+    else:
+        main_num = str(randint(1, randint(1,9999)))
     address_number.append(main_num)
 
     return address_number
-
 
 def street():
     street_postfix = sample_res("street_postfix")["id"][0]
@@ -87,23 +89,7 @@ def street():
             "id"
         ][0]
         if randint(0, 9) == 0:
-            street_prefix = choice(
-                [
-                    "N",
-                    "North",
-                    "E",
-                    "East",
-                    "W",
-                    "West",
-                    "S",
-                    "South",
-                    "Old",
-                    "New",
-                    "Upper",
-                    "Lower",
-                    "Middle",
-                ]
-            )
+            street_prefix = sample_res("placeprefix")["id"][0]
             street = [street_prefix, street_name.title(), street_postfix]
         elif randint(0, 9) == 0:
             street_prefix = sample_res("genericplace")["id"][0]
@@ -112,6 +98,7 @@ def street():
             street = [street_name.title(), street_postfix]
     return street
 
-
+# TODO: I lost the original version of this due to a corrupt git record.
+# Rebuild it by selecting from a list of real locations, states, and zips.
 def locality():
     return "placeholder town, PA 19341"
