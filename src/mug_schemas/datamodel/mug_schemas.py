@@ -1,5 +1,5 @@
 # Auto generated from mug_schemas.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-05-13T15:16:26
+# Generation date: 2023-05-13T15:36:25
 # Schema: mug_schemas
 #
 # id: https://w3id.org/my-org/mug_schemas
@@ -72,6 +72,10 @@ class FullNameId(GeneratedThingId):
 
 
 class CompanyId(GeneratedThingId):
+    pass
+
+
+class CompanyNameId(GeneratedThingId):
     pass
 
 
@@ -257,7 +261,7 @@ class Person(GeneratedThing):
 @dataclass
 class FullName(GeneratedThing):
     """
-    All parts of a name.
+    All parts of a person's name.
     """
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -320,7 +324,7 @@ class Company(GeneratedThing):
     class_model_uri: ClassVar[URIRef] = MUG.Company
 
     id: Union[str, CompanyId] = None
-    company_name: Optional[str] = None
+    company_name: Optional[Union[Union[str, CompanyNameId], List[Union[str, CompanyNameId]]]] = empty_list()
     work_address: Optional[Union[Union[str, WorkingAddressId], List[Union[str, WorkingAddressId]]]] = empty_list()
     industry: Optional[str] = None
     slogan: Optional[str] = None
@@ -332,8 +336,9 @@ class Company(GeneratedThing):
         if not isinstance(self.id, CompanyId):
             self.id = CompanyId(self.id)
 
-        if self.company_name is not None and not isinstance(self.company_name, str):
-            self.company_name = str(self.company_name)
+        if not isinstance(self.company_name, list):
+            self.company_name = [self.company_name] if self.company_name is not None else []
+        self.company_name = [v if isinstance(v, CompanyNameId) else CompanyNameId(v) for v in self.company_name]
 
         if not isinstance(self.work_address, list):
             self.work_address = [self.work_address] if self.work_address is not None else []
@@ -347,6 +352,38 @@ class Company(GeneratedThing):
 
         if self.logo_description is not None and not isinstance(self.logo_description, str):
             self.logo_description = str(self.logo_description)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class CompanyName(GeneratedThing):
+    """
+    All parts of a company's name.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = MUG.CompanyName
+    class_class_curie: ClassVar[str] = "mug:CompanyName"
+    class_name: ClassVar[str] = "CompanyName"
+    class_model_uri: ClassVar[URIRef] = MUG.CompanyName
+
+    id: Union[str, CompanyNameId] = None
+    company_name_main: Optional[Union[str, List[str]]] = empty_list()
+    company_name_suffix: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, CompanyNameId):
+            self.id = CompanyNameId(self.id)
+
+        if not isinstance(self.company_name_main, list):
+            self.company_name_main = [self.company_name_main] if self.company_name_main is not None else []
+        self.company_name_main = [v if isinstance(v, str) else str(v) for v in self.company_name_main]
+
+        if self.company_name_suffix is not None and not isinstance(self.company_name_suffix, str):
+            self.company_name_suffix = str(self.company_name_suffix)
 
         super().__post_init__(**kwargs)
 
@@ -427,7 +464,13 @@ slots.work_address = Slot(uri=MUG.work_address, name="work_address", curie=MUG.c
                    model_uri=MUG.work_address, domain=None, range=Optional[Union[Union[str, WorkingAddressId], List[Union[str, WorkingAddressId]]]])
 
 slots.company_name = Slot(uri=MUG.company_name, name="company_name", curie=MUG.curie('company_name'),
-                   model_uri=MUG.company_name, domain=None, range=Optional[str])
+                   model_uri=MUG.company_name, domain=None, range=Optional[Union[Union[str, CompanyNameId], List[Union[str, CompanyNameId]]]])
+
+slots.company_name_main = Slot(uri=MUG.company_name_main, name="company_name_main", curie=MUG.curie('company_name_main'),
+                   model_uri=MUG.company_name_main, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.company_name_suffix = Slot(uri=MUG.company_name_suffix, name="company_name_suffix", curie=MUG.curie('company_name_suffix'),
+                   model_uri=MUG.company_name_suffix, domain=None, range=Optional[str])
 
 slots.industry = Slot(uri=MUG.industry, name="industry", curie=MUG.curie('industry'),
                    model_uri=MUG.industry, domain=None, range=Optional[str])

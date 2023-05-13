@@ -82,7 +82,7 @@ classes:
   FullName:
     is_a: GeneratedThing
     description: >-
-      All parts of a name.
+      All parts of a person's name.
     slots:
       - given_name
       - family_name
@@ -101,6 +101,14 @@ classes:
       - industry
       - slogan
       - logo_description
+
+  CompanyName:
+    is_a: GeneratedThing
+    description: >-
+      All parts of a company's name.
+    slots:
+      - company_name_main
+      - company_name_suffix
 
   GeneratedThingCollection:
     tree_root: true
@@ -275,7 +283,28 @@ slots:
     description: >-
       One or more addresses where a person may work.
   company_name:
+    range: CompanyName
+    multivalued: true
+    description: >-
+      One or more names of a company.
+  company_name_main:
     range: string
+    multivalued: true
+    description: >-
+      One or more names of a company.
+      This is the primitive string form,
+      so it may be less processed than
+      company_name.
+  company_name_suffix:
+    range: string
+    multivalued: true
+    description: >-
+      A formal or informal postfix for a company
+      name.
+    examples:
+      - value: "Co"
+      - value: "Inc"
+      - value: "Limited"
   industry:
     range: string
   slogan:
