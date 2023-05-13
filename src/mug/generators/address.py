@@ -5,7 +5,6 @@ import uuid
 from random import choice, randint
 
 from mug.constants import CONSONANTS, VOWELS
-from mug.generators import fullname
 from mug.load_class import get_class_details
 from mug.load_data import sample_res
 
@@ -28,10 +27,6 @@ def generate():
     # Format for printing
     # TODO: make a small utility to do this
     # TODO: consider adding all to list and joining instead of managing spaces
-    if contents["addressee"]:
-        faddressee = f'{contents["addressee"]["description"]}'
-    else:
-        faddressee = ""
     if contents["address_number"]:
         if len(contents["address_number"]) == 1:
             faddress_number = f'{contents["address_number"][0]}'
@@ -47,20 +42,11 @@ def generate():
         flocality = " ".join(contents["locality"])
     else:
         flocality = ""
-    contents["description"] = f"{faddressee}\n{faddress_number} {fstreet}\n{flocality}"
+    contents["description"] = f"{faddress_number} {fstreet}\n{flocality}"
 
     contents["name"] = f"{faddress_number} {fstreet}"
 
     return contents
-
-
-def addressee():
-    # TODO: generate Person object instead of FullName
-    #       or reconsider this in the model
-    # TODO: Add another name rendering to FullName
-    #       that's somewhere between the current name and desc
-    return fullname.generate()
-
 
 def address_number():
     address_number = []

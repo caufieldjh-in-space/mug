@@ -1,5 +1,5 @@
 # Auto generated from mug_schemas.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-04-02T12:10:17
+# Generation date: 2023-05-13T15:16:26
 # Schema: mug_schemas
 #
 # id: https://w3id.org/my-org/mug_schemas
@@ -134,8 +134,8 @@ class GeneratedThing(NamedThing):
 @dataclass
 class Address(GeneratedThing):
     """
-    A mailing address for a physical location. This is the general class - it includes an addressee, but that isn't
-    required.
+    A mailing address for a physical location. This is the general class. Does not include the addressee (a Person has
+    a home_address, but the Address alone does not have a Person)
     """
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -145,7 +145,6 @@ class Address(GeneratedThing):
     class_model_uri: ClassVar[URIRef] = MUG.Address
 
     id: Union[str, AddressId] = None
-    addressee: Optional[str] = None
     address_number: Optional[Union[str, List[str]]] = empty_list()
     street: Optional[Union[str, List[str]]] = empty_list()
     locality: Optional[Union[str, List[str]]] = empty_list()
@@ -155,9 +154,6 @@ class Address(GeneratedThing):
             self.MissingRequiredField("id")
         if not isinstance(self.id, AddressId):
             self.id = AddressId(self.id)
-
-        if self.addressee is not None and not isinstance(self.addressee, str):
-            self.addressee = str(self.addressee)
 
         if not isinstance(self.address_number, list):
             self.address_number = [self.address_number] if self.address_number is not None else []
@@ -187,18 +183,12 @@ class ResidentialAddress(Address):
     class_model_uri: ClassVar[URIRef] = MUG.ResidentialAddress
 
     id: Union[str, ResidentialAddressId] = None
-    addressee: Union[str, PersonId] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
             self.MissingRequiredField("id")
         if not isinstance(self.id, ResidentialAddressId):
             self.id = ResidentialAddressId(self.id)
-
-        if self._is_empty(self.addressee):
-            self.MissingRequiredField("addressee")
-        if not isinstance(self.addressee, PersonId):
-            self.addressee = PersonId(self.addressee)
 
         super().__post_init__(**kwargs)
 
@@ -217,18 +207,12 @@ class WorkingAddress(Address):
     class_model_uri: ClassVar[URIRef] = MUG.WorkingAddress
 
     id: Union[str, WorkingAddressId] = None
-    addressee: Union[str, CompanyId] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
             self.MissingRequiredField("id")
         if not isinstance(self.id, WorkingAddressId):
             self.id = WorkingAddressId(self.id)
-
-        if self._is_empty(self.addressee):
-            self.MissingRequiredField("addressee")
-        if not isinstance(self.addressee, CompanyId):
-            self.addressee = CompanyId(self.addressee)
 
         super().__post_init__(**kwargs)
 
@@ -456,9 +440,3 @@ slots.logo_description = Slot(uri=MUG.logo_description, name="logo_description",
 
 slots.generatedThingCollection__entries = Slot(uri=MUG.entries, name="generatedThingCollection__entries", curie=MUG.curie('entries'),
                    model_uri=MUG.generatedThingCollection__entries, domain=None, range=Optional[Union[Dict[Union[str, GeneratedThingId], Union[dict, GeneratedThing]], List[Union[dict, GeneratedThing]]]])
-
-slots.ResidentialAddress_addressee = Slot(uri=MUG.addressee, name="ResidentialAddress_addressee", curie=MUG.curie('addressee'),
-                   model_uri=MUG.ResidentialAddress_addressee, domain=ResidentialAddress, range=Union[str, PersonId])
-
-slots.WorkingAddress_addressee = Slot(uri=MUG.addressee, name="WorkingAddress_addressee", curie=MUG.curie('addressee'),
-                   model_uri=MUG.WorkingAddress_addressee, domain=WorkingAddress, range=Union[str, CompanyId])

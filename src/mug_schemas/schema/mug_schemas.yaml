@@ -44,10 +44,11 @@ classes:
     is_a: GeneratedThing
     description: >-
       A mailing address for a physical location.
-      This is the general class - it includes
-      an addressee, but that isn't required.
+      This is the general class.
+      Does not include the addressee (a Person has 
+      a home_address, but the Address alone does not
+      have a Person)
     slots:
-      - addressee
       - address_number
       - street
       - locality
@@ -59,10 +60,6 @@ classes:
     is_a: Address
     description: >-
       Address of a residential location.
-    slot_usage:
-      addressee:
-        range: Person
-        required: true
 
   WorkingAddress:
     is_a: Address
@@ -72,10 +69,6 @@ classes:
       since it's specific to Company,
       but for now that can cover things
       like government agencies, too.
-    slot_usage:
-      addressee:
-        range: Company
-        required: true
 
   Person:
     is_a: GeneratedThing
@@ -191,7 +184,7 @@ slots:
   full_name:
     range: FullName
     description: >-
-      Slot for all name parts.
+      Slot for all of a Person's name parts.
   given_name:
     range: string
     multivalued: true
