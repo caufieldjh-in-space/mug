@@ -39,11 +39,13 @@ def generate():
 
 # TODO: add portmanteaus, though that may mean adding a function
 #       to get lists of many ids at once
-# TODO: include some generic company names like TriState or General
+# TODO: select industry first, if not provided, so it may be used
+# TODO: inherit industry from parent if present
 # TODO: add some more Weirdness
 def company_name_main():
-    tc = randint(0, 2)
+    tc = randint(0, 3)
     if tc == 0:  # Acronym
+        # TODO: instead of making acronyms alone, make them from a phrase
         name = make_acronym()
     elif tc == 1:  # Simple word or phrase
         name = sample_res(
@@ -68,6 +70,8 @@ def company_name_main():
             name3 = sample_res("familyname")["id"][0]
             conn2 = choice(["", "-", " & ", " + ", " And "])
             name = f"{name}{conn2}{name3}"
+    elif tc == 3: # Generic names
+        name = sample_res("genericcompanyname")["id"][0]
 
     # Modifiers
     # TODO: fix up this first modifier, it isn't quite right
