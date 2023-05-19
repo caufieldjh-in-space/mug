@@ -1,6 +1,6 @@
 """portmanteu.py - create fun portmanteaus"""
 
-import random
+from random import choice
 
 def make_portmanteau(input: tuple) -> str:
     """Produce a portmanteau.
@@ -16,7 +16,7 @@ def make_portmanteau(input: tuple) -> str:
     list1 = input[0]
     list2 = input[1]
 
-    term1 = random.choice(list1).lower()
+    term1 = choice(list1).lower()
     i = 1
     j = 1
     while not result:
@@ -24,9 +24,9 @@ def make_portmanteau(input: tuple) -> str:
             if j >= len(list1): # No options left
                 result = term1
             else:
-                term1 = random.choice(list1).lower() # Get a new term
+                term1 = choice(list1).lower() # Get a new term
                 j = j +1
-        term2 = random.choice(list2).lower()
+        term2 = choice(list2).lower()
         i = i +1
         for overlap in range(5,1,-1):
             if term1[-overlap:] == term2[0:overlap]:

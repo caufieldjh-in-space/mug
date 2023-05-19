@@ -6,8 +6,6 @@ from pathlib import Path
 
 RESOURCE_DIR = Path("src/mug/resources")
 
-# TODO: add a lookup function (given id, get value in column)
-
 
 def load_res(resname: str):
     """Load TSV and return full data frame."""
