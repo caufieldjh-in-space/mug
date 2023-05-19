@@ -21,6 +21,9 @@ def generate():
     for slot in details:
         if slot == "id":
             contents[slot] = str(uuid.uuid4())
+        elif slot == "company_name_suffix":
+            biztype = sample_res(choice(["businesstype","industry"]))["id"][0]
+            contents[slot] = company_name_suffix(biztype)
         else:
             gen_func = getattr(GEN_MOD, slot)
             contents[slot] = gen_func()
@@ -37,11 +40,14 @@ def generate():
 
     return contents
 
+
 # TODO: add portmanteaus, though that may mean adding a function
 #       to get lists of many ids at once
 # TODO: select industry first, if not provided, so it may be used
 # TODO: inherit industry from parent if present
 # TODO: add some more Weirdness
+# TODO: add some associated words to business types
+#       like "Bakery" may have bread, cake, etc
 def company_name_main():
     tc = randint(0, 3)
     if tc == 0:  # Acronym
@@ -70,13 +76,15 @@ def company_name_main():
             name3 = sample_res("familyname")["id"][0]
             conn2 = choice(["", "-", " & ", " + ", " And "])
             name = f"{name}{conn2}{name3}"
-    elif tc == 3: # Generic names
+    elif tc == 3:  # Generic names
         name = sample_res("genericcompanyname")["id"][0]
 
     # Modifiers
     # TODO: fix up this first modifier, it isn't quite right
     if randint(0, 6) == 0:
-        postfix = sample_res(choice(["company_postfix_casual", "genericplace"]))["id"][0]
+        postfix = sample_res(choice(["company_postfix_casual", "genericplace"]))["id"][
+            0
+        ]
         conn = choice(["", " "])
         name = f"{name}{conn}{postfix}"
     if randint(0, 8) == 0:
@@ -88,23 +96,18 @@ def company_name_main():
     if randint(0, 9) == 0:
         name = all_upper(name)
 
-
     return [name]
 
-# TODO: tune this up a bit as sometimes it generates very strange combos
-#       Maybe use just one business/industry type and just one postfix?
-def company_name_suffix():
+
+def company_name_suffix(biztype: str):
     suffixes = []
     used_already = []
     for i in range(randint(1, 2)):
-        this_choice = choice(
-            [
-                "businesstype",
-                "company_postfix_formal",
-                "industry",
-            ]
-        )
+        this_choice = choice(["company_postfix_formal", "us_place"])
         if this_choice not in used_already:
             suffixes.append(sample_res(this_choice)["id"][0])
         used_already.append(this_choice)
+    if biztype != "":
+        if randint(0,4) == 0:
+            suffixes.append(biztype)
     return suffixes
