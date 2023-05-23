@@ -1,187 +1,187 @@
-id
-Accounting
-Advertising
-Aerospace
-Agriculture
-Alternative Dispute Resolution
-Alternative Medicine
-Animation
-Apparel
-Architecture
-Arts and Crafts
-Automotive
-Aviation
-Banking
-Beverages
-Biotechnology
-Broadcast Media
-Building Materials
-Business Equipment
-Business Supplies
-Business Support
-Capital Markets
-Casinos
-Ceramics
-Chemical Production
-Chemicals
-Civil Engineering
-Commercial Real Estate
-Computer Engineering
-Computer Games
-Computer Hardware
-Computer Networking
-Computer Software
-Concrete
-Construction
-Consumer Electronics
-Consumer Goods
-Consumer Services
-Containers
-Cosmetics
-Dairy
-Defense
-Dentistry
-Design
-E-Learning
-Editing
-Education
-Education Management
-Electrical Engineering
-Electrical Manufacturing
-Electronic Manufacturing
-Energy
-Entertainment
-Environmental Consulting
-Environmental Services
-Event Promotion
-Event Services
-Executive Office Management
-Facilities Services
-Family Services
-Farming
-Fashion
-Financial Services
-Fine Art
-Fishery
-Fitness
-Food
-Food Production
-Forestry
-Freight Delivery
-Fundraising
-Furniture
-Gambling
-Glass
-Government Relations
-Graphic Design
-Greentech
-Healthcare
-Higher Education
-Hospitality
-Hospitals
-Human Resources
-Import and Export
-Industrial Automation
-Industrial Engineering
-Information Services
-Information Technology
-Insurance
-International Affairs
-International Trade
-Internet Services
-Investigations
-Investment Banking
-Investment Management
-Jewelry
-Law
-Law Firms
-Law Practice
-Legal Services
-Leisure
-Library Services
-Logistics
-Luxury Goods
-Machinery
-Management Consulting
-Manufacturing
-Maritime
-Market Research
-Marketing
-Mechanical Engineering
-Media
-Media Production
-Medical Equipment
-Medical Practice
-Mental Health Care
-Metal Production
-Metals
-Mining
-Mortgage Lending
-Motion Pictures
-Museums
-Music
-Nanotechnology
-Network Security
-Newspapers
-Offshoring
-Oil
-Online Publishing
-Outsourcing
-Packaging
-Painting
-Paper Products
-Performing Arts
-Pharmaceuticals
-Philanthropy
-Photography
-Planning
-Plastics
-Primary Education
-Printing
-Private Equity
-Procurement
-Professional Services
-Professional Training
-Program Development
-Property Management
-Public Relations
-Public Safety
-Publishing
-Railroad Manufacturing
-Ranching
-Real Estate
-Recreational Facilities
-Recreational Services
-Renewables
-Research
-Restaurants
-Retail
-Sales
-Secondary Education
-Security
-Semiconductors
-Shipbuilding
-Shipping
-Solar
-Space
-Spirits
-Sporting Goods
-Sports
-Staffing
-Supermarkets
-Telecommunications
-Textiles
-Tobacco
-Translation
-Transportation
-Travel
-Utilities
-Venture Capital
-Veterinary Medicine
-Warehousing
-Waste Management
-Web Design
-Wholesale
-Wine
-Wireless
-Writing
+id	terms
+Accounting	account, budget, money, tax
+Advertising	ad, notify, marketing
+Aerospace	air, aircraft, plane, travel
+Agriculture	farm, crop, livestock
+Alternative Dispute Resolution	mediation, arbitration, negotiation, resolution
+Alternative Medicine	holistic, nature, acupuncture, herbal
+Animation	cartoon, digital, motion, visual
+Apparel	clothing, fashion, garment, textile
+Architecture	blueprint, design, construction, structure
+Arts and Crafts	creative, handmade, artisan, craftsmanship
+Automotive	vehicles, car, automobile, transportation
+Aviation	airplanes, flight, pilots, travel
+Banking	finance, loan, savings, investment
+Beverages	 drinks, refresh, taste, nature
+Biotechnology	bioengineering, genetics, research, pharmaceuticals
+Broadcast Media	television, radio, broadcasting, media
+Building Materials	construction, materials, lumber, cement, bricks
+Business Equipment	supplies, computers, printers
+Business Supplies	stationery, furniture, paper, consumables
+Business Support	 administration, outsourcing, consulting, assistance
+Capital Markets	investments, stocks, bonds, trading
+Casinos	gambling, gaming, slots, cards
+Ceramics	pottery, porcelain, tiles, art
+Chemical Production	processing, manufacturing
+Chemicals	compounds, substances, reaction
+Civil Engineering	infrastructure, roads, bridges, projects, urban, planning, engineering
+Commercial Real Estate	properties, development, buildings, spaces, leasing, management
+Computer Engineering	hardware, design, software, development, computer, systems, embedded
+Computer Games	games, gaming, development, virtual
+Computer Hardware	computer, components, processors, motherboards, peripherals, hardware
+Computer Networking	data, communication, networks, infrastructure, routers, switches, security
+Computer Software	software, applications, programming, development, engineering
+Concrete	construction, material, cement, mixture, building, foundations, infrastructure
+Construction	building, projects, construction, industry, management, contractors
+Consumer Electronics	electronics, devices, gadgets, smartphones, home, appliances
+Consumer Goods	retail, products, goods, consumer, market
+Consumer Services	customer, services, hospitality, personal
+Containers	shipping, containers, packaging, materials, storage, logistics
+Cosmetics	beauty, skincare, makeup
+Dairy	dairy, milk, cheese, yogurt, farming
+Defense	military, national, security, defense, arms
+Dentistry	dental, care, oral, health, clinics
+Design	creative, design, graphics, visual
+E-Learning	online, education, distance, learning, virtual, classroom, platforms
+Editing	 proofreading, content, editing, copyediting, editorial
+Education	learning, knowledge, academic, teaching
+Education Management	administration, educational, leadership, curriculum, development, school, management
+Electrical Engineering	power, systems, circuit, design, electrical, devices, infrastructure
+Electrical Manufacturing	electrical, equipment, production, components, manufacturing
+Electronic Manufacturing	electronic, devices, production, circuit, boards, components, assembly
+Energy	power, generation, renewable, energy, sources, efficiency
+Entertainment	media, leisure, performing, arts, amusement, entertainment
+Environmental Consulting	sustainability, environmental, assessments, ecological, impact, green
+Environmental Services	environmental, remediation, waste, sustainability, green
+Event Promotion	event, marketing, promotional, campaigns, planning, audience, engagement
+Event Services	event, coordination, venue, management, logistics, audiovisual, services
+Executive Office Management	admin, support, executive, assistance, office, operations, management
+Facilities Services	facility, maintenance, janitorial, services, building, management, operations
+Family Services	social, services, counseling, family, support, community, outreach
+Farming	agriculture, crop, cultivation, livestock, raising, sustainable, farming
+Fashion	apparel, fashion, design, trends, clothing
+Financial Services	banking, investment, management, financial, planning, insurance, services
+Fine Art	visual, arts, painting, sculpture, art, exhibitions, galleries
+Fishery	fishing, marine, resources, fish, aquaculture
+Fitness	physical, fitness, exercise, gym, personal, training
+Food	culinary, dining, gastronomy, food, culture
+Food Production	food, processing, manufacturing, packaging
+Forestry	lumber, logging, timber, forest, management, conservation, reforestation
+Freight Delivery	logistics, transportation, shipping, supply, chain, cargo, distribution, warehousing
+Fundraising	fundraisers, donations, charity, nonprofit, philanthropy, campaigns, events
+Furniture	furnishings, interior, design, decor, home, furniture, custom, upholstery
+Gambling	casino, betting, gaming, gambling, poker, roulette, slots
+Glass	glassware, windows, mirrors, manufacturing, installation, glass, blowing
+Government Relations	public, policy, advocacy, lobbying, legislation, government, affairs, political, consulting, regulatory, compliance
+Graphic Design	brand, branding, visual, identity, illustration, typography, print, design, digital, logo
+Greentech	sustainability, renewable, energy, clean, technology, green, innovation, environmental, solutions, efficiency, solar, power
+Healthcare	medical, hospitals, clinics, healthcare, services, pharmaceuticals, technology, patient, care
+Higher Education	education, university, college, academic, research, students, degree
+Hospitality	hotel, accommodation, tourism, restaurant, customer, service, hospitality, management, guest, experience
+Hospitals	medical, healthcare, patient, care, emergency, services, surgery, facilities, professionals
+Human Resources	employment, recruitment, HR, management, personnel, workforce, employee, relations, talent, acquisition
+Import and Export	trade, customs, logistics, international, shipping, importation, exportation, compliance
+Industrial Automation	automation, manufacturing, robotics, control, systems, process, optimization, industrial, machinery, factory
+Industrial Engineering	process, improvement, efficiency, production, planning, supply, chain, management, quality, control, lean, manufacturing, industrial, systems
+Information Services	data, management, information, systems, analysis, security, integration, governance, storage
+Information Technology	IT, services, software, development, network, infrastructure, cybersecurity, cloud, computing, support, system, administration
+Insurance	coverage, policy, risk, management, claims, underwriting, insurance, brokers
+International Affairs	diplomacy, global, governance, international, relations, foreign, policy, diplomatic, negotiations, communications
+International Trade	trade, agreements, import, export, regulations, customs, international, markets, financing, negotiations, global, commerce
+Internet Services	websites, development, web, hosting, domains, registration, online, marketing, e-commerce, analytics, content, management, systems
+Investigations	surveillance, detective, investigations, forensics, analysis, background
+Investment Banking	financial, services, mergers, acquisitions, capital, markets, investment, advisory, corporate, finance, financial, analysis
+Investment Management	portfolios, management, allocations, financial, planning, wealth, management, investment, strategies, assessment, advisory
+Jewelry	gemstones, diamonds, gold, silver, jewelry, design, precious, metals, luxury, accessories
+Law	legal, legislation, judiciary, rights, practices, law
+Law Firms	legal, services, attorneys, lawyers, representation, advice, law, litigation
+Law Practice	legal, services, advice, representation, research, advocacy, ethics, law
+Legal Services	legal, services, advice, representation, research, advocacy, ethics, law
+Leisure	recreation, entertainment, relaxation, activities, fun
+Library Services	library, resources, cataloging, information, retrieval, management, digital, libraries, programs, archives
+Logistics	supply, chain, transportation, inventory, management, logistics, planning, distribution, operations, freight
+Luxury Goods	luxury, fashion, products, premium, brands, lifestyle, market, retail, craftsmanship
+Machinery	manufacturing, equipment, industrial, machinery, maintenance, installation, automation, parts
+Management Consulting	strategic, consulting, organizational, development, business, analysis, process, management, strategy, performance, optimization
+Manufacturing	production, assembly, fabrication, manufacturing, processes, quality, control, efficiency, industrial, production
+Maritime	shipping, ports, maritime, transportation, logistics, vessels, operations
+Market Research	market, analysis, insights, trends, survey, research, data, analysis, segmentation, intelligence
+Marketing	advertising, branding, digital, marketing, strategy, campaigns, positioning, analytics
+Mechanical Engineering	mechanical, design, machine, development, thermodynamics, systems, development, analysis, testing
+Media	media, journalism, production, broadcasting, platforms
+Media Production	film, production, television, video, content, creation, post-production, cinema
+Medical Equipment	medical, devices, healthcare, technology, innovation
+Medical Practice	healthcare, patient, care, medical, treatment, specialties, consultations, examinations
+Mental Health Care	mental, health, services, therapy, counseling, psychiatric, care, counseling, treatment, awareness
+Metal Production	metal, manufacturing, fabrication, processing, alloys, metalworking, recycling, finishing
+Metals	metal, products
+Mining	mineral, extraction, mining, operations, engineering, exploration
+Mortgage Lending	mortgage, loans, home, financing, rates, brokers, underwriting, refinancing
+Motion Pictures	film, movie, production, filmmaking, cinema, distribution
+Museums	museum, exhibitions, art, collections, history, artifacts, curation, education, conservation, archives
+Music	music, production, composition, recording, performances, streaming
+Nanotechnology	nanomaterials, research, engineering, manufacturing, applications, nanoparticles, nano, small
+Network Security	cybersecurity, data, protection, encryption, network, monitoring, detection
+Newspapers	journalism, reporting, editorial, print, media, headlines, circulation, subscriptions
+Offshoring	outsourcing, offshore, operations, reduction, global, workforce, international, expansion
+Oil	oil, drilling, exploration, extraction, refining, petroleum, energy, reserves, production
+Online Publishing	content, digital, media, articles, blogging, e-books, online, magazines, web, monetization
+Outsourcing	contracting, delegation, services, process, outsourcing
+Packaging	packaging, design, materials, labeling, branding, logistics, sustainability
+Painting	art, canvas, brush, strokes, color, pigment, techniques, visual, expression
+Paper Products	stationery, printing, paper, manufacturing, envelopes, notebooks, packaging, materials
+Performing Arts	theater, dance, acting, stage, performance, rehearsals, live, entertainment, ticket
+Pharmaceuticals	medications, drugs, research, development, clinical, trials, pharmaceutical
+Philanthropy	nonprofits, charitable, giving, donations, philanthropy, social, impact
+Photography	photographs, camera, lens, photography, digital, imaging, photo
+Planning	strategic, planning, project, management, resources, allocation, goal, decision
+Plastics	plastic, manufacturing, polymers, products, injection, molding, recycling, sustainability
+Primary Education	teachers, students, curriculum, elementary, schools, childhood, education, literacy
+Printing	print, materials, printing, digital, offset, press
+Private Equity	investment, acquisitions, buyouts, venture, capital, portfolio
+Procurement	sourcing, supply, chain, purchasing, vendor, management, negotiations, cost, savings
+Professional Services	consulting, legal, services, accounting, marketing, HR, advisory
+Professional Training	skills, development, workshops, certifications, vocational, training, education
+Program Development	program
+Property Management	rental, properties, property, maintenance, leasing, management
+Public Relations	publicity, media, relations, releases, brand, reputation, management
+Public Safety	enforcement, emergency, services, public, health, response, prevention
+Publishing	books, magazines, journals, publishing, editorial, literary, self-publishing
+Railroad Manufacturing	rolling, locomotives, rail, infrastructure, train, railcar, manufacturing
+Ranching	cattle, livestock, ranch, management, grazing, herd
+Real Estate	property, housing, estate, residential, development
+Recreational Facilities	sports, facilities, fitness, centers, recreational, parks, amusement, leisure, venues
+Recreational Services	tourism, hospitality, recreational, activities, event, planning, entertainment, services
+Renewables	renewable, energy, solar, power, wind, sustainable, clean, technologies
+Research	research, studies, experiments, scientific, inquiry, data, analysis
+Restaurants	dining, food, service, culinary, restaurant, management, menu, hospitality, taste
+Retail	retail, stores, shopping, e-commerce, service, inventory, management
+Sales	selling, acquisition, leads, generation, sales, strategies, team, revenue
+Secondary Education	students, teachers, schools, curriculum, college, preparation, exams
+Security	security, systems, surveillance, cybersecurity, access, control, assessment, services
+Semiconductors	semiconductor, chips, microelectronics, circuits
+Shipbuilding	ship, construction, naval, shipyard, maritime
+Shipping	cargo, logistics, freight, transportation, supply, chain, shipping, containerization
+Solar	solar, panels, photovoltaic, systems, energy, renewable, power, generation, sun, light
+Space	astro, star, outer
+Spirits	libations, spirits, distilling
+Sporting Goods	sport, compete, athletics
+Sports	sport, compete, athletics
+Staffing	HR, people, staff
+Supermarkets	shop, grocery
+Telecommunications	telecom
+Textiles	fabric, material
+Tobacco	smoke, leaf
+Translation	voice, interpret, text, speech
+Transportation	travel, transport, freight
+Travel	travel
+Utilities	utilities
+Venture Capital	venture, invest
+Veterinary Medicine	pet, care
+Warehousing	storage, space
+Waste Management	waste, green, recycle
+Web Design	web, design
+Wholesale	sales, wholesale
+Wine	grape, vintage
+Wireless	wireless, communication, talk
+Writing	write, edit
