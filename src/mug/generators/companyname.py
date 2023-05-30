@@ -29,7 +29,6 @@ def generate():
         if slot == "id":
             contents[slot] = str(uuid.uuid4())
         elif slot == "company_name_suffix":
-
             contents[slot] = company_name_suffix(biztype)
         else:
             gen_func = getattr(GEN_MOD, slot)
@@ -52,7 +51,7 @@ def generate():
 # TODO: add some more Weirdness
 # TODO: add Tech Names
 def company_name_main():
-    tc = randint(0, 4)
+    tc = randint(3, 3)
     if tc == 0:  # Simple word or phrase
         name = sample_res(
             choice(
@@ -78,10 +77,19 @@ def company_name_main():
             name = f"{name}{conn2}{name3}"
     elif tc == 2:  # Generic names
         name = sample_res("genericcompanyname")["id"][0]
-    elif tc == 3:  # Portmanteaus alone
+    elif tc == 3:  # Place names
+        name = sample_res(choice(["animal", "english_word", "familyname", "givenname"]))["id"][0]
+        if randint(0, 1) == 0:
+            place_name = sample_res("genericplace")["id"][0]
+            name = [name.title(), place_name.title()]
+        else:
+            street_postfix = sample_res("street_postfix")["id"][0]
+            name = [name.title(), street_postfix]
+        name = " ".join(name)
+    elif tc == 4:  # Portmanteaus alone
         wordlist = (load_res("english_word")["id"]).to_list()
         name = make_portmanteau((wordlist, wordlist)).title()
-    elif tc == 4:  # Tech name
+    elif tc == 5:  # Tech name
         # TODO: to be completed (use the casual postfixes, and control syllables)
         basename = (
             sample_res(choice(["animal", "english_word", "givenname"]))["id"][0]
@@ -95,10 +103,6 @@ def company_name_main():
     #     postfix = (sample_res(choice(["genericplace"]))["id"][0]).title()
     #     conn = choice(["", " "])
     #     name = f"{name}{conn}{postfix}"
-    if randint(0, 6) == 0:
-        postfix = (sample_res(choice(["genericplace"]))["id"][0]).title()
-        conn = choice(["", " "])
-        name = f"{name}{conn}{postfix}"
     if randint(0, 8) == 0:
         name = name.replace(" ", "")
     if randint(0, 6) == 0:
