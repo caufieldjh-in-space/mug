@@ -23,11 +23,12 @@ def generate():
     bizchoice = sample_res(choice(["businesstype", "industry"]))
     biztype = bizchoice["id"][0]
     bizterms = bizchoice["terms"]
-    print(bizterms)
 
     for slot in details:
         if slot == "id":
             contents[slot] = str(uuid.uuid4())
+        elif slot == "company_name_main":
+            contents[slot] = company_name_main(bizterms)
         elif slot == "company_name_suffix":
             contents[slot] = company_name_suffix(biztype)
         else:
@@ -39,6 +40,7 @@ def generate():
     if contents["company_name_suffix"]:
         fsuffix = " ".join(contents["company_name_suffix"])
 
+    # TODO: enable the main to be an acronym version of the full name
     if contents["company_name_main"]:
         fcompany_name_main = " ".join(contents["company_name_main"])
         contents["description"] = f"{fcompany_name_main} {fsuffix}"
@@ -50,8 +52,8 @@ def generate():
 # TODO: inherit industry from parent if present
 # TODO: add some more Weirdness
 # TODO: add Tech Names
-def company_name_main():
-    tc = randint(3, 3)
+def company_name_main(bizterms: list):
+    tc = randint(0, 5)
     if tc == 0:  # Simple word or phrase
         name = sample_res(
             choice(
@@ -78,7 +80,7 @@ def company_name_main():
     elif tc == 2:  # Generic names
         name = sample_res("genericcompanyname")["id"][0]
     elif tc == 3:  # Place names
-        name = sample_res(choice(["animal", "english_word", "familyname", "givenname"]))["id"][0]
+        name = sample_res(choice(["animal", "english_word", "familyname", "givenname", "worldcity"]))["id"][0]
         if randint(0, 1) == 0:
             place_name = sample_res("genericplace")["id"][0]
             name = [name.title(), place_name.title()]
@@ -97,13 +99,12 @@ def company_name_main():
         name = basename
 
     # Modifiers
-    # if randint(0, 0) == 0:  # Add associated term
-    #     # TODO: this won't work until we have a biztype in advance so we can look it up
-    #     # also it probably should be a name component instead of a modifier
-    #     postfix = (sample_res(choice(["genericplace"]))["id"][0]).title()
-    #     conn = choice(["", " "])
-    #     name = f"{name}{conn}{postfix}"
-    if randint(0, 8) == 0:
+    if randint(0, 3) == 0:  # Add associated term
+        postfix = (choice(bizterms)).title()
+        if postfix != '':
+            conn = choice(["", " "])
+            name = f"{name}{conn}{postfix}"
+    if randint(0, 9) == 0:
         name = name.replace(" ", "")
     if randint(0, 6) == 0:
         name = controlled_misspell(name)

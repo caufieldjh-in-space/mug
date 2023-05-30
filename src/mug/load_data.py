@@ -17,7 +17,7 @@ RESOURCE_DIR = Path("src/mug/resources")
 def load_res(resname: str):
     """Load TSV and return full data frame.
 
-    Comma-delimited strings are parsed as lists.
+    This doesn't parse further - that's done as needed.
     """
     fn = f"{resname}.tsv"
     respath = RESOURCE_DIR / fn
@@ -28,13 +28,21 @@ def load_res(resname: str):
 
 
 def sample_res(resname: str):
-    """Retrieve a sample from a resource, returning a dict."""
+    """Retrieve a sample from a resource, returning a dict.
+    
+    Any values containing commas get parsed as lists.
+    """
 
     res = load_res(resname)
 
     sample = (res.sample(n=1)).to_dict(as_series=False)
 
-    return sample
+    # Remove any None values, replacing with empty strings
+    clean_sample = {k:v if v[0] is not None else [""] for k, v in sample.items()}
+
+    parsed_lists = {k:(v[0]).split(", ") for k, v in clean_sample.items()}
+
+    return parsed_lists
 
 
 def lookup_res(resname: str, idselect: str):
