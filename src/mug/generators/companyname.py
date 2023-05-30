@@ -19,13 +19,17 @@ def generate():
 
     details = get_class_details(GEN_NAME)
 
+    # TODO: enable inheritance here from Company
+    bizchoice = sample_res(choice(["businesstype", "industry"]))
+    biztype = bizchoice["id"][0]
+    bizterms = bizchoice["terms"]
+    print(bizterms)
+
     for slot in details:
         if slot == "id":
             contents[slot] = str(uuid.uuid4())
         elif slot == "company_name_suffix":
-            biztype = sample_res(
-                choice(["businesstype", "corporate_department", "industry"])
-            )["id"][0]
+
             contents[slot] = company_name_suffix(biztype)
         else:
             gen_func = getattr(GEN_MOD, slot)
@@ -46,10 +50,6 @@ def generate():
 
 # TODO: inherit industry from parent if present
 # TODO: add some more Weirdness
-# TODO: add some associated words to business types
-#       like "Bakery" may have bread, cake, etc
-#       This is probably a pretty tedious thing to do,
-#       so get some AI help
 # TODO: add Tech Names
 def company_name_main():
     tc = randint(0, 4)
@@ -83,10 +83,18 @@ def company_name_main():
         name = make_portmanteau((wordlist, wordlist)).title()
     elif tc == 4:  # Tech name
         # TODO: to be completed (use the casual postfixes, and control syllables)
-        basename = (sample_res(choice(["animal","english_word", "givenname"]))["id"][0]).title()
+        basename = (
+            sample_res(choice(["animal", "english_word", "givenname"]))["id"][0]
+        ).title()
         name = basename
 
     # Modifiers
+    # if randint(0, 0) == 0:  # Add associated term
+    #     # TODO: this won't work until we have a biztype in advance so we can look it up
+    #     # also it probably should be a name component instead of a modifier
+    #     postfix = (sample_res(choice(["genericplace"]))["id"][0]).title()
+    #     conn = choice(["", " "])
+    #     name = f"{name}{conn}{postfix}"
     if randint(0, 6) == 0:
         postfix = (sample_res(choice(["genericplace"]))["id"][0]).title()
         conn = choice(["", " "])
@@ -107,7 +115,7 @@ def company_name_suffix(biztype: str):
     suffixes = []
     used_already = []
     if biztype != "":
-        if randint(0, 3) == 0:
+        if randint(0, 2) == 0:
             suffixes.append(biztype)
     # TODO: Identify and add some other suffixes
     for i in range(randint(1, 2)):

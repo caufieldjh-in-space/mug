@@ -2,25 +2,25 @@ id	terms
 Abbey	monastery, community, spirit, retreat
 Aboriginal Art Gallery	art, indigenous, cultural, heritage, exhibition, traditional
 Abrasives Supply	sandpaper, grinding, abrasive, surface
-Accountant	
-Accounting Firm	
-Accounting School	
-Accounting Software Company	
-Acoustical Consultant	
-Acrobatic Diving Pool	
-Acrylic Store	
-Acupuncture Clinic	
-Acupuncture School	
-Acupuncturist	
-Acura Dealer	
-Addiction Treatment Center	
-Administrative Attorney	
-Adoption Agency	
-Adult Day Care Center	
-Adult Dvd Store	
-Adult Education School	
-Adult Entertainment Club	
-Adult Entertainment Store	
+Accountant	finance, bookkeeping
+Accounting Firm	tax, audit
+Accounting School	education, learn
+Accounting Software Company	soft
+Acoustical Consultant	sound, hear
+Acrobatic Diving Pool	swim, dive, cool
+Acrylic Store	art, supplies
+Acupuncture Clinic	health, therapy, nature, spirit, holistic
+Acupuncture School	health, therapy, nature, spirit, holistic
+Acupuncturist	health, therapy, nature, spirit, holistic
+Acura Dealer	drive, dealer
+Addiction Treatment Center	care, life
+Administrative Attorney	legal, counsel
+Adoption Agency	family, child
+Adult Day Care Center	elderly, care
+Adult Dvd Store	adult, movies
+Adult Education School	learn, class
+Adult Entertainment Club	night, dance
+Adult Entertainment Store	pleasure, sin
 Adult Foster Care Service	
 Adventure Sports	
 Adventure Sports Center	
@@ -66,19 +66,19 @@ Air Conditioning System Supply
 Air Duct Cleaning Service	
 Air Filter Supply	
 Air Force Base	
-Air Taxi	
-Airbrushing Service	
-Airbrushing Supply Store	
+Air Taxi	air, transport
+Airbrushing Service	paint
+Airbrushing Supply Store	paint
 Aircraft Maintenance Company	
 Aircraft Manufacturer	
 Aircraft Rental Service	
 Aircraft Supply Store	
-Airline	
+Airline	air
 Airline Ticket Agency	
 Airplane	
 Airport	
-Airport Shuttle Service	
-Airsoft Supply Store	
+Airport Shuttle Service	transport
+Airsoft Supply Store	shoot
 Airstrip	
 Alcohol Manufacturer	
 Alcohol Retail Monopoly	
@@ -96,9 +96,9 @@ Aluminum Welder
 Aluminum Window	
 Amateur Theater	
 Ambulance Service	
-American Restaurant	
+American Restaurant	taste, tradition
 Amish Furniture Store	
-Ammunition Supply	
+Ammunition Supply	ammo
 Amphitheater	
 Amusement Center	
 Amusement Machine Supply	
@@ -131,11 +131,11 @@ Appliance Rental Service
 Appliance Repair Service	
 Appliance Store	
 Appliances Customer Service	
-Appraiser	
+Appraiser	value
 Apprenticeship Center	
 Aquaculture Farm	
-Aquarium	
-Aquarium Shop	
+Aquarium	fish, ocean, sea
+Aquarium Shop	fish, ocean, sea
 Aquatic Centre	
 Arboretum	
 Arborist And Tree Surgeon	
@@ -772,7 +772,7 @@ Computer Networking Center
 Computer Repair Service	
 Computer Security Service	
 Computer Service	
-Computer Software Store	
+Computer Software Store	soft
 Computer Store	
 Computer Support And Services	
 Computer Training School	
@@ -3220,8 +3220,8 @@ Soft Drinks Shop
 Suppon Restaurant	
 Softball Club	
 Softball Field	
-Software Company	
-Software Training Institute	
+Software Company	soft
+Software Training Institute	soft
 Soil Testing Service	
 Sokol House	
 Solar Energy Company	
