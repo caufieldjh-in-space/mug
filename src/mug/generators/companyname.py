@@ -53,7 +53,7 @@ def generate():
 # TODO: add some more Weirdness
 # TODO: add Tech Names
 def company_name_main(bizterms: list):
-    tc = randint(0, 5)
+    tc = randint(0, 6)
     if tc == 0:  # Simple word or phrase
         name = sample_res(
             choice(
@@ -68,7 +68,12 @@ def company_name_main(bizterms: list):
                 ]
             )
         )["id"][0].title()
-    elif tc == 1:  # Person names
+    elif tc == 1:  # Single, informal Person names
+        namechoice = sample_res("givenname")
+        name = choice([namechoice["id"][0], choice(namechoice["nickname"])])
+        if randint(0, 5) == 0:
+            name = f"{name}'s"
+    elif tc == 2:  # Combined Person names
         name1 = sample_res("familyname")["id"][0]
         name2 = sample_res("familyname")["id"][0]
         conn1 = choice(["", " ", ", "])
@@ -77,9 +82,9 @@ def company_name_main(bizterms: list):
             name3 = sample_res("familyname")["id"][0]
             conn2 = choice(["", "-", " & ", " + ", " And "])
             name = f"{name}{conn2}{name3}"
-    elif tc == 2:  # Generic names
+    elif tc == 3:  # Generic names
         name = sample_res("genericcompanyname")["id"][0]
-    elif tc == 3:  # Place names
+    elif tc == 4:  # Place names
         name = sample_res(choice(["animal", "english_word", "familyname", "givenname", "worldcity"]))["id"][0]
         if randint(0, 1) == 0:
             place_name = sample_res("genericplace")["id"][0]
@@ -88,10 +93,10 @@ def company_name_main(bizterms: list):
             street_postfix = sample_res("street_postfix")["id"][0]
             name = [name.title(), street_postfix]
         name = " ".join(name)
-    elif tc == 4:  # Portmanteaus alone
+    elif tc == 5:  # Portmanteaus alone
         wordlist = (load_res("english_word")["id"]).to_list()
         name = make_portmanteau((wordlist, wordlist)).title()
-    elif tc == 5:  # Tech name
+    elif tc == 6:  # Tech name
         # TODO: to be completed (use the casual postfixes, and control syllables)
         basename = (
             sample_res(choice(["animal", "english_word", "givenname"]))["id"][0]
